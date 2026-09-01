@@ -1,0 +1,8 @@
+This Stability AI Model is licensed under the Stability AI Community
+License, Copyright (c) Stability AI Ltd. All Rights Reserved.
+
+This repository contains evaluation scores and figures derived from audio
+generated with stabilityai/stable-audio-open-1.0 and
+stabilityai/stable-audio-3-small-music under the Stability AI Community
+License. "Powered by Stability AI." Stable Audio 3 Small Music
+redistributes a T5Gemma text encoder subject to the Gemma Terms of Use.
