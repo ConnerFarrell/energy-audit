@@ -1,6 +1,8 @@
 # Do Text-to-Music Models Take Direction?
 **An instrumented audit of energy-instruction compliance in five open text-to-music models (2023–2026).**
 
+**Conner O. Farrell** · CCRMA, Stanford University · Preprint, 2026 (arXiv + DOI forthcoming) · the submitted PDF is in [`paper/`](paper/farrell-ttm-direction-2026.pdf) · the arousal instrument lives in its own repo: [intensity-index](https://github.com/ConnerFarrell/intensity-index)
+
 When you ask a text-to-music model for a *calm* folk track or an *extremely
 intense* EDM track, does the audio actually move? We generated 1,500 clips
 across a frozen matrix — 5 models × 5 genres × 5 requested energy levels ×
@@ -57,32 +59,46 @@ regenerates digit-for-digit from the released CSVs.
 table, CI, and figure in the paper from `data/*.csv`.
 
 **Tier 2 — scoring (Kaggle, ~1 h GPU).** `notebooks/scoring.ipynb` re-runs
-the full three-instrument scoring stack over the released audio corpus and
-re-banks all CSVs. Arousal Index and LUFS reproduce bit-for-bit; CLAP shows
-documented run-to-run drift ≤ 0.033 at the cell-mean level (verdicts stable;
-the fixed-anchor CLAP axis in `data/s7_*.csv` is the deterministic
-replacement).
+the full three-instrument scoring stack over the generated corpus and
+re-banks all CSVs (corpus access and environment details: `docs/MODELS.md`).
+Arousal Index and LUFS reproduce bit-for-bit; CLAP shows documented
+run-to-run drift ≤ 0.033 at the cell-mean level (verdicts stable; the
+fixed-anchor CLAP axis in `data/s7_*.csv` is the deterministic replacement).
 
 **Tier 3 — generation.** Prompt set (`data/prompts.csv`), model revisions,
 and generation harness notes in `docs/MODELS.md`.
 
-## Repository layout
+## What's here
 
 ```
-data/       scored_full_v2.csv (per-clip scores, raw + normalized lenses),
-            features_verbal.csv (per-clip acoustic descriptors),
-            s6_*.csv, s7_*.csv (banked analyses), prompts.csv
-notebooks/  scoring.ipynb (scoring stack), repro.ipynb (statistics)
-figures/    compliance_curves_ci.png, per_genre_curves.png, skew_L1L9.png
-docs/       MODELS.md (roster, revisions), TOS_AUDIT.md (license audit)
-paper/      main.tex, refs.bib (workshop submission source)
+├── paper/
+│   ├── farrell-ttm-direction-2026.pdf   # the paper (preprint)
+│   ├── main.tex                         # paper source
+│   └── refs.bib                         # verified bibliography
+├── data/
+│   ├── scored_full_v2.csv               # per-clip scores, raw + normalized lenses
+│   ├── features_verbal.csv              # per-clip acoustic descriptors
+│   ├── s6_*.csv, s7_*.csv               # banked analyses (CIs, decompositions, axes)
+│   └── prompts.csv                      # the frozen 50-prompt matrix
+├── notebooks/
+│   ├── scoring.ipynb                    # three-instrument scoring stack (Kaggle)
+│   └── repro.ipynb                      # regenerates every statistic in the paper
+├── figures/                             # compliance curves, per-genre curves, skew
+├── docs/
+│   ├── MODELS.md                        # model roster + exact checkpoint revisions
+│   └── TOS_AUDIT.md                     # license audit for the model roster
+├── LICENSE                              # MIT (analysis code)
+└── NOTICE                               # Stability AI attribution
 ```
 
 ## Audio exhibits
 
-Short audio exhibits for the failure gallery will be linked here upon
-de-anonymization; they are not stored in this repository. MusicGen-derived audio is CC-BY-NC and
-appears only in non-commercial research contexts.
+A curated failure gallery — *listen* to a model refuse "calm rock," hear the
+level-9 collapse — is in preparation and will be hosted on the project page
+(link will be added here). Exhibits will respect each model's license
+(MusicGen audio is CC-BY-NC and appears only in non-commercial research
+contexts). Until then, every quantitative claim is independently checkable
+from the released CSVs and notebooks above.
 
 ## Licensing and attribution
 
@@ -101,5 +117,16 @@ appears only in non-commercial research contexts.
 
 ## Citation
 
-Paper under review (double-blind); citation entry will be added on
-de-anonymization. Until then, cite this repository.
+```bibtex
+@misc{farrell2026direction,
+  author = {Farrell, Conner O.},
+  title  = {Do Text-to-Music Models Take Direction? An Instrumented Audit
+            of Energy-Instruction Compliance},
+  year   = {2026},
+  note   = {Preprint. Code and data:
+            https://github.com/ConnerFarrell/energy-audit},
+}
+```
+The arXiv ID and Zenodo DOI will be appended here once live. The companion
+instrument paper: Farrell, *The Arousal Index* (submitted to ICASSP 2027) —
+[intensity-index](https://github.com/ConnerFarrell/intensity-index).
