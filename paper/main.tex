@@ -1,0 +1,426 @@
+\documentclass{article}
+\usepackage[preprint,nonatbib]{neurips_2026}
+\usepackage[hidelinks]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage{url}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{xcolor}
+
+\newcommand{\ci}[2]{[#1,\,#2]}
+\urldef{\repourl}\url{https://github.com/ConnerFarrell/energy-audit}
+\newcommand{\inst}{Arousal Index}
+
+\title{Do Text-to-Music Models Take Direction?\\
+An Instrumented Audit of Energy-Instruction Compliance}
+
+\author{Conner O.\ Farrell\\
+  CCRMA, Stanford University\\
+  \texttt{conner@ccrma.stanford.edu}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Text-to-music systems are steered almost entirely through natural-language prompts, yet whether graded perceptual instructions are actually followed is largely unknown. We audit five open text-to-music models
+(2023--2026) on one well-measured perceptual axis: musical energy. A frozen matrix of genres $\times$ requested levels $\times$ phrasings (numeric ``energy level $L$ out of 11'' vs.\ a five-word verbal ladder), six generations per cell, yields 1{,}500 thirty-second clips. Each clip is scored by three instruments---an
+interpretable, calibrated arousal model, integrated loudness (LUFS), and CLAP
+text--audio similarity---and every analysis is repeated on loudness-normalized
+copies to separate ``changed the music'' from ``turned the volume knob.''
+Because the instrument is a sparse linear model over named features, compliance decomposes exactly into loudness, noisiness, and tonality---mechanisms, not only scores. We find:
+(1)~\emph{numeric} instructions do nothing measurable (all monotonicity CIs
+cover zero), while \emph{verbal} instructions move every model (verbal$-$numeric
+$\Delta\rho$ excludes zero for all five); (2)~usable dynamic range is
+nonetheless narrow---median achieved movement between ``very calm'' and
+``extremely intense'' spans $0.1$--$2.05$ points on an 11-point scale;
+(3)~a feature-level decomposition attributes compliance mostly to noisiness and
+tonality change rather than loudness (loudness share $-2$--$38\%$), and the one
+model with the largest loudness share independently loses the most compliance
+under loudness normalization; (4)~compliance concentrates inside
+genre-plausible energy bands; and (5)~one model's energy \emph{decreases} at the
+top instruction level on all three instruments. We release prompts, scores,
+features, and analysis code for full statistical reproduction.
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+
+Prompting is the primary interface to modern text-to-music (TTM) systems, and
+prompts routinely contain graded perceptual direction: \emph{a calm folk
+track}, \emph{extremely intense EDM}. Whether such direction is followed---monotonically, with usable range,
+consistently across genres and phrasings---has, to our knowledge, not been
+answered with graded instruction ladders and objective measurement. Existing adherence evaluation is dominated by a single scalar,
+CLAP text--audio similarity to the whole prompt \citep{evalsurvey2025}, which
+cannot say \emph{which} part of a prompt was honored, \emph{how much} the audio
+moved per unit of requested change, or \emph{by what acoustic means}.
+
+We treat this as a measurement problem. We fix one perceptual axis with
+unusually good measurement properties---arousal/energy, the most reliably rated
+affect dimension in music research \citep{russell1980circumplex,
+eerola2011comparison}---and deploy an interpretable, calibrated arousal
+instrument \citep{p0aanon} alongside integrated loudness \citep{itu2015bs1770}
+and CLAP similarity \citep{wu2023laionclap} over a frozen prompt matrix. The
+instrument's interpretability turns an adherence score into a
+\emph{discovery}: a sparse linear model over named acoustic features, its
+compliance signal decomposes exactly into loudness, noisiness, and tonality
+contributions---when a model ``adds energy,'' what did it change?
+
+\textbf{Contributions.}
+(1)~The first graded \emph{compliance curves} for perceptual energy
+instructions across five open TTM models spanning 2023--2026 and three
+architecture families, with clip-level bootstrap confidence intervals for
+monotonicity, dynamic range, and phrasing effects.
+(2)~A two-way mechanism decomposition---loudness-normalized re-scoring plus an
+exact feature-level attribution---showing that measured compliance is mostly
+musical-content change, quantifying each model's ``volume-knob'' share, and
+demonstrating that the two methods agree.
+(3)~A genre-plausibility analysis showing compliance is gated by what a genre
+palette can plausibly reach, and two top-of-scale phenomena: instruction
+saturation (energy \emph{falling} from level~7 to level~9) and instrument
+ceiling effects, disentangled using pre-calibration scores.
+(4)~A fully reproducible release: prompts, per-clip scores and features, and a
+notebook that regenerates every statistic in this paper from the released CSVs.
+
+\section{Related work}
+\label{sec:related}
+
+\textbf{Controllable music generation} spans text conditioning
+\citep{copet2023musicgen, evans2025sao, gong2026acestep} and signal-level
+controls \citep{musicongen2024}; recent work adds continuous valence--arousal
+conditioning precisely because text-based emotional prompting is considered
+unreliable \citep{laragen2025}. Our audit quantifies that assumed-weak
+baseline as graded curves.
+\textbf{Adherence evaluation} typically reports CLAP-style similarity between
+prompt and output \citep{evalsurvey2025}. Closest to our question, AImoclips
+\citep{go2025aimoclips} finds human-rated emotion conveyance biased toward
+neutrality; we find the objective analogue (clustered ``house levels,''
+narrow range) with graded ladders, phrasing contrasts, and an acoustic
+mechanism account that human ratings cannot provide. \textbf{Music emotion recognition} supplies the measurement
+substrate: continuous arousal annotations \citep{aljanaki2017deam,
+zhang2018pmemo} and evidence that arousal is the stable, acoustically
+grounded affect axis \citep{eerola2011comparison}.
+
+\section{Materials and method}
+\label{sec:method}
+
+\textbf{Models.} Five open checkpoints chosen to cross scale, era, and
+architecture: MusicGen-small and MusicGen-medium (2023; autoregressive LM over
+EnCodec tokens; scale axis held within family) \citep{copet2023musicgen};
+Stable Audio Open 1.0 (2024; latent diffusion) \citep{evans2025sao};
+Stable Audio 3 Small Music (2026; music-tuned latent diffusion; era axis held
+within vendor) \citep{sa3card2026}; and ACE-Step~1.5 turbo (2026; hybrid
+LM-planner$+$DiT, RL-tuned for prompt adherence) \citep{gong2026acestep}.
+We abbreviate mgs, mgm, sao, sa3s, ace. Commercial systems are excluded on
+license-risk grounds; the roster is open-weights only by design.
+
+\textbf{Prompt matrix (frozen before generation).} Five genre palettes
+(rock, EDM, hip-hop, acoustic folk, orchestral) $\times$ five requested levels
+$L \in \{1,3,5,7,9\}$ $\times$ two phrasings: numeric
+(``instrumental \emph{genre} track, energy level $L$ out of 11'') and verbal
+(``instrumental \emph{genre} track, \emph{descriptor}'' with the fixed ladder
+\emph{very calm / calm / moderate energy / energetic / extremely intense}).
+``Instrumental'' is prepended throughout to neutralize the vocal-capability
+confound (some rosters cannot sing). Six seeds per cell give
+$5{\times}50{\times}6 = 1{,}500$ clips of $\sim$30\,s.
+
+\textbf{Instruments.} All clips pass through one front end (mono sum,
+22.05\,kHz, first 30\,s \citep{mcfee2015librosa}) into three scorers.
+(i)~The \inst{} \citep{p0aanon}: a ridge regression over six descriptors of
+three named features---loudness (frame RMS), noisiness (zero-crossing rate),
+and a tonality index ($-10\log_{10}$ spectral flatness), each as mean and
+standard deviation---trained on DEAM arousal annotations
+\citep{aljanaki2017deam} ($R^2{=}0.29$, 5-fold), transferring to PMEmo
+\citep{zhang2018pmemo} at Spearman $\rho{=}0.77$, and isotonically calibrated
+(out-of-fold) to an absolute 0--11 scale. Its known limitation is inherited
+honestly: DEAM under-represents arousal extremes, so the calibrated scale
+compresses above $\sim$6.5; we therefore also report pre-calibration
+(``raw'') scores where the top of the scale matters (\S\ref{sec:droop}).
+(ii)~Integrated loudness in LUFS \citep{itu2015bs1770,
+steinmetz2021pyloudnorm}. (iii)~CLAP cosine similarity between each clip and
+its own prompt \citep{wu2023laionclap}. \textbf{Normalized lens:} every clip
+is additionally loudness-normalized to $-14$\,LUFS and re-scored by (i) and
+(iii); compliance that survives normalization reflects changed musical
+content, not gain.
+
+\textbf{Positive controls.} Real DEAM excerpts of known low vs.\ high arousal
+run through the identical stack score $3.7$--$4.1$ vs.\ $6.0$--$6.5$,
+confirming the instruments separate genuine arousal differences in this
+pipeline before any claim is made about generated audio.
+
+\textbf{Statistics.} Pre-committed before scoring: per model$\times$phrasing,
+the median score per level; monotonicity as Spearman $\rho$(level, score);
+dynamic range as the level-9 minus level-1 difference; the phrasing gap; and
+the normalized-lens decomposition---each with 2{,}000-resample clip-level
+bootstrap percentile 95\% CIs (seed-fixed; digit-reproducible from the released data). Mean-based deltas are
+reported alongside medians as a sensitivity analysis; where they diverge, the
+divergence itself is informative (\S\ref{sec:range}). The genre-band analysis
+uses energy bands fixed before scoring for the four instrumentation palettes;
+the rock band is analyst-set from a documented prior taxonomy and flagged as
+such, with a rock-excluded sensitivity check.
+
+\section{Results}
+
+\begin{table}[!t]
+  \caption{Monotonicity and dynamic range with 95\% clip-level bootstrap CIs
+  (B=2{,}000). $\Delta$ = level-9 minus level-1 \inst{} score (verbal);
+  median is the pre-registered estimator, mean is the sensitivity analysis.
+  Bold: CI excludes 0.}
+  \label{tab:main}
+  \centering
+  \small
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{lccccc}
+    \toprule
+    & $\rho$ numeric & $\rho$ verbal & $\Delta\rho$ (verb$-$num)
+    & median $\Delta$ & mean $\Delta$ \\
+    \midrule
+    mgs  & $.04\;\ci{-.13}{.20}$ & $\mathbf{.39}\;\ci{.25}{.51}$ & $\mathbf{+.35}\;\ci{.20}{.50}$ & $\mathbf{2.05}\;\ci{0.80}{2.40}$ & $\mathbf{0.93}\;\ci{0.40}{1.45}$ \\
+    mgm  & $.04\;\ci{-.13}{.20}$ & $\mathbf{.54}\;\ci{.41}{.64}$ & $\mathbf{+.50}\;\ci{.33}{.67}$ & $\mathbf{1.30}\;\ci{0.50}{2.10}$ & $\mathbf{1.28}\;\ci{0.91}{1.63}$ \\
+    sao  & $.01\;\ci{-.17}{.16}$ & $\mathbf{.50}\;\ci{.37}{.62}$ & $\mathbf{+.50}\;\ci{.37}{.63}$ & $\mathbf{1.30}\;\ci{0.55}{2.00}$ & $\mathbf{1.13}\;\ci{0.78}{1.50}$ \\
+    sa3s & $.04\;\ci{-.14}{.20}$ & $\mathbf{.38}\;\ci{.22}{.53}$ & $\mathbf{+.35}\;\ci{.22}{.48}$ & $\mathbf{1.60}\;\ci{0.55}{2.20}$ & $\mathbf{0.83}\;\ci{0.31}{1.33}$ \\
+    ace  & $.07\;\ci{-.09}{.23}$ & $\mathbf{.33}\;\ci{.17}{.48}$ & $\mathbf{+.26}\;\ci{.06}{.45}$ & $0.10\;\ci{-0.05}{0.70}$ & $0.18\;\ci{-0.12}{0.47}$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+\label{sec:results}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.76\linewidth]{compliance_curves_ci.png}
+  \caption{\textbf{Compliance curves.} Mean \inst{} score (0--11) vs.\
+  requested energy level, per model, with 95\% clip-level bootstrap bands
+  (B{=}2{,}000), for numeric (left) and verbal (right) phrasings. Numeric
+  curves are flat at each model's ``house level''; verbal curves rise, with
+  model-specific slopes, ceilings, and a top-level reversal for ace. The released notebook regenerates this figure.}
+  \label{fig:curves}
+\end{figure}
+
+\subsection{Numbers do nothing; words work---narrowly}
+\label{sec:range}
+
+Table~\ref{tab:main} gives the headline. Under \emph{numeric} instructions,
+no model moves: all Spearman CIs cover zero and every curve sits at a
+model-specific house level (numeric mean 6.04 sao, 5.83 mgm, 5.81 mgs, 5.80
+sa3s, 4.35 ace)---an objective counterpart to the ``bias toward neutrality''
+reported for categorical emotion intents \citep{go2025aimoclips}. Under
+\emph{verbal} instructions every model becomes reliably monotonic
+($\rho$ from $.33$ to $.54$, all CIs excluding zero), and the verbal$-$numeric
+contrast $\Delta\rho$ excludes zero for all five models. The instruction
+\emph{format} is not cosmetic: these systems parse ``extremely intense'' but
+not ``energy level 9 out of 11.''
+
+Achieved range is another matter. The pre-registered median movement from
+``very calm'' to ``extremely intense'' spans 0.10 (ace) to 2.05 (mgs) points
+of an 11-point scale---at best $\sim$19\% of the scale. Mean-based deltas are
+systematically smaller for the mid-pack (mgs 0.93 vs.\ median 2.05; sa3s 0.83
+vs.\ 1.60): the achieved-movement distribution is right-skewed, i.e., failure
+is \emph{clip-concentrated}---a minority of generations ignore the
+instruction and drag the mean; the typical clip complies more than the mean
+suggests. For ace, neither median nor mean excludes zero: the 2026
+adherence-tuned model has no established verbal energy range on this audit,
+in the direction opposite its design claim \citep{gong2026acestep}.
+
+
+
+\subsection{Mechanism: mostly the music, partly the volume knob}
+\label{sec:mechanism}
+
+Two independent decompositions agree (Table~\ref{tab:mech}). First, the
+\emph{normalized lens}: the content share---the fraction of each model's
+verbal $\Delta$ that survives $-14$\,LUFS normalization---is $.76$ (mgm),
+$.76$ (mgs), $.82$ (sa3s), and $.59$ (sao); ace's ratio is undefined (its raw $\Delta$ CI covers zero: no reliable compliance to decompose).
+Second, the \emph{feature attribution}: because the \inst{} is linear in
+standardized descriptors, each model's pre-calibration score delta splits
+exactly into loudness, noisiness, and tonality cluster contributions.
+Noisiness and tonality carry the movement for every complying model;
+loudness contributes at most 38\% (sao) and essentially nothing for mgm
+($-2\%$). The consistency check lands: sao's feature-level loudness share
+(38\%) matches its normalization-vanishing share ($1-.59=41\%$) via independent
+computations. Verbal LUFS deltas tell the same story from
+a third angle: sao raises loudness by $+6.3$\,dB from ``very calm'' to
+``extremely intense''---an order of magnitude in power---while ace's
+peak-normalizing decoder clamps loudness entirely ($-0.4$\,dB), a design
+property we report as behavior, not confound. \textbf{Practitioner reading:} ``adding energy'' predominantly means
+noisier, less tonal music; sao also leans on gain, which a mastering chain
+would erase.
+
+\begin{table}[!t]
+  \caption{Mechanism decomposition (verbal, level 9 $-$ level 1). Content
+  share = fraction of the calibrated $\Delta$ surviving $-14$\,LUFS
+  normalization (95\% CI). Cluster shares split the pre-calibration score
+  delta $\Delta_{\text{raw}}$ exactly; shares sum to 100\% and can exceed it
+  when clusters oppose.}
+  \label{tab:mech}
+  \centering\small
+  \small
+  \setlength{\tabcolsep}{5pt}
+  \begin{tabular}{lccrrr}
+    \toprule
+    & content share & $\Delta_{\text{raw}}$ & loudness & noisiness & tonality \\
+    \midrule
+    mgm  & $.76\;\ci{.63}{.91}$ & $+1.86$ & $-2\%$  & $62\%$ & $40\%$ \\
+    sa3s & $.82\;\ci{.64}{1.15}$ & $+0.73$ & $18\%$ & $39\%$ & $43\%$ \\
+    mgs  & $.76\;\ci{.47}{.99}$ & $+0.96$ & $21\%$ & $27\%$ & $53\%$ \\
+    sao  & $.59\;\ci{.50}{.69}$ & $+1.39$ & $38\%$ & $38\%$ & $24\%$ \\
+    ace  & undefined            & $+0.21$ & \multicolumn{3}{c}{(no reliable $\Delta$ to decompose)} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Compliance is gated by genre plausibility}
+\label{sec:bands}
+
+Requested levels were graded against per-genre plausible energy bands fixed
+before scoring (folk 0.5--5.5, EDM 4--8, hip-hop 2--7, orchestral 3--7;
+rock 5--8, analyst-set). Per-unit achieved movement concentrates on steps
+that stay inside the band: pooled in-band gain $+0.223$ per requested unit
+vs.\ $+0.033$ out-of-band (difference $+0.190$, CI \ci{+0.096}{+0.279};
+per-model differences significant for ace $+0.297$, sa3s $+0.291$, mgm
+$+0.206$; not for mgs $+0.132$ or sao $+0.026$). The pattern strengthens slightly
+when the analyst-set rock band is excluded (pooled difference $+0.217$,
+CI \ci{+0.111}{+0.321}).
+Notably, the model with the largest volume-knob share (sao) is the one whose
+compliance is \emph{not} band-gated---gain applies anywhere; content
+change is constrained by the palette. We report this as association, not causation. A genre-controlled
+check agrees: on a fixed-anchor CLAP axis whose anchors share each genre
+phrase, verbal moves every model and numeric stays flat---not cross-genre
+acoustics.
+Failure has direction: rock generations start near each model's ceiling even
+at ``very calm'' (mgm rock level-1 mean 6.37; sa3s 6.48)---these systems
+cannot make \emph{calm rock}---while folk fails upward, plateauing at 4--6
+under ``extremely intense.''
+
+\subsection{The top of the scale: saturation vs.\ instrument ceiling}
+\label{sec:droop}
+
+Three of five models score \emph{lower} at level 9 than 7 under verbal
+instruction---model behavior, or our instrument's top-end compression? Three
+witnesses adjudicate. For \textbf{ace} the drop is real on
+all three: calibrated \inst{} $-0.55$ \ci{-0.82}{-0.25}, own-prompt CLAP
+$-0.086$ \ci{-0.138}{-0.031}, and pre-calibration score $-0.37$
+\ci{-0.56}{-0.18}---pushed to ``extremely intense,'' ace produces audio that
+even matches its own prompt \emph{less}. For \textbf{mgs} the calibrated drop
+is ambiguous ($-0.42$ \ci{-0.86}{+0.03}) precisely because calibration
+compresses the top of the scale, but the pre-calibration score drops clearly
+($-0.73$ \ci{-1.37}{-0.15}, CLAP marginal at $-0.085$ \ci{-0.170}{+0.004}):
+real saturation, masked by the instrument ceiling. For \textbf{sa3s} no
+witness establishes a drop. mgm and sao rise on all witnesses. The same
+pre-calibration lens quantifies how much the ceiling understates top-end
+movement (e.g., mgm verbal $\Delta_{\text{raw}}{=}1.86$ \ci{1.47}{2.24}
+vs.\ calibrated $1.28$)---a caution for calibrated-instrument audits of generated audio. A full raw-scale replicate of Table~\ref{tab:main}
+(released) preserves the ordering ($\rho$ from $.34$, ace, to $.59$, mgm,
+all CIs excluding zero), and ace's raw $\Delta$ ($+0.21$ \ci{-0.03}{+0.43})
+still includes zero: the null range and the undefined content share are not
+ceiling artifacts.
+
+\subsection{Scale, era, and the frontier}
+\label{sec:narratives}
+
+Within family, the larger MusicGen is more monotonic in point estimate
+($.54$ vs.\ $.39$; $\Delta\rho\ {+}.15$ \ci{-.00}{+.32}, not established).
+Within vendor, two years (sao$\to$sa3s) improved musicality by ear while the
+compliance point estimate fell ($.50\to.38$; $\Delta\rho\ {-}.12$
+\ci{-.27}{+.02}): no decline established, but the interval nearly excludes
+any gain---better music, not better compliance.
+The 2026 adherence-RL-tuned frontier model (ace), as configured here, is the weakest complier on
+every estimate, with a genre-specific collapse (EDM per-genre $\rho{=}.08$
+vs.\ rock $.71$) and confirmed top-level saturation. A pre-registered directional hypothesis---rock shows lower verbal
+elasticity than instrumentation palettes---held for three of five models
+(rock-minus-others $\rho$: mgm $-.21$, sa3s $-.27$, sao $-.20$; mgs null;
+ace reversed via its EDM collapse); the edge-cell table reframes it as a
+ceiling: rock cannot go \emph{down}.
+
+\section{Limitations}
+\label{sec:limits}
+
+Our arousal instrument transfers from human-annotated music to generated
+audio; positive controls confirm it separates real arousal, three-instrument
+convergence carries the headline claims, but transfer error cannot be fully
+excluded---hence triangulated top-of-scale claims and reported
+pre-calibration scores. The calibrated scale compresses above $\sim$6.5.
+Own-prompt CLAP compares each clip to a different anchor text per level; a
+released fixed-anchor CLAP axis (genre-matched calm/intense anchors,
+\texttt{clap-htsat-unfused}, deterministic) replicates the contrast: all
+five verbal $\rho$ CIs exclude zero ($.27$--$.60$); numeric flat.
+CLAP inference was not bit-reproducible across runs (cell-mean drift
+$\le 0.033$; \inst{} and LUFS reproduce exactly); all CLAP verdicts are
+stable across observed draws; released values are from the canonical run. Six seeds per cell bound precision (hence CIs
+everywhere); clips are single 30-s windows; prompts are English; five genre
+palettes; open models only; no listener
+study---human benchmarks \citep{go2025aimoclips} are complementary evidence.
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+Deployed text-to-music systems take perceptual direction only in words,
+move a fraction of the requested range, mostly
+change the music rather than the volume---except where they don't, quantifiably---and comply mainly
+where the genre palette
+makes the request plausible. A calibrated, interpretable instrument makes each claim checkable: its weights decompose compliance. Prompts, scores, features, and the statistics notebook are released at \repourl{}.
+
+\paragraph{Responsible use statement.}
+
+This work audits open-weights music generators with open data; findings are aggregate measurements, not product judgments, and the released
+multi-instrument stack exposes single-metric gaming. Audio exhibits respect each model's license (MusicGen CC-BY-NC; Stability attribution; ACE-Step MIT); no human subjects or personal data are involved. Residual risks---steering generation toward manipulative affect, or misreading the instrument as a general emotion proxy---are mitigated by releasing the full stack, its negative results, and calibration limits.
+
+\paragraph{Acknowledgments.}
+The author thanks Chris Chafe for advising and guidance. The author used
+Anthropic's Claude to draft and revise prose; all claims, numbers, figures,
+and citations were verified by the author, who takes full responsibility for
+the content. Claude is not an author.
+
+\bibliographystyle{unsrtnat}
+\bibliography{refs}
+
+\appendix
+
+\section{Per-cell means and edge grading}
+\label{app:edge}
+Full model $\times$ genre $\times$ level verbal means with out-of-band
+markers are released as \texttt{s6\_edge\_cells.csv}; Table~\ref{tab:edge}
+reproduces the two directional examples cited in \S\ref{sec:bands}.
+
+\begin{table}[h]
+  \caption{Directional failure examples (verbal mean \inst{} score;
+  * = requested level outside the genre band).}
+  \label{tab:edge}
+  \centering\small
+  \begin{tabular}{lccccc}
+    \toprule
+    & $L{=}1$ & $L{=}3$ & $L{=}5$ & $L{=}7$ & $L{=}9$ \\
+    \midrule
+    mgm / rock & 6.37* & 6.38* & 6.48 & 6.50 & 6.48* \\
+    mgm / folk & 4.43 & 4.03 & 5.82 & 4.90* & 6.25* \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{Native-unit feature deltas}
+\label{app:feats}
+Level-9 minus level-1 changes in native units (verbal), released in
+\texttt{s6\_feature\_decomp.csv}: e.g., mgm raises zero-crossing rate by
+$+0.126$ and \emph{lowers} the tonality index by $-14.8$\,dB-equivalent while
+its RMS loudness is flat ($-0.009$); sao raises RMS by $+0.106$ (the largest
+in the roster), consistent with its 38\% loudness share.
+
+\section{Reproducibility}
+\label{app:repro}
+Corpus: 1{,}500 clips, $\sim$30\,s, six fixed seeds per cell. Scoring front
+end identical for all models (mono, 22.05\,kHz, 30\,s). All bootstrap CIs:
+2{,}000 clip-level resamples, percentile method, fixed seed; every statistic
+in the paper regenerates digit-for-digit from the released
+\texttt{scored\_full\_v2.csv} (per-clip scores, both lenses),
+\texttt{features\_verbal.csv} (per-clip descriptors), and the
+\texttt{s6\_*.csv} and \texttt{s7\_*.csv} banks via the released notebook. Model checkpoints and
+exact revisions are listed in the repository.
+
+\section{Prompt set}
+\label{app:prompts}
+All 50 prompts follow the two templates of \S\ref{sec:method}; the full list
+ships as \texttt{prompts.csv}.
+
+\end{document}
