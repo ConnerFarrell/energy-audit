@@ -1,21 +1,25 @@
 # P0b re-run · Step 1 · Tier-1 calibration
 
-## Attempt #2 (2026-11-07): **FAIL on the strict digit-for-digit rule by 15 cells, each off by 1 ULP; PASS (2,707/2,707) under attempt #1's comparison rule**
+## Attempt #2 (2026-11-07): **PASS — 2,707/2,707 cells match under the strict digit-for-digit rule** (after the re-bank below)
+
+*History: before the re-bank, attempt #2 matched 2,692/2,707 strict (15 cells in `s6_raw_ridge_level_means.csv` off by 1 ULP) and 2,707/2,707 under attempt #1's rule. After re-banking that one file from `data/arousal_index_ridge.json`, a fresh run matches 2,707/2,707 under both rules (notebook 43.8 s). The paper/README cross-check (§4, §10.4) is byte-identical before and after the re-bank: 216 match, 8 mismatch, 9 no source.*
 
 | | Attempt #1 | **Attempt #2** |
 |---|---:|---:|
 | Banked cells compared | 2,707 | **2,707** |
-| Match, strict rule (regenerated value rounds to the stored digits) | 2,501 | **2,692** |
+| Match, strict rule (regenerated value rounds to the stored digits) | 2,501 | **2,692** before re-bank → **2,707** after |
 | Match, attempt-1 rule (tolerance = half a stored digit + 1e-9) | 2,501 | **2,707** |
-| Mismatch | 5 | **15** (all ≤ 1 ULP; strict rule only) |
+| Mismatch | 5 | **15** before re-bank (all ≤ 1 ULP; strict rule only) → **0** after |
 | No code in `repro.ipynb` | 201 | **0** |
 | Row order and row count identical, all 9 bank files | n/a | **yes** |
 | Two executions byte-identical (9 tables + 4 figures) | yes | **yes** |
-| Notebook wall-clock | 15.4 s | **47.1 s** (final run; 44–47 s across 4 runs) |
+| Notebook wall-clock | 15.4 s | **43.8 s** (final run; 44–47 s on earlier runs) |
 
 **The 15 cells.** All 15 are in `s6_raw_ridge_level_means.csv`, which stores 16–17 significant digits. Each regenerated value differs from the banked one in its last digit, by exactly one unit in the last binary place: one ULP, about 1e-15 (e.g. ace L1 is 4.45670257206441**3** banked vs 4.45670257206441**2** regenerated). The other 10 cells in that file match exactly, as do all 95 `s6_feature_decomp.csv` cells and every downstream CI built from the raw-ridge scores (`droop_L9-L7_rawridge`, `rho_level_raw`, `delta_raw_*`), which are stored at 3–4 decimals.
 
 The cause is known. The ridge coefficients were re-fit from DEAM in this environment (scikit-learn 1.9.1, numpy 2.5.4) because the canonical run's coefficients were never saved. The re-fit agrees with the canonical model to about 1e-16 relative, and that last-bit difference carries into the 17-digit means. Every summation and row-order variant I tried gives the same result, so the difference is in the fitted coefficients themselves (the linear-algebra build), not in the notebook. It can only be closed by re-banking that one file from the saved coefficients, which changes committed data (your call), or by recovering the original coefficients, which no surviving output contains.
+
+**Re-bank (2026-11-07):** `data/s6_raw_ridge_level_means.csv` — Re-banked 2026-11-07 from the saved ridge coefficients (original fit's coefficients were never saved); values change at ~1e-15; no published number changes. Strict-rule result after the re-bank: 2,707/2,707.
 
 **What changed for attempt #2** (no change to any statistic's logic; no change to `data/*.csv`):
 1. `repro.ipynb`'s content-share function is replaced by the canonical one: NaN when |L9−L1| ≤ 1e-9. This closes all 5 attempt-1 mismatches.

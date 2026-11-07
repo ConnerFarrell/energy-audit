@@ -152,3 +152,7 @@ from the released CSVs and notebooks above.
 The arXiv ID and Zenodo DOI will be appended here once live. The companion
 instrument paper: Farrell, *The Arousal Index* (submitted to ICASSP 2027) —
 [intensity-index](https://github.com/ConnerFarrell/intensity-index).
+
+## Changelog
+
+- **2026-11-07** — `data/s6_raw_ridge_level_means.csv`: Re-banked 2026-11-07 from the saved ridge coefficients (original fit's coefficients were never saved); values change at ~1e-15; no published number changes. The coefficients are in `data/arousal_index_ridge.json` (re-fit by `scripts/fit_arousal_ridge.py`).
