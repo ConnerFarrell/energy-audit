@@ -3,6 +3,8 @@
 
 **Conner O. Farrell** · CCRMA, Stanford University · Preprint, 2026 (arXiv + DOI forthcoming) · the submitted PDF is in [`paper/`](paper/farrell-ttm-direction-2026.pdf) · the arousal instrument lives in its own repo: [intensity-index](https://github.com/ConnerFarrell/intensity-index)
 
+**Powered by Stability AI.** Portions of the audited corpus were generated with Stability AI models under the Stability AI Community License; the attribution notice is in [`NOTICE`](NOTICE).
+
 When you ask a text-to-music model for a *calm* folk track or an *extremely
 intense* EDM track, does the audio actually move? We generated 1,500 clips
 across a frozen matrix — 5 models × 5 genres × 5 requested energy levels ×
@@ -55,8 +57,22 @@ regenerates digit-for-digit from the released CSVs.
 
 ## Reproduce
 
-**Tier 1 — statistics (minutes, no GPU).** `repro.ipynb` regenerates every
-table, CI, and figure in the paper from `data/*.csv`.
+**Tier 1 — statistics (minutes, no GPU, no audio, no DEAM).**
+`notebooks/repro.ipynb` regenerates every banked table and CI (`data/s6_*.csv`,
+`data/s7_*.csv`) and every figure from `data/`:
+
+```bash
+pip install -r requirements.txt
+jupyter nbconvert --to notebook --execute --ExecutePreprocessor.timeout=-1 --output-dir repro_out notebooks/repro.ipynb
+```
+
+It can be run from anywhere inside the repo. Inputs come from `REPRO_DATA_DIR`
+(default `data/`, never written). Outputs go to `REPRO_OUT_DIR` (default
+`repro_out/`): regenerated banks in `tables/` under the same file names as
+`data/`, figures in `figures/`. The committed `figures/` folder is never
+overwritten by default. The pre-calibration ("raw ridge") statistics use the
+fitted Arousal Index ridge in `data/arousal_index_ridge.json`, re-fit from DEAM
+by `scripts/fit_arousal_ridge.py`.
 
 **Tier 2 — scoring (Kaggle, ~1 h GPU).** `notebooks/scoring.ipynb` re-runs
 the full three-instrument scoring stack over the generated corpus and
@@ -79,10 +95,15 @@ and generation harness notes in `docs/MODELS.md`.
 │   ├── scored_full_v2.csv               # per-clip scores, raw + normalized lenses
 │   ├── features_verbal.csv              # per-clip acoustic descriptors
 │   ├── s6_*.csv, s7_*.csv               # banked analyses (CIs, decompositions, axes)
+│   ├── arousal_index_ridge.json         # fitted Arousal Index ridge (Tier 1 needs no DEAM)
 │   └── prompts.csv                      # the frozen 50-prompt matrix
 ├── notebooks/
 │   ├── scoring.ipynb                    # three-instrument scoring stack (Kaggle)
+│   ├── clap-axis.ipynb                  # fixed-anchor CLAP axis (Kaggle)
 │   └── repro.ipynb                      # regenerates every statistic in the paper
+├── scripts/fit_arousal_ridge.py         # re-fits the ridge from DEAM
+├── requirements.txt                     # Tier-1 environment (pinned)
+├── requirements-scoring.txt             # Tier-2 environment (partly recorded)
 ├── figures/                             # compliance curves, per-genre curves, skew
 ├── docs/
 │   ├── MODELS.md                        # model roster + exact checkpoint revisions
@@ -103,10 +124,11 @@ from the released CSVs and notebooks above.
 ## Licensing and attribution
 
 - Analysis code in this repository: MIT.
-- **Powered by Stability AI.** Portions of the audited corpus were generated
-  with Stability AI models under the Stability AI Community License; see
-  `NOTICE`. Stable Audio 3 Small Music additionally redistributes a T5Gemma
-  text encoder under the Gemma Terms of Use.
+- Stability AI models (Stable Audio Open 1.0, Stable Audio 3 Small Music):
+  Stability AI Community License; attribution notice in `NOTICE` ("Powered by
+  Stability AI", see top of this README). Stable Audio 3 Small Music
+  additionally redistributes a T5Gemma text encoder under the Gemma Terms of
+  Use.
 - MusicGen checkpoints: code MIT, weights CC-BY-NC-4.0 (Meta); cite
   Copet et al., 2023 (arXiv:2306.05284). MusicGen-derived audio is used
   non-commercially only.

@@ -1,0 +1,19 @@
+# Tier 1 (notebooks/repro.ipynb, scripts/fit_arousal_ridge.py) — CPU only.
+# Python 3.12.3.
+#
+# Provenance: these are the exact versions repro.ipynb was verified with
+# (rerun/step1, attempt #2, 2026-11-07). They are NOT a record of the original
+# canonical run: that ran on Kaggle Docker image 28755 (Python 3.12), whose
+# numpy/pandas/scipy/scikit-learn versions were never recorded. Treat the
+# originals as unknown; these pins are known-good.
+numpy==2.5.4
+pandas==3.1.1
+scipy==1.18.1
+matplotlib==3.11.2
+scikit-learn==1.9.1      # only scripts/fit_arousal_ridge.py needs it
+nbconvert==7.17.2
+nbclient==0.11.0
+nbformat==5.11.1
+ipykernel==7.4.0
+jupyter-client==8.10.0
+jupyter-core==5.9.1
