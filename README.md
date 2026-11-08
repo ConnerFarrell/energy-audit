@@ -155,4 +155,4 @@ instrument paper: Farrell, *The Arousal Index* (submitted to ICASSP 2027) —
 
 ## Changelog
 
-- **2026-11-07** — `data/s6_raw_ridge_level_means.csv`: Re-banked 2026-11-07 from the saved ridge coefficients (original fit's coefficients were never saved); values change at ~1e-15; no published number changes. The coefficients are in `data/arousal_index_ridge.json` (re-fit by `scripts/fit_arousal_ridge.py`).
+- **2026-11-08** — `data/s6_raw_ridge_level_means.csv`: correction to the 2026-11-07 entry. The file was briefly re-banked from ridge coefficients fit outside the canonical environment (values changed at ~1e-15); that re-bank is reverted, and the file is back to its original values, which the pinned Kaggle image reproduces exactly (25/25). `data/arousal_index_ridge.json` is now fit on that pinned image (`scripts/fit_arousal_ridge.py`). No published number changed at any point.
