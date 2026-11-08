@@ -1,4 +1,4 @@
-# P0b re-run · Step 2 · Tier-2 rescoring — **FAIL on the determinism gate (last-binary-digit level); every cross-run check passes**
+# P0b re-run · Step 2 · Tier-2 rescoring — **FAIL on the original determinism gate; ACCEPTED 2026-11-08 under the revised standard (§10)**
 
 **Verdict: FAIL**, by the gate as specified ("run one model twice to confirm identical scores"). Rescoring all 300 sao clips a second time in the same Kaggle session gave bit-identical Arousal Index values, but **LUFS differed on 67/300 clips by exactly 1 ULP** (one unit in the last binary place; max 3.6e-15 dB), and CLAP on 173/300 (`clap`) and 163/300 (`clap_n`) clips, by at most about 1e-16 absolute. Nothing was changed to make it pass.
 
@@ -166,3 +166,15 @@ Not committed:
 2. **Revert the Step-1 re-bank** of `s6_raw_ridge_level_means.csv` and regenerate the ridge JSON on the pinned image (§4).
 3. **Adopt this run's CLAP** (`kaggle_out/scored_full_v2.csv`, `clap`/`clap_n`) as the banked CLAP in `data/`? That changes committed data and the CLAP-dependent banks, so I haven't done it.
 4. **README CLAP drift bound** (≤ 0.033) is contradicted by the data (0.042). Wording change pending your call.
+
+---
+
+## 10. Decisions applied (2026-11-08)
+
+1. **Determinism standard, accepted as revised.** Fresh runs on the pinned image must match the bank exactly: **achieved** (p0a, p0a_n and LUFS 1,500/1,500 bit-identical; non-CLAP banks 997/997). Repeats *within one session* may differ by at most 1e-12 relative. The measured maximum was about 1e-15 for LUFS (1 ULP) and about 1e-16 absolute for CLAP, which is within the limit. This is now stated in the README under Tier 2.
+2. **Re-bank reverted.** `data/s6_raw_ridge_level_means.csv` is byte-identical to the original again. `data/arousal_index_ridge.json` is refit on the pinned image (CPU run `energy-audit-ridge-refit`). **The Tier-1 strict check on that image is 2,688/2,707, not 2,707**: 8 raw-ridge cells off by ≤ 1 ULP and 11 feature-decomp cells by 1–225 ULP. The details and the hypothesis are in the Step 1 report's "Current status". The changelog line in the README is corrected.
+3. **Seeded CLAP saved; banked CLAP untouched.** This run's `clap`/`clap_n` are in `data/clap_seeded_2026-11-07.csv` (1,500 rows; round-trip checked exact). The CLAP-dependent tables derived from it are in `rerun/step2/clap_seeded_derived/`. **The paper's CLAP numbers (§4.4 droop, and every CLAP-dependent figure) are pending a RESEARCH decision** on which run to cite: the July bank, or this seeded run.
+4. **README drift claim replaced.** "CLAP drift ≤ 0.033" now reads as measured: unseeded cell-mean drift up to 0.042, scoring now seeded.
+5. **Listening pack.** Private Kaggle notebook `energy-audit-listen-clips` (pinned image, CPU) extracts only the three clips and writes one spectrogram PNG per clip. Each PNG has three panels: the file as generated (mono sum, native rate), the scorer's input (mono, 22.05 kHz, first 30 s), and that input after −14 LUFS normalization.
+   - **Verified sources:** `sa3s__rock_L7_num__s1.wav` from `audio_C.tar`, `ace__rock_L1_verb__s1.wav` from `audio_D.tar`, `mgm__edm_L1_num__s5.wav` from `audio_A.tar`.
+   - **Download:** the three WAVs and PNGs are in that notebook's Output tab. They are **not committed** here: MusicGen-derived audio, and images made from it, stay out of this public repo under the CC-BY-NC terms in `docs/TOS_AUDIT.md`. The notebook source is `kaggle_listen/energy-audit-listen-clips.ipynb`.
