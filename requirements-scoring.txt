@@ -1,0 +1,18 @@
+# Tier 2 (notebooks/scoring.ipynb, notebooks/clap-axis.ipynb) — Kaggle, GPU.
+# Canonical runs: Kaggle Docker image 28755, Python 3.12, CUDA 12.8.
+#
+# RECORDED (printed by clap-axis.ipynb in its saved output and in the
+# canonical run log, 2026-07-24):
+transformers==5.0.0
+torch==2.10.0            # recorded as 2.10.0+cu128 (CUDA 12.8 build)
+#
+# NOT RECORDED: the image's versions of the packages below were never
+# printed or saved. Left unpinned on purpose; pin them from the image if
+# you need an exact rebuild. Do not read these lines as known versions.
+librosa
+pyloudnorm
+soundfile
+numpy
+pandas
+scipy
+scikit-learn

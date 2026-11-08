@@ -1,0 +1,234 @@
+where,claim,reported,source_value,status,source
+tex Table 1,mgs rho numeric point,.04,0.0408,MATCH,s6_bootstrap_cis rho_level_p0a/numeric
+tex Table 1,mgs rho numeric lo,-.13,-0.1268,MATCH,s6_bootstrap_cis rho_level_p0a/numeric
+tex Table 1,mgs rho numeric hi,.20,0.1966,MATCH,s6_bootstrap_cis rho_level_p0a/numeric
+tex Table 1,mgs rho verbal point,.39,0.3876,MATCH,s6_bootstrap_cis rho_level_p0a/verbal
+tex Table 1,mgs rho verbal lo,.25,0.2468,MATCH,s6_bootstrap_cis rho_level_p0a/verbal
+tex Table 1,mgs rho verbal hi,.51,0.5123,MATCH,s6_bootstrap_cis rho_level_p0a/verbal
+tex Table 1,mgs delta rho point,.35,0.3468,MATCH,s6_bootstrap_cis phrasing_drho/verbal-numeric
+tex Table 1,mgs delta rho lo,.20,0.1993,MATCH,s6_bootstrap_cis phrasing_drho/verbal-numeric
+tex Table 1,mgs delta rho hi,.50,0.4965,MATCH,s6_bootstrap_cis phrasing_drho/verbal-numeric
+tex Table 1,mgs median delta point,2.05,2.05,MATCH,s6_bootstrap_cis delta_L9-L1_median/verbal
+tex Table 1,mgs median delta lo,0.80,0.8,MATCH,s6_bootstrap_cis delta_L9-L1_median/verbal
+tex Table 1,mgs median delta hi,2.40,2.4,MATCH,s6_bootstrap_cis delta_L9-L1_median/verbal
+tex Table 1,mgs mean delta point,0.93,0.9333,MATCH,s6_bootstrap_cis delta_L9-L1_mean/verbal
+tex Table 1,mgs mean delta lo,0.40,0.3967,MATCH,s6_bootstrap_cis delta_L9-L1_mean/verbal
+tex Table 1,mgs mean delta hi,1.45,1.45,MATCH,s6_bootstrap_cis delta_L9-L1_mean/verbal
+tex Table 1,mgm rho numeric point,.04,0.0383,MATCH,s6_bootstrap_cis rho_level_p0a/numeric
+tex Table 1,mgm rho numeric lo,-.13,-0.134,MATCH,s6_bootstrap_cis rho_level_p0a/numeric
+tex Table 1,mgm rho numeric hi,.20,0.2021,MATCH,s6_bootstrap_cis rho_level_p0a/numeric
+tex Table 1,mgm rho verbal point,.54,0.5383,MATCH,s6_bootstrap_cis rho_level_p0a/verbal
+tex Table 1,mgm rho verbal lo,.41,0.4139,MATCH,s6_bootstrap_cis rho_level_p0a/verbal
+tex Table 1,mgm rho verbal hi,.64,0.6438,MATCH,s6_bootstrap_cis rho_level_p0a/verbal
+tex Table 1,mgm delta rho point,.50,0.5,MATCH,s6_bootstrap_cis phrasing_drho/verbal-numeric
+tex Table 1,mgm delta rho lo,.33,0.333,MATCH,s6_bootstrap_cis phrasing_drho/verbal-numeric
+tex Table 1,mgm delta rho hi,.67,0.6685,MATCH,s6_bootstrap_cis phrasing_drho/verbal-numeric
+tex Table 1,mgm median delta point,1.30,1.3,MATCH,s6_bootstrap_cis delta_L9-L1_median/verbal
+tex Table 1,mgm median delta lo,0.50,0.5,MATCH,s6_bootstrap_cis delta_L9-L1_median/verbal
+tex Table 1,mgm median delta hi,2.10,2.1,MATCH,s6_bootstrap_cis delta_L9-L1_median/verbal
+tex Table 1,mgm mean delta point,1.28,1.2767,MATCH,s6_bootstrap_cis delta_L9-L1_mean/verbal
+tex Table 1,mgm mean delta lo,0.91,0.91,MATCH,s6_bootstrap_cis delta_L9-L1_mean/verbal
+tex Table 1,mgm mean delta hi,1.63,1.6267,MATCH,s6_bootstrap_cis delta_L9-L1_mean/verbal
+tex Table 1,sao rho numeric point,.01,0.0071,MATCH,s6_bootstrap_cis rho_level_p0a/numeric
+tex Table 1,sao rho numeric lo,-.17,-0.1653,MATCH,s6_bootstrap_cis rho_level_p0a/numeric
+tex Table 1,sao rho numeric hi,.16,0.1641,MATCH,s6_bootstrap_cis rho_level_p0a/numeric
+tex Table 1,sao rho verbal point,.50,0.5042,MATCH,s6_bootstrap_cis rho_level_p0a/verbal
+tex Table 1,sao rho verbal lo,.37,0.3672,MATCH,s6_bootstrap_cis rho_level_p0a/verbal
+tex Table 1,sao rho verbal hi,.62,0.6186,MATCH,s6_bootstrap_cis rho_level_p0a/verbal
+tex Table 1,sao delta rho point,.50,0.4972,MATCH,s6_bootstrap_cis phrasing_drho/verbal-numeric
+tex Table 1,sao delta rho lo,.37,0.3702,MATCH,s6_bootstrap_cis phrasing_drho/verbal-numeric
+tex Table 1,sao delta rho hi,.63,0.6268,MATCH,s6_bootstrap_cis phrasing_drho/verbal-numeric
+tex Table 1,sao median delta point,1.30,1.3,MATCH,s6_bootstrap_cis delta_L9-L1_median/verbal
+tex Table 1,sao median delta lo,0.55,0.55,MATCH,s6_bootstrap_cis delta_L9-L1_median/verbal
+tex Table 1,sao median delta hi,2.00,2,MATCH,s6_bootstrap_cis delta_L9-L1_median/verbal
+tex Table 1,sao mean delta point,1.13,1.1333,MATCH,s6_bootstrap_cis delta_L9-L1_mean/verbal
+tex Table 1,sao mean delta lo,0.78,0.78,MATCH,s6_bootstrap_cis delta_L9-L1_mean/verbal
+tex Table 1,sao mean delta hi,1.50,1.4967,MATCH,s6_bootstrap_cis delta_L9-L1_mean/verbal
+tex Table 1,sa3s rho numeric point,.04,0.0347,MISMATCH,s6_bootstrap_cis rho_level_p0a/numeric
+tex Table 1,sa3s rho numeric lo,-.14,-0.1392,MATCH,s6_bootstrap_cis rho_level_p0a/numeric
+tex Table 1,sa3s rho numeric hi,.20,0.1981,MATCH,s6_bootstrap_cis rho_level_p0a/numeric
+tex Table 1,sa3s rho verbal point,.38,0.3844,MATCH,s6_bootstrap_cis rho_level_p0a/verbal
+tex Table 1,sa3s rho verbal lo,.22,0.2226,MATCH,s6_bootstrap_cis rho_level_p0a/verbal
+tex Table 1,sa3s rho verbal hi,.53,0.5253,MATCH,s6_bootstrap_cis rho_level_p0a/verbal
+tex Table 1,sa3s delta rho point,.35,0.3496,MATCH,s6_bootstrap_cis phrasing_drho/verbal-numeric
+tex Table 1,sa3s delta rho lo,.22,0.2221,MATCH,s6_bootstrap_cis phrasing_drho/verbal-numeric
+tex Table 1,sa3s delta rho hi,.48,0.4822,MATCH,s6_bootstrap_cis phrasing_drho/verbal-numeric
+tex Table 1,sa3s median delta point,1.60,1.6,MATCH,s6_bootstrap_cis delta_L9-L1_median/verbal
+tex Table 1,sa3s median delta lo,0.55,0.55,MATCH,s6_bootstrap_cis delta_L9-L1_median/verbal
+tex Table 1,sa3s median delta hi,2.20,2.2,MATCH,s6_bootstrap_cis delta_L9-L1_median/verbal
+tex Table 1,sa3s mean delta point,0.83,0.83,MATCH,s6_bootstrap_cis delta_L9-L1_mean/verbal
+tex Table 1,sa3s mean delta lo,0.31,0.3067,MATCH,s6_bootstrap_cis delta_L9-L1_mean/verbal
+tex Table 1,sa3s mean delta hi,1.33,1.3267,MATCH,s6_bootstrap_cis delta_L9-L1_mean/verbal
+tex Table 1,ace rho numeric point,.07,0.0705,MATCH,s6_bootstrap_cis rho_level_p0a/numeric
+tex Table 1,ace rho numeric lo,-.09,-0.089,MATCH,s6_bootstrap_cis rho_level_p0a/numeric
+tex Table 1,ace rho numeric hi,.23,0.2283,MATCH,s6_bootstrap_cis rho_level_p0a/numeric
+tex Table 1,ace rho verbal point,.33,0.3281,MATCH,s6_bootstrap_cis rho_level_p0a/verbal
+tex Table 1,ace rho verbal lo,.17,0.1672,MATCH,s6_bootstrap_cis rho_level_p0a/verbal
+tex Table 1,ace rho verbal hi,.48,0.4758,MATCH,s6_bootstrap_cis rho_level_p0a/verbal
+tex Table 1,ace delta rho point,.26,0.2577,MATCH,s6_bootstrap_cis phrasing_drho/verbal-numeric
+tex Table 1,ace delta rho lo,.06,0.0632,MATCH,s6_bootstrap_cis phrasing_drho/verbal-numeric
+tex Table 1,ace delta rho hi,.45,0.4508,MATCH,s6_bootstrap_cis phrasing_drho/verbal-numeric
+tex Table 1,ace median delta point,0.10,0.1,MATCH,s6_bootstrap_cis delta_L9-L1_median/verbal
+tex Table 1,ace median delta lo,-0.05,-0.05,MATCH,s6_bootstrap_cis delta_L9-L1_median/verbal
+tex Table 1,ace median delta hi,0.70,0.7,MATCH,s6_bootstrap_cis delta_L9-L1_median/verbal
+tex Table 1,ace mean delta point,0.18,0.1833,MATCH,s6_bootstrap_cis delta_L9-L1_mean/verbal
+tex Table 1,ace mean delta lo,-0.12,-0.1201,MATCH,s6_bootstrap_cis delta_L9-L1_mean/verbal
+tex Table 1,ace mean delta hi,0.47,0.47,MATCH,s6_bootstrap_cis delta_L9-L1_mean/verbal
+tex §4.1 l.207,sao house level,6.04,6.04467,MATCH,scored_full_v2 numeric mean
+tex §4.1 l.207,mgm house level,5.83,5.834,MATCH,scored_full_v2 numeric mean
+tex §4.1 l.207,mgs house level,5.81,5.80733,MATCH,scored_full_v2 numeric mean
+tex §4.1 l.207,sa3s house level,5.80,5.80333,MATCH,scored_full_v2 numeric mean
+tex §4.1 l.207,ace house level,4.35,4.35,MATCH,scored_full_v2 numeric mean
+tex Table 2,mgm content share point,.76,0.7624,MATCH,s6_bootstrap_cis K4
+tex Table 2,mgm content share lo,.63,0.627,MATCH,s6_bootstrap_cis K4
+tex Table 2,mgm content share hi,.91,0.9124,MATCH,s6_bootstrap_cis K4
+tex Table 2,mgm d_raw,1.86,1.857,MATCH,s6_feature_decomp
+tex Table 2,mgm loudness_share,-2%,-1.9,MATCH,s6_feature_decomp
+tex Table 2,mgm noisiness_share,62%,62.3,MATCH,s6_feature_decomp
+tex Table 2,mgm tonality_share,40%,39.7,MATCH,s6_feature_decomp
+tex Table 2,sa3s content share point,.82,0.8153,MATCH,s6_bootstrap_cis K4
+tex Table 2,sa3s content share lo,.64,0.6392,MATCH,s6_bootstrap_cis K4
+tex Table 2,sa3s content share hi,1.15,1.1473,MATCH,s6_bootstrap_cis K4
+tex Table 2,sa3s d_raw,0.73,0.728,MATCH,s6_feature_decomp
+tex Table 2,sa3s loudness_share,18%,18.3,MATCH,s6_feature_decomp
+tex Table 2,sa3s noisiness_share,39%,39.1,MATCH,s6_feature_decomp
+tex Table 2,sa3s tonality_share,43%,42.6,MATCH,s6_feature_decomp
+tex Table 2,mgs content share point,.76,0.7571,MATCH,s6_bootstrap_cis K4
+tex Table 2,mgs content share lo,.47,0.4712,MATCH,s6_bootstrap_cis K4
+tex Table 2,mgs content share hi,.99,0.9878,MATCH,s6_bootstrap_cis K4
+tex Table 2,mgs d_raw,0.96,0.965,MATCH (half-up 0.97 / half-even 0.96),s6_feature_decomp
+tex Table 2,mgs loudness_share,21%,20.7,MATCH,s6_feature_decomp
+tex Table 2,mgs noisiness_share,27%,26.6,MATCH,s6_feature_decomp
+tex Table 2,mgs tonality_share,53%,52.7,MATCH,s6_feature_decomp
+tex Table 2,sao content share point,.59,0.5912,MATCH,s6_bootstrap_cis K4
+tex Table 2,sao content share lo,.50,0.5028,MATCH,s6_bootstrap_cis K4
+tex Table 2,sao content share hi,.69,0.686,MATCH,s6_bootstrap_cis K4
+tex Table 2,sao d_raw,1.39,1.389,MATCH,s6_feature_decomp
+tex Table 2,sao loudness_share,38%,38.4,MATCH,s6_feature_decomp
+tex Table 2,sao noisiness_share,38%,38,MATCH,s6_feature_decomp
+tex Table 2,sao tonality_share,24%,23.6,MATCH,s6_feature_decomp
+tex Table 2,ace d_raw,0.21,0.208,MATCH,s6_feature_decomp
+tex §4.2 l.244-246,sao verbal LUFS L9-L1 (dB),6.3,6.325,MATCH,s6_level_means lufs
+tex §4.2 l.244-246,ace verbal LUFS L9-L1 (dB),-0.4,-0.378,MATCH,s6_level_means lufs
+tex §4.3 l.280,pooled in-band gain,0.223,,NO SOURCE IN REPO,only the difference is banked/regenerated
+tex §4.3 l.280,pooled out-of-band gain,0.033,,NO SOURCE IN REPO,only the difference is banked/regenerated
+tex §4.3 l.281,pooled difference point,0.190,0.1903,MATCH,s6_bootstrap_cis
+tex §4.3 l.281,pooled difference lo,0.096,0.0956,MATCH,s6_bootstrap_cis
+tex §4.3 l.281,pooled difference hi,0.279,0.2794,MATCH,s6_bootstrap_cis
+tex §4.3 l.282,ace in-minus-out,0.297,0.2969,MATCH,s6_bootstrap_cis
+tex §4.3 l.282,sa3s in-minus-out,0.291,0.2906,MATCH,s6_bootstrap_cis
+tex §4.3 l.282,mgm in-minus-out,0.206,0.2063,MATCH,s6_bootstrap_cis
+tex §4.3 l.282,mgs in-minus-out,0.132,0.1319,MATCH,s6_bootstrap_cis
+tex §4.3 l.282,sao in-minus-out,0.026,0.026,MATCH,s6_bootstrap_cis
+tex §4.3 l.284,rock-excluded difference point,0.217,0.2166,MATCH,s7_bootstrap_cis
+tex §4.3 l.284,rock-excluded difference lo,0.111,0.1113,MATCH,s7_bootstrap_cis
+tex §4.3 l.284,rock-excluded difference hi,0.321,0.3211,MATCH,s7_bootstrap_cis
+tex §4.3 l.293,mgm rock L1,6.37,6.37,MATCH,s6_edge_cells
+tex §4.3 l.293,sa3s rock L1,6.48,6.48,MATCH,s6_edge_cells
+tex §4.4 l.303-309,ace droop_L9-L7_p0a point,-0.55,-0.5533,MATCH,s6_bootstrap_cis
+tex §4.4 l.303-309,ace droop_L9-L7_p0a lo,-0.82,-0.8233,MATCH,s6_bootstrap_cis
+tex §4.4 l.303-309,ace droop_L9-L7_p0a hi,-0.25,-0.25,MATCH,s6_bootstrap_cis
+tex §4.4 l.303-309,ace droop_L9-L7_clap point,-0.086,-0.0806,MISMATCH,s6_bootstrap_cis
+tex §4.4 l.303-309,ace droop_L9-L7_clap lo,-0.138,-0.132,MISMATCH,s6_bootstrap_cis
+tex §4.4 l.303-309,ace droop_L9-L7_clap hi,-0.031,-0.0269,MISMATCH,s6_bootstrap_cis
+tex §4.4 l.303-309,ace droop_L9-L7_rawridge point,-0.37,-0.3692,MATCH,s6_bootstrap_cis
+tex §4.4 l.303-309,ace droop_L9-L7_rawridge lo,-0.56,-0.5586,MATCH,s6_bootstrap_cis
+tex §4.4 l.303-309,ace droop_L9-L7_rawridge hi,-0.18,-0.1803,MATCH,s6_bootstrap_cis
+tex §4.4 l.303-309,mgs droop_L9-L7_p0a point,-0.42,-0.42,MATCH,s6_bootstrap_cis
+tex §4.4 l.303-309,mgs droop_L9-L7_p0a lo,-0.86,-0.8567,MATCH,s6_bootstrap_cis
+tex §4.4 l.303-309,mgs droop_L9-L7_p0a hi,0.03,0.0268,MATCH,s6_bootstrap_cis
+tex §4.4 l.303-309,mgs droop_L9-L7_rawridge point,-0.73,-0.7311,MATCH,s6_bootstrap_cis
+tex §4.4 l.303-309,mgs droop_L9-L7_rawridge lo,-1.37,-1.3699,MATCH,s6_bootstrap_cis
+tex §4.4 l.303-309,mgs droop_L9-L7_rawridge hi,-0.15,-0.1468,MATCH,s6_bootstrap_cis
+tex §4.4 l.303-309,mgs droop_L9-L7_clap point,-0.085,-0.0458,MISMATCH,s6_bootstrap_cis
+tex §4.4 l.303-309,mgs droop_L9-L7_clap lo,-0.170,-0.1202,MISMATCH,s6_bootstrap_cis
+tex §4.4 l.303-309,mgs droop_L9-L7_clap hi,0.004,0.0302,MISMATCH,s6_bootstrap_cis
+tex §4.4 l.313,mgm delta_raw_mean point,1.86,1.8567,MATCH,s7_bootstrap_cis
+tex §4.4 l.313,mgm delta_raw_mean lo,1.47,1.4651,MATCH,s7_bootstrap_cis
+tex §4.4 l.313,mgm delta_raw_mean hi,2.24,2.2401,MATCH,s7_bootstrap_cis
+tex §4.4 l.315,raw rho ace,.34,0.3418,MATCH,s7_bootstrap_cis
+tex §4.4 l.315,raw rho mgm,.59,0.5864,MATCH,s7_bootstrap_cis
+tex §4.4 l.316,ace delta_raw_mean point,0.21,0.2078,MATCH,s7_bootstrap_cis
+tex §4.4 l.316,ace delta_raw_mean lo,-0.03,-0.0342,MATCH,s7_bootstrap_cis
+tex §4.4 l.316,ace delta_raw_mean hi,0.43,0.4331,MATCH,s7_bootstrap_cis
+tex §4.5,family_drho scale_mgm-mgs point,0.15,0.1508,MATCH,s7_bootstrap_cis
+tex §4.5,family_drho scale_mgm-mgs lo,-0.00,-0.0006,MATCH,s7_bootstrap_cis
+tex §4.5,family_drho scale_mgm-mgs hi,0.32,0.3151,MATCH,s7_bootstrap_cis
+tex §4.5,family_drho era_sa3s-sao point,-0.12,-0.1199,MATCH,s7_bootstrap_cis
+tex §4.5,family_drho era_sa3s-sao lo,-0.27,-0.267,MATCH,s7_bootstrap_cis
+tex §4.5,family_drho era_sa3s-sao hi,0.02,0.024,MATCH,s7_bootstrap_cis
+tex §4.5,"ace per-genre rho edm (computed directly, not banked)",.08,0.0760006,MATCH,spearman on scored_full_v2 (my computation)
+tex §4.5,"ace per-genre rho rock (computed directly, not banked)",.71,0.705495,MATCH,spearman on scored_full_v2 (my computation)
+tex §4.5,mgm rock-minus-others rho,-.21,,NO SOURCE IN REPO,definition not in repo; not banked
+tex §4.5,sa3s rock-minus-others rho,-.27,,NO SOURCE IN REPO,definition not in repo; not banked
+tex §4.5,sao rock-minus-others rho,-.20,,NO SOURCE IN REPO,definition not in repo; not banked
+tex §4.5,mgm/mgs drho .54 vs .39,.54,0.5383,MATCH,s6_bootstrap_cis
+README #2 / tex,axis verbal rho ace,.27,0.2743,MATCH,s7_bootstrap_cis
+README #2 / tex,axis verbal rho mgm,.60,0.5961,MATCH,s7_bootstrap_cis
+README #2,"clip-level agreement AI vs axis rho=.70 (all 1500 clips, my computation)",.70,0.710463,MISMATCH,spearman on scored_full_v2 x s7_clap_axis (definition not stated)
+README #2,"same, verbal clips only (alternative reading)",.70,0.70164,MATCH,same
+README #2,median range low (ace),0.1,0.1,MATCH,s7_leaderboard
+README #2,median range high (mgs),2.05,2.05,MATCH,s7_leaderboard
+README #3,content share low (sao) 59%,59%,59.12,MATCH,s6_bootstrap_cis
+README #3,content share high (sa3s) 82%,82%,81.53,MATCH,s6_bootstrap_cis
+README #3,sao loudness share 38%,38%,38.4,MATCH,s6_feature_decomp
+README leaderboard,mgm rho_level_p0a point,.54,0.5383,MATCH,s6_bootstrap_cis
+README leaderboard,mgm rho_level_p0a lo,.41,0.4139,MATCH,s6_bootstrap_cis
+README leaderboard,mgm rho_level_p0a hi,.64,0.6438,MATCH,s6_bootstrap_cis
+README leaderboard,mgm delta_L9-L1_median point,1.30,1.3,MATCH,s6_bootstrap_cis
+README leaderboard,mgm delta_L9-L1_median lo,0.50,0.5,MATCH,s6_bootstrap_cis
+README leaderboard,mgm delta_L9-L1_median hi,2.10,2.1,MATCH,s6_bootstrap_cis
+README leaderboard,mgm K4_content_share point,.76,0.7624,MATCH,s6_bootstrap_cis
+README leaderboard,mgm K4_content_share lo,.63,0.627,MATCH,s6_bootstrap_cis
+README leaderboard,mgm K4_content_share hi,.91,0.9124,MATCH,s6_bootstrap_cis
+README leaderboard,sao rho_level_p0a point,.50,0.5042,MATCH,s6_bootstrap_cis
+README leaderboard,sao rho_level_p0a lo,.37,0.3672,MATCH,s6_bootstrap_cis
+README leaderboard,sao rho_level_p0a hi,.62,0.6186,MATCH,s6_bootstrap_cis
+README leaderboard,sao delta_L9-L1_median point,1.30,1.3,MATCH,s6_bootstrap_cis
+README leaderboard,sao delta_L9-L1_median lo,0.55,0.55,MATCH,s6_bootstrap_cis
+README leaderboard,sao delta_L9-L1_median hi,2.00,2,MATCH,s6_bootstrap_cis
+README leaderboard,sao K4_content_share point,.59,0.5912,MATCH,s6_bootstrap_cis
+README leaderboard,sao K4_content_share lo,.50,0.5028,MATCH,s6_bootstrap_cis
+README leaderboard,sao K4_content_share hi,.69,0.686,MATCH,s6_bootstrap_cis
+README leaderboard,mgs rho_level_p0a point,.39,0.3876,MATCH,s6_bootstrap_cis
+README leaderboard,mgs rho_level_p0a lo,.25,0.2468,MATCH,s6_bootstrap_cis
+README leaderboard,mgs rho_level_p0a hi,.51,0.5123,MATCH,s6_bootstrap_cis
+README leaderboard,mgs delta_L9-L1_median point,2.05,2.05,MATCH,s6_bootstrap_cis
+README leaderboard,mgs delta_L9-L1_median lo,0.80,0.8,MATCH,s6_bootstrap_cis
+README leaderboard,mgs delta_L9-L1_median hi,2.40,2.4,MATCH,s6_bootstrap_cis
+README leaderboard,mgs K4_content_share point,.76,0.7571,MATCH,s6_bootstrap_cis
+README leaderboard,mgs K4_content_share lo,.47,0.4712,MATCH,s6_bootstrap_cis
+README leaderboard,mgs K4_content_share hi,.99,0.9878,MATCH,s6_bootstrap_cis
+README leaderboard,sa3s rho_level_p0a point,.38,0.3844,MATCH,s6_bootstrap_cis
+README leaderboard,sa3s rho_level_p0a lo,.22,0.2226,MATCH,s6_bootstrap_cis
+README leaderboard,sa3s rho_level_p0a hi,.53,0.5253,MATCH,s6_bootstrap_cis
+README leaderboard,sa3s delta_L9-L1_median point,1.60,1.6,MATCH,s6_bootstrap_cis
+README leaderboard,sa3s delta_L9-L1_median lo,0.55,0.55,MATCH,s6_bootstrap_cis
+README leaderboard,sa3s delta_L9-L1_median hi,2.20,2.2,MATCH,s6_bootstrap_cis
+README leaderboard,sa3s K4_content_share point,.82,0.8153,MATCH,s6_bootstrap_cis
+README leaderboard,sa3s K4_content_share lo,.64,0.6392,MATCH,s6_bootstrap_cis
+README leaderboard,sa3s K4_content_share hi,1.15,1.1473,MATCH,s6_bootstrap_cis
+README leaderboard,ace rho_level_p0a point,.33,0.3281,MATCH,s6_bootstrap_cis
+README leaderboard,ace rho_level_p0a lo,.17,0.1672,MATCH,s6_bootstrap_cis
+README leaderboard,ace rho_level_p0a hi,.48,0.4758,MATCH,s6_bootstrap_cis
+README leaderboard,ace delta_L9-L1_median point,0.10,0.1,MATCH,s6_bootstrap_cis
+README leaderboard,ace delta_L9-L1_median lo,-0.05,-0.05,MATCH,s6_bootstrap_cis
+README leaderboard,ace delta_L9-L1_median hi,0.70,0.7,MATCH,s6_bootstrap_cis
+tex App. A,mgm/rock L1,6.37,6.37,MATCH,s6_edge_cells
+tex App. A,mgm/rock L3,6.38,6.38,MATCH,s6_edge_cells
+tex App. A,mgm/rock L5,6.48,6.48,MATCH,s6_edge_cells
+tex App. A,mgm/rock L7,6.50,6.5,MATCH,s6_edge_cells
+tex App. A,mgm/rock L9,6.48,6.48,MATCH,s6_edge_cells
+tex App. A,mgm/folk L1,4.43,4.43,MATCH,s6_edge_cells
+tex App. A,mgm/folk L3,4.03,4.03,MATCH,s6_edge_cells
+tex App. A,mgm/folk L5,5.82,5.82,MATCH,s6_edge_cells
+tex App. A,mgm/folk L7,4.90,4.9,MATCH,s6_edge_cells
+tex App. A,mgm/folk L9,6.25,6.25,MATCH,s6_edge_cells
+tex App. B,mgm ZCR delta,0.126,0.125948,MATCH,s6_feature_decomp
+tex App. B,mgm tonality delta,-14.8,-14.8322,MATCH,s6_feature_decomp ['dfeat_hnr_mean']
+tex App. B,mgm RMS delta,-0.009,-0.00874455,MATCH,s6_feature_decomp
+tex App. B,sao RMS delta,0.106,0.105916,MATCH,s6_feature_decomp
+tex §3 l.136,Arousal Index DEAM R^2,0.29,,NO SOURCE IN REPO (instrument paper / Tier 2),out of Tier-1 scope
+tex §3 l.137,PMEmo transfer rho,0.77,,NO SOURCE IN REPO (instrument paper / Tier 2),out of Tier-1 scope
+tex §3 l.150,control clips score range,3.7-4.1 vs 6.0-6.5,,NO SOURCE IN REPO (instrument paper / Tier 2),out of Tier-1 scope
+tex l.350 / README Tier 2,CLAP run-to-run drift,<=0.033,,NO SOURCE IN REPO (instrument paper / Tier 2),out of Tier-1 scope
