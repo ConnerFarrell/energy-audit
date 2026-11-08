@@ -52,8 +52,10 @@ copies.
 
 Content share = fraction of compliance surviving −14 LUFS normalization
 (1.0 = pure musical change, 0 = pure volume knob). All CIs: 2,000-resample
-clip-level bootstrap, percentile method, fixed seed — every number
-regenerates digit-for-digit from the released CSVs.
+clip-level bootstrap, percentile method, fixed seed. Reproduction pass rule:
+every banked cell regenerates within 1e-12 relative of the released CSVs, and
+every published number reproduces exactly. Current status, including the
+published numbers that don't yet reproduce, is in `rerun/step1/REPORT.md`.
 
 ## Reproduce
 
