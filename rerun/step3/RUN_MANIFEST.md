@@ -58,7 +58,7 @@ The run stopped at 66/300 clips after 1.42 h. This was not a crash: the harness'
 * seconds 9–30: −61 to −73 dBFS RMS per second, peaks 0.003–0.030; very quiet, not empty
 * whole clip: −67.8 dBFS RMS, peak 0.031
 
-The other 66 clips (all 50 rock clips plus `edm_L1_num`) range from −29.1 to −13.5 dBFS RMS and all pass.
+The other 66 clips (all 60 rock clips plus the 6 `edm_L1_num` clips) range from −29.1 to −13.5 dBFS RMS and all pass.
 
 Harness defect, separate from the gate: the rejected clip was still on disk as `….tmp.wav`, which matches
 `*.wav`. So `audio_mrt2.tar` holds 67 WAVs against 66 manifest rows. The 66 manifest rows are the valid
