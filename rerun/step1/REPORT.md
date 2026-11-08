@@ -1,6 +1,31 @@
 # P0b re-run · Step 1 · Tier-1 calibration
 
-## Attempt #2 (2026-11-07): **PASS — 2,707/2,707 cells match under the strict digit-for-digit rule** (after the re-bank below)
+## Current status (2026-11-08): **FAIL on the strict rule on the pinned image: 2,688/2,707** (19 cells at 1–225 ULP; 2,707/2,707 under attempt #1's rule)
+
+After you decided to revert the re-bank: `data/s6_raw_ridge_level_means.csv` is back to its original values, and `data/arousal_index_ridge.json` is refit on the pinned canonical image (CPU Kaggle run `energy-audit-ridge-refit`, numpy 2.0.2, pandas 2.3.3, scikit-learn 1.6.1). Step 1's strict comparison was then run on that image (attempt #3):
+
+| where | strict | mismatches | attempt-1 rule |
+|---|---:|---|---:|
+| **pinned Kaggle image (attempt #3)** | **2,688/2,707** | `s6_raw_ridge_level_means` 8 (≤ 1 ULP); `s6_feature_decomp` 11 (1–225 ULP, all in float64 columns `dfeat_zcr_*` and `dfeat_brightness_mean`) | 2,707 |
+| this container, same JSON | 2,701/2,707 | `s6_raw_ridge_level_means` 6 (1 ULP) | 2,707 |
+
+**Not 2,707/2,707. Stopped here without changing code, per the step rules.**
+
+*Evidence:*
+- On the same image, the canonical scoring path (`notebooks/scoring.ipynb`, Step 2) reproduces both files exactly: 25/25 and 95/95.
+- Both runs fit the ridge from the same DEAM feature CSV ("fast path" in both logs).
+- The pinned-image coefficients agree with the container's to about 1e-15 relative. Evaluated in the container, they reproduce 19/25 raw-ridge cells, against 7/25 for the container fit.
+- The ported S6.4 matched 95/95 decomp cells under pandas 3.1.1, but only 84/95 under the image's pandas 2.3.3.
+
+*Best hypothesis (not verified):* the Tier-1 port doesn't rebuild the canonical in-memory feature table exactly. Canonical S6.4 builds it from `extract_six` dictionaries through `pd.concat` and `pd.to_numeric`, while the port reads `features_verbal.csv` and casts dtypes. On pandas 2.3.3 the two tables differ enough in dtype or layout that the group means round differently, and the script fit also differs from the in-notebook fit at about 1e-15. Verifying this means replaying the canonical S6.4 construction under pandas 2.3.3. That's your call; it isn't done.
+
+No published number is affected: every mismatch is in the 15th–17th significant digit of files stored at full precision.
+
+---
+
+## Attempt #2 (2026-11-07) — *superseded 2026-11-08: its PASS depended on the re-bank, which is reverted*
+
+*Original heading:* Attempt #2 (2026-11-07): **PASS — 2,707/2,707 cells match under the strict digit-for-digit rule** (after the re-bank below)
 
 *History: before the re-bank, attempt #2 matched 2,692/2,707 strict (15 cells in `s6_raw_ridge_level_means.csv` off by 1 ULP) and 2,707/2,707 under attempt #1's rule. After re-banking that one file from `data/arousal_index_ridge.json`, a fresh run matches 2,707/2,707 under both rules (notebook 43.8 s). The paper/README cross-check (§4, §10.4) is byte-identical before and after the re-bank: 216 match, 8 mismatch, 9 no source.*
 
@@ -19,7 +44,7 @@
 
 The cause is known. The ridge coefficients were re-fit from DEAM in this environment (scikit-learn 1.9.1, numpy 2.5.4) because the canonical run's coefficients were never saved. The re-fit agrees with the canonical model to about 1e-16 relative, and that last-bit difference carries into the 17-digit means. Every summation and row-order variant I tried gives the same result, so the difference is in the fitted coefficients themselves (the linear-algebra build), not in the notebook. It can only be closed by re-banking that one file from the saved coefficients, which changes committed data (your call), or by recovering the original coefficients, which no surviving output contains.
 
-**Re-bank (2026-11-07):** `data/s6_raw_ridge_level_means.csv` — Re-banked 2026-11-07 from the saved ridge coefficients (original fit's coefficients were never saved); values change at ~1e-15; no published number changes. Strict-rule result after the re-bank: 2,707/2,707.
+**Re-bank (2026-11-07) — REVERTED 2026-11-08** (the pinned image reproduces the original values 25/25; see Step 2 report §4): `data/s6_raw_ridge_level_means.csv` — Re-banked 2026-11-07 from the saved ridge coefficients (original fit's coefficients were never saved); values change at ~1e-15; no published number changes. Strict-rule result after the re-bank: 2,707/2,707.
 
 **What changed for attempt #2** (no change to any statistic's logic; no change to `data/*.csv`):
 1. `repro.ipynb`'s content-share function is replaced by the canonical one: NaN when |L9−L1| ≤ 1e-9. This closes all 5 attempt-1 mismatches.

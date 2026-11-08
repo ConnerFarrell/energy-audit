@@ -1,0 +1,37 @@
+                              match  mismatch  ulp  missing  cells
+file                                                              
+s6_bootstrap_cis.csv            198         0    0        0    198
+s6_edge_cells.csv               125         0    0        0    125
+s6_feature_decomp.csv            84        11    3        0     95
+s6_level_means.csv              250         0    0        0    250
+s6_raw_ridge_level_means.csv     17         8    8        0     25
+s7_axis_level_means.csv          50         0    0        0     50
+s7_bootstrap_cis.csv            114         0    0        0    114
+s7_clap_axis.csv               1500         0    0        0   1500
+s7_leaderboard.csv               50         0    0        0     50
+s7_skew_L1L9.csv                300         0    0        0    300
+TOTAL 2707 match 2688 mismatch 19 of which <=4 ULP 11 missing 0
+attempt-1 rule: match 2707 / 2707
+ties: 0
+note column (text): 104 / 104 equal
+row order/count identical: {'s6_bootstrap_cis.csv': (True, 66, 66), 's7_bootstrap_cis.csv': (True, 38, 38), 's7_leaderboard.csv': (True, 5, 5), 's6_level_means.csv': (True, 50, 50), 's6_edge_cells.csv': (True, 25, 25), 's7_axis_level_means.csv': (True, 50, 50), 's7_skew_L1L9.csv': (True, 300, 300), 's6_feature_decomp.csv': (True, 5, 5), 's6_raw_ridge_level_means.csv': (True, 5, 5)}
+                        file  key                 field                stored         regenerated             status status_attempt1_rule
+       s6_feature_decomp.csv  ace        dfeat_zcr_mean 0.0030172909007352977  0.0030172909007352           MISMATCH                MATCH
+       s6_feature_decomp.csv  ace         dfeat_zcr_std -0.003306958000494624 -0.0033069580004946           MISMATCH                MATCH
+       s6_feature_decomp.csv  mgm dfeat_brightness_mean    1909.2043349084458  1909.2043349084456 MISMATCH (<=4 ULP)                MATCH
+       s6_feature_decomp.csv  mgm        dfeat_zcr_mean    0.1259482371406654  0.1259482371406653 MISMATCH (<=4 ULP)                MATCH
+       s6_feature_decomp.csv  mgm         dfeat_zcr_std  0.055214690541019976  0.0552146905410199           MISMATCH                MATCH
+       s6_feature_decomp.csv  mgs        dfeat_zcr_mean  0.026802199410529706  0.0268021994105297 MISMATCH (<=4 ULP)                MATCH
+       s6_feature_decomp.csv  mgs         dfeat_zcr_std  0.009890976948895326  0.0098909769488953           MISMATCH                MATCH
+       s6_feature_decomp.csv sa3s        dfeat_zcr_mean   0.02962386974732327  0.0296238697473232           MISMATCH                MATCH
+       s6_feature_decomp.csv sa3s         dfeat_zcr_std   0.01068274743054682  0.0106827474305468           MISMATCH                MATCH
+       s6_feature_decomp.csv  sao        dfeat_zcr_mean   0.04839187165408927  0.0483918716540892           MISMATCH                MATCH
+       s6_feature_decomp.csv  sao         dfeat_zcr_std  0.006432261282393124  0.0064322612823931           MISMATCH                MATCH
+s6_raw_ridge_level_means.csv  mgm                     7     6.075210391481337  6.0752103914813365 MISMATCH (<=4 ULP)                MATCH
+s6_raw_ridge_level_means.csv  mgm                     9     7.042233685603586   7.042233685603585 MISMATCH (<=4 ULP)                MATCH
+s6_raw_ridge_level_means.csv sa3s                     3     5.009484907979711    5.00948490797971 MISMATCH (<=4 ULP)                MATCH
+s6_raw_ridge_level_means.csv sa3s                     5     5.824698226735659   5.824698226735658 MISMATCH (<=4 ULP)                MATCH
+s6_raw_ridge_level_means.csv sa3s                     7     5.993764827444836   5.993764827444835 MISMATCH (<=4 ULP)                MATCH
+s6_raw_ridge_level_means.csv sa3s                     9     5.849650934757278   5.849650934757277 MISMATCH (<=4 ULP)                MATCH
+s6_raw_ridge_level_means.csv  sao                     5     5.728631323370675   5.728631323370674 MISMATCH (<=4 ULP)                MATCH
+s6_raw_ridge_level_means.csv  sao                     7    5.9314197961879715   5.931419796187971 MISMATCH (<=4 ULP)                MATCH
