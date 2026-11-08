@@ -1,4 +1,21 @@
-# P0b re-run · Step 2 · Tier-2 rescoring — **FAIL on the original determinism gate; ACCEPTED 2026-11-08 under the revised standard (§10)**
+# P0b re-run · Step 2 · Tier-2 rescoring 
+
+## Verdict under the Tier-1 pass rule (decided 2026-11-08): **FAIL, from CLAP only**
+
+**Rule:** every banked cell within 1e-12 relative of the bank, **and** every published number reproduces exactly. It's applied to this run's outputs, already in hand (`kaggle_out/`), against the current `data/`, with the raw-ridge file reverted to its original values. Output: `rule_check_banks.csv`.
+
+| condition | result | for reference: strict digit rule |
+|---|---|---|
+| Per clip: p0a, p0a_n, LUFS (1,500 each) | **PASS: exact** | exact |
+| Non-CLAP banked cells this notebook produces (997) | **PASS: 997/997** | 997/997 |
+| CLAP-dependent banked cells (115) | **FAIL: 3/115** within 1e-12. This is by design: the seeded run is the new CLAP baseline, and `data/` keeps the old CLAP (decision 3) | 3/115 |
+| CLAP-axis cells (45) | not produced by `scoring.ipynb` (`clap-axis.ipynb` makes them); not evaluated | — |
+| Published numbers | **FAIL**: the 6 CLAP droop numbers in the paper's §4.4 don't reproduce under this run either (ace −0.0706, mgs −0.0341), pending the RESEARCH decision. The other 3 failures are listed in the Step 1 report | — |
+
+Everything that isn't CLAP passes the rule. The FAIL comes entirely from the CLAP change you decided to keep out of `data/`, and from paper text awaiting the RESEARCH decision.
+
+*Earlier status, kept for the record:* FAIL on the original same-session determinism gate; ACCEPTED 2026-11-08 under the revised standard (§10).
+
 
 **Verdict: FAIL**, by the gate as specified ("run one model twice to confirm identical scores"). Rescoring all 300 sao clips a second time in the same Kaggle session gave bit-identical Arousal Index values, but **LUFS differed on 67/300 clips by exactly 1 ULP** (one unit in the last binary place; max 3.6e-15 dB), and CLAP on 173/300 (`clap`) and 163/300 (`clap_n`) clips, by at most about 1e-16 absolute. Nothing was changed to make it pass.
 
