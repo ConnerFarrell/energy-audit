@@ -1,0 +1,39 @@
+{
+ "model": "google/magenta-realtime-2",
+ "size": "mrt2_base",
+ "hf_revision": "010aa0dcb0dfd27b24f0ad07b4dad63e8f9521cc",
+ "library": "magenta-rt 2.0.3 (JAX backend)",
+ "harness": "gen/mrt2.py @ 34f50fc3215d76a0a8a25745ddd2f4645b87528e",
+ "requirements": "rerun/step3/requirements-gen-mrt2.txt@34f50fc",
+ "gpu": "Tesla T4, 580.178.04, 15360 MiB\nTesla T4, 580.178.04, 15360 MiB",
+ "jax_devices": [
+  "cuda:0",
+  "cuda:1"
+ ],
+ "kaggle_docker_image_reported": "gcr.io/kaggle-gpu-images/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+ "started_utc": "2026-11-08T05:09:02Z",
+ "finished_utc": "2026-11-08T06:34:17Z",
+ "notebook_wall_h": 1.421,
+ "harness_exit_code": 1,
+ "restored_from_earlier_version": 0,
+ "made_this_session": 66,
+ "gen_s_mean": 73.12,
+ "gen_s_total_h": 1.34,
+ "deadline_h": 11.0,
+ "checks": {
+  "clips_on_disk": 67,
+  "manifest_rows": 66,
+  "expected": 300,
+  "complete": false,
+  "manifest_matches_disk": false,
+  "manifest_unique": true,
+  "all_48k_stereo_30s": true,
+  "distinct_pcm": 66,
+  "all_pcm_distinct": true,
+  "distinct_seeds": 66,
+  "min_peak": 0.29315185546875,
+  "min_rms_dbfs": -29.106483683458176,
+  "tar_wavs": 67
+ },
+ "status": "PARTIAL: push a new version with this output attached as input to resume"
+}

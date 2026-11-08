@@ -1,0 +1,81 @@
+[mrt2] 300 clips to make (mrt2_base, rev 010aa0dcb0, 30 s = 750 frames)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[mrt2] devices=[CudaDevice(id=0), CudaDevice(id=1)] jax=0.11.0 download 61s, load+compile 86s
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+[mrt2] 1/300 mrt2__rock_L1_num__s0.wav 76.4s | mean 76.5s/clip | ETA 381 min
+[mrt2] 2/300 mrt2__rock_L1_num__s1.wav 73.3s | mean 74.9s/clip | ETA 372 min
+[mrt2] 3/300 mrt2__rock_L1_num__s2.wav 73.0s | mean 74.3s/clip | ETA 368 min
+[mrt2] 4/300 mrt2__rock_L1_num__s3.wav 73.0s | mean 74.0s/clip | ETA 365 min
+[mrt2] 5/300 mrt2__rock_L1_num__s4.wav 73.1s | mean 73.8s/clip | ETA 363 min
+[mrt2] 6/300 mrt2__rock_L1_num__s5.wav 73.1s | mean 73.7s/clip | ETA 361 min
+[mrt2] 7/300 mrt2__rock_L1_verb__s0.wav 73.1s | mean 73.6s/clip | ETA 360 min
+[mrt2] 8/300 mrt2__rock_L1_verb__s1.wav 73.1s | mean 73.6s/clip | ETA 358 min
+[mrt2] 9/300 mrt2__rock_L1_verb__s2.wav 73.1s | mean 73.5s/clip | ETA 357 min
+[mrt2] 10/300 mrt2__rock_L1_verb__s3.wav 73.2s | mean 73.5s/clip | ETA 355 min
+[mrt2] 11/300 mrt2__rock_L1_verb__s4.wav 73.1s | mean 73.5s/clip | ETA 354 min
+[mrt2] 12/300 mrt2__rock_L1_verb__s5.wav 73.1s | mean 73.4s/clip | ETA 352 min
+[mrt2] 13/300 mrt2__rock_L3_num__s0.wav 73.2s | mean 73.4s/clip | ETA 351 min
+[mrt2] 14/300 mrt2__rock_L3_num__s1.wav 73.2s | mean 73.4s/clip | ETA 350 min
+[mrt2] 15/300 mrt2__rock_L3_num__s2.wav 73.0s | mean 73.4s/clip | ETA 349 min
+[mrt2] 16/300 mrt2__rock_L3_num__s3.wav 73.0s | mean 73.4s/clip | ETA 347 min
+[mrt2] 17/300 mrt2__rock_L3_num__s4.wav 73.1s | mean 73.4s/clip | ETA 346 min
+[mrt2] 18/300 mrt2__rock_L3_num__s5.wav 73.1s | mean 73.3s/clip | ETA 345 min
+[mrt2] 19/300 mrt2__rock_L3_verb__s0.wav 73.1s | mean 73.3s/clip | ETA 343 min
+[mrt2] 20/300 mrt2__rock_L3_verb__s1.wav 73.1s | mean 73.3s/clip | ETA 342 min
+[mrt2] 21/300 mrt2__rock_L3_verb__s2.wav 73.1s | mean 73.3s/clip | ETA 341 min
+[mrt2] 22/300 mrt2__rock_L3_verb__s3.wav 73.1s | mean 73.3s/clip | ETA 340 min
+[mrt2] 23/300 mrt2__rock_L3_verb__s4.wav 73.1s | mean 73.3s/clip | ETA 338 min
+[mrt2] 24/300 mrt2__rock_L3_verb__s5.wav 73.1s | mean 73.3s/clip | ETA 337 min
+[mrt2] 25/300 mrt2__rock_L5_num__s0.wav 73.1s | mean 73.3s/clip | ETA 336 min
+[mrt2] 26/300 mrt2__rock_L5_num__s1.wav 73.1s | mean 73.3s/clip | ETA 335 min
+[mrt2] 27/300 mrt2__rock_L5_num__s2.wav 73.0s | mean 73.3s/clip | ETA 333 min
+[mrt2] 28/300 mrt2__rock_L5_num__s3.wav 73.0s | mean 73.3s/clip | ETA 332 min
+[mrt2] 29/300 mrt2__rock_L5_num__s4.wav 73.1s | mean 73.3s/clip | ETA 331 min
+[mrt2] 30/300 mrt2__rock_L5_num__s5.wav 73.0s | mean 73.3s/clip | ETA 330 min
+[mrt2] 31/300 mrt2__rock_L5_verb__s0.wav 73.1s | mean 73.3s/clip | ETA 328 min
+[mrt2] 32/300 mrt2__rock_L5_verb__s1.wav 73.0s | mean 73.3s/clip | ETA 327 min
+[mrt2] 33/300 mrt2__rock_L5_verb__s2.wav 73.0s | mean 73.3s/clip | ETA 326 min
+[mrt2] 34/300 mrt2__rock_L5_verb__s3.wav 73.1s | mean 73.2s/clip | ETA 325 min
+[mrt2] 35/300 mrt2__rock_L5_verb__s4.wav 73.1s | mean 73.2s/clip | ETA 324 min
+[mrt2] 36/300 mrt2__rock_L5_verb__s5.wav 73.0s | mean 73.2s/clip | ETA 322 min
+[mrt2] 37/300 mrt2__rock_L7_num__s0.wav 73.1s | mean 73.2s/clip | ETA 321 min
+[mrt2] 38/300 mrt2__rock_L7_num__s1.wav 73.1s | mean 73.2s/clip | ETA 320 min
+[mrt2] 39/300 mrt2__rock_L7_num__s2.wav 73.0s | mean 73.2s/clip | ETA 319 min
+[mrt2] 40/300 mrt2__rock_L7_num__s3.wav 73.1s | mean 73.2s/clip | ETA 317 min
+[mrt2] 41/300 mrt2__rock_L7_num__s4.wav 73.0s | mean 73.2s/clip | ETA 316 min
+[mrt2] 42/300 mrt2__rock_L7_num__s5.wav 73.0s | mean 73.2s/clip | ETA 315 min
+[mrt2] 43/300 mrt2__rock_L7_verb__s0.wav 73.1s | mean 73.2s/clip | ETA 314 min
+[mrt2] 44/300 mrt2__rock_L7_verb__s1.wav 73.1s | mean 73.2s/clip | ETA 312 min
+[mrt2] 45/300 mrt2__rock_L7_verb__s2.wav 73.1s | mean 73.2s/clip | ETA 311 min
+[mrt2] 46/300 mrt2__rock_L7_verb__s3.wav 73.0s | mean 73.2s/clip | ETA 310 min
+[mrt2] 47/300 mrt2__rock_L7_verb__s4.wav 73.0s | mean 73.2s/clip | ETA 309 min
+[mrt2] 48/300 mrt2__rock_L7_verb__s5.wav 73.1s | mean 73.2s/clip | ETA 307 min
+[mrt2] 49/300 mrt2__rock_L9_num__s0.wav 73.0s | mean 73.2s/clip | ETA 306 min
+[mrt2] 50/300 mrt2__rock_L9_num__s1.wav 72.9s | mean 73.2s/clip | ETA 305 min
+[mrt2] 51/300 mrt2__rock_L9_num__s2.wav 73.0s | mean 73.2s/clip | ETA 304 min
+[mrt2] 52/300 mrt2__rock_L9_num__s3.wav 73.1s | mean 73.2s/clip | ETA 303 min
+[mrt2] 53/300 mrt2__rock_L9_num__s4.wav 73.1s | mean 73.2s/clip | ETA 301 min
+[mrt2] 54/300 mrt2__rock_L9_num__s5.wav 73.1s | mean 73.2s/clip | ETA 300 min
+[mrt2] 55/300 mrt2__rock_L9_verb__s0.wav 73.1s | mean 73.2s/clip | ETA 299 min
+[mrt2] 56/300 mrt2__rock_L9_verb__s1.wav 73.0s | mean 73.2s/clip | ETA 298 min
+[mrt2] 57/300 mrt2__rock_L9_verb__s2.wav 73.0s | mean 73.2s/clip | ETA 296 min
+[mrt2] 58/300 mrt2__rock_L9_verb__s3.wav 73.0s | mean 73.2s/clip | ETA 295 min
+[mrt2] 59/300 mrt2__rock_L9_verb__s4.wav 73.0s | mean 73.2s/clip | ETA 294 min
+[mrt2] 60/300 mrt2__rock_L9_verb__s5.wav 73.0s | mean 73.2s/clip | ETA 293 min
+[mrt2] 61/300 mrt2__edm_L1_num__s0.wav 73.1s | mean 73.2s/clip | ETA 292 min
+[mrt2] 62/300 mrt2__edm_L1_num__s1.wav 73.0s | mean 73.2s/clip | ETA 290 min
+[mrt2] 63/300 mrt2__edm_L1_num__s2.wav 73.1s | mean 73.2s/clip | ETA 289 min
+[mrt2] 64/300 mrt2__edm_L1_num__s3.wav 73.1s | mean 73.2s/clip | ETA 288 min
+[mrt2] 65/300 mrt2__edm_L1_num__s4.wav 73.0s | mean 73.2s/clip | ETA 287 min
+[mrt2] 66/300 mrt2__edm_L1_num__s5.wav 73.0s | mean 73.2s/clip | ETA 285 min
+Traceback (most recent call last):
+  File "/tmp/repo/gen/mrt2.py", line 281, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/tmp/repo/gen/mrt2.py", line 253, in main
+    meas = audit(tmp, args.duration)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/repo/gen/mrt2.py", line 172, in audit
+    assert peak >= MIN_PEAK and rms_dbfs > MIN_RMS_DBFS, (path.name, peak, rms_dbfs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('mrt2__edm_L1_verb__s0.tmp.wav', 0.030548095703125, np.float64(-67.77389052475856))

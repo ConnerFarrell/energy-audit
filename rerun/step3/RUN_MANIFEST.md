@@ -21,11 +21,11 @@ inferred.*
 | pushed | 2026-11-08 05:08 UTC; status RUNNING at 05:09 UTC |
 | expected wall-clock | ~6.3 h (smoke: 73.8 s/clip × 300 + ~3 min setup), not a measurement |
 | time stop | harness stops cleanly at 11.0 h; the finished clips are packed into the Output |
-| finished | [STATUS?] |
-| measured wall-clock | [STATUS?] (`run_manifest.json` → `notebook_wall_h`, `gen_s_total_h`) |
-| completeness | [STATUS?] (`run_manifest.json` → `status`, `checks`) |
-| GPU quota used | [STATUS?] (not exposed by the Kaggle API; read it from the Kaggle quota page) |
-| corpus bank | [STATUS?] private Kaggle dataset version, created from this run's `audio_mrt2.tar` + `manifest_mrt2.csv` after it finishes |
+| finished | 2026-11-08 06:34 UTC (notebook COMPLETE on Kaggle; corpus **PARTIAL**, see below) |
+| measured wall-clock | 1.42 h notebook (1.34 h generating; 73.1 s/clip mean over 66 clips) |
+| completeness | **66/300.** The harness stopped at clip 67 (`mrt2__edm_L1_verb__s0`) on its non-silence audit: RMS −67.8 dBFS, peak 0.031, below the −60 dBFS floor. Records: `generate_v1/` |
+| GPU quota used | about 1.4 h by wall-clock; the exact figure is [STATUS?] (Kaggle quota page) |
+| corpus bank | not banked: the corpus is incomplete (66/300). Pending Conner's decision on the silence gate (2026-11-08) |
 
 ## If the run stops at the 11 h mark
 
@@ -47,3 +47,21 @@ manifest row, and the harness generates only the rest. Same seeds give bit-ident
 
 Records: `smoke_v1/`, `smoke_v2/`. Listening clips (s0, s1, s3 of `rock_L1_verb`) are in the private smoke
 notebook's Output. Conner approved them on 2026-11-08 ("clips OK").
+
+## Version 1 outcome (2026-11-08)
+
+The run stopped at 66/300 clips after 1.42 h. This was not a crash: the harness's own non-silence check
+(`audit()`, floor −60 dBFS RMS, chosen by me in Part B) rejected clip 67,
+`mrt2__edm_L1_verb__s0` ("instrumental electronic dance track, very calm"):
+
+* seconds 0–9: about −92 dBFS RMS (peak ≤ 0.0001), near-digital silence; 15.5% of samples are exact zeros
+* seconds 9–30: −61 to −73 dBFS RMS per second, peaks 0.003–0.030; very quiet, not empty
+* whole clip: −67.8 dBFS RMS, peak 0.031
+
+The other 66 clips (all 50 rock clips plus `edm_L1_num`) range from −29.1 to −13.5 dBFS RMS and all pass.
+
+Harness defect, separate from the gate: the rejected clip was still on disk as `….tmp.wav`, which matches
+`*.wav`. So `audio_mrt2.tar` holds 67 WAVs against 66 manifest rows. The 66 manifest rows are the valid
+corpus; the `.tmp.wav` is the rejected clip.
+
+Resume is blocked on the gate decision. Not done: banking, scoring.
