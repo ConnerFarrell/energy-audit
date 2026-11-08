@@ -1,0 +1,20 @@
+{
+ "mrt2_clips": 300,
+ "mrt2_excluded_normalized_lens": 0,
+ "mrt2_gain_over_40db": 1,
+ "mrt2_scorer_errors": 0,
+ "mrt2_quiet_flag": 1,
+ "six_outputs": [
+  "features_verbal.csv",
+  "s6_bootstrap_cis.csv",
+  "s6_edge_cells.csv",
+  "s6_feature_decomp.csv",
+  "s6_level_means.csv",
+  "s6_raw_ridge_level_means.csv",
+  "s7_bootstrap_cis.csv",
+  "s7_leaderboard.csv",
+  "s7_skew_L1L9.csv",
+  "scored_full.csv",
+  "scored_full_v2.csv"
+ ]
+}

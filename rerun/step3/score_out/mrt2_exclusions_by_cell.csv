@@ -1,0 +1,11 @@
+model,phrasing,level,n,excluded_normalized_lens,gain_over_40db,quiet_flag
+mrt2,numeric,1,30,0,0,0
+mrt2,numeric,3,30,0,0,0
+mrt2,numeric,5,30,0,0,0
+mrt2,numeric,7,30,0,0,0
+mrt2,numeric,9,30,0,0,0
+mrt2,verbal,1,30,0,1,1
+mrt2,verbal,3,30,0,0,0
+mrt2,verbal,5,30,0,0,0
+mrt2,verbal,7,30,0,0,0
+mrt2,verbal,9,30,0,0,0
