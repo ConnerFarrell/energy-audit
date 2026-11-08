@@ -47,9 +47,20 @@ and what obligations come with it.
 - **Obligations:** cite the technical report (arXiv:2602.00744).
 - **Notes:** 2026 hybrid language-model planner + diffusion transformer, tuned with reinforcement learning for prompt adherence, which is the property this study measures. Custom pipeline (https://github.com/ace-step/ACE-Step-1.5); supports duration control, used to request ~30 s clips.
 
+### 5. google/magenta-realtime-2 (`mrt2_base`)
+- **Status:** added 2026-11-08 for the re-run's Step 3 (one new model). Reviewed before any clip was generated, per the standing policy below.
+- **Page:** https://huggingface.co/google/magenta-realtime-2 (code: https://github.com/magenta/magenta-realtime; library: PyPI `magenta-rt` 2.0.3, 2026-07-30)
+- **Re-checked:** 2026-11-08, live model card at HF revision `010aa0dcb0dfd27b24f0ad07b4dad63e8f9521cc` (last modified 2026-06-04). Not gated.
+- **License:** code Apache 2.0; **weights CC-BY-4.0**. The card's Terms of Use add: *"Google claims no rights in outputs you generate using Magenta RealTime 2. You and your users are solely responsible for outputs and their subsequent uses,"* and ask users not to generate content that infringes the rights of others, including copyrighted content.
+- **(a) Generate for research:** OK. Research is a listed use. The card states the model is trained mostly on instrumental stock music (~71k hours).
+- **(b) Publish scores/figures:** OK. These are measurements of outputs, published for research.
+- **(c) Publish audio exhibits:** OK*. Google claims no rights in outputs, and the weights license is not non-commercial. Exhibits follow the general terms only: no infringing content, and the user is responsible for outputs.
+- **Obligations:** if the weights are redistributed (we don't), CC-BY-4.0 attribution: credit Google DeepMind, link the license, note any changes. For the paper: cite the Magenta RealTime / live music models paper (arXiv:2508.04651) and the SpectroStream codec (arXiv:2508.05207). Keep the Apache 2.0 notice if we vendor or patch library code.
+- **Notes:** 2.4B-parameter decoder-only transformer generating SpectroStream tokens frame by frame (25 frames/s, 48 kHz stereo), conditioned on a MusicCoCa text-style embedding. It's a streaming "live music" architecture, a class not in the roster. Duration is set exactly by frame count (30 s = 750 frames). Generation here uses the library's offline JAX (CUDA) backend, not the real-time MLX path. The 2026-07-22 audit set it aside because "its real-time streaming stack doesn't suit batch evaluation"; that reason no longer holds, since `magenta-rt` now ships an offline JAX backend for "offline / batch generation and research." The library's JAX `generate()` exposes no sampling seed (the sampler key is fixed at `PRNGKey(0)`), so the harness (`gen/mrt2.py`) sets the per-clip seed explicitly on the initial sampler state and on the MusicCoCa mapper. This is a harness detail, not a license matter.
+
 ## Considered, not used (candidates for future work)
 
-- **google/magenta-realtime-2** — license clean (Apache 2.0 code, CC-BY-4.0 weights; Google claims no rights in outputs). Not used: its real-time streaming stack doesn't suit batch evaluation. A strong candidate for future work.
+- **google/magenta-realtime-2** — license clean (Apache 2.0 code, CC-BY-4.0 weights; Google claims no rights in outputs). Not used: its real-time streaming stack doesn't suit batch evaluation. A strong candidate for future work. *(2026-11-08: re-reviewed and added as entry 5 above; the library now has an offline JAX backend.)*
 - **HeartMuLa/HeartMuLa-oss-3B** — license clean (Apache 2.0). Not used: young library stack, untested in this study's compute setup. Revisit for an extended version.
 - **riffusion/riffusion-model-v1** — license fine (CreativeML OpenRAIL-M). Not used: a 2022 spectrogram-image approach, no longer representative.
 - **ACE-Step/ACE-Step-v1-3.5B** — Apache 2.0. Superseded by Ace-Step 1.5 from the same team.
