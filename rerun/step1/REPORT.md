@@ -1,5 +1,34 @@
 # P0b re-run · Step 1 · Tier-1 calibration
 
+## Verdict under the Tier-1 pass rule (decided 2026-11-08): **FAIL**
+
+**Rule:** every banked cell within 1e-12 relative of the bank, **and** every published number reproduces exactly. It's applied to the pinned-image results already in hand (`kaggle_ridge/out/`; no new run). Script: `rule_check.py`; outputs: `rule_check_cells.csv`, `rule_check_published.csv`.
+
+| condition | result | for reference: strict digit rule |
+|---|---|---|
+| Banked cells within 1e-12 relative (2,707) | **PASS: 2,707/2,707** (max relative difference 3.2e-14) | 2,688/2,707 |
+| Every published number reproduces exactly (232 numbers in the paper and README) | **FAIL: 221 reproduce, 9 do not, 2 unverified** | — |
+
+The cross-check of published numbers against the pinned-image tables is identical to the one against the bank. Every banked value is within 1e-12, so no published number changes between the two.
+
+**The 9 published numbers that do not reproduce:**
+
+| # | where | paper says | reproduces as | status |
+|---|---|---|---|---|
+| 1 | Table 1, sa3s numeric ρ | .04 | 0.0347 → .03 | paper rounding error (rounded from the 3-dp printout 0.035) |
+| 2–4 | §4.4, ace CLAP droop L9−L7 [CI] | −0.086 [−0.138, −0.031] | −0.0806 [−0.1320, −0.0269] | CLAP: pending RESEARCH decision on which run to cite |
+| 5–7 | §4.4, mgs CLAP droop L9−L7 [CI] | −0.085 [−0.170, +0.004] | −0.0458 [−0.1202, +0.0302] | CLAP: pending RESEARCH decision |
+| 8 | §4.5, mgm rock-minus-others ρ | −.21 | −0.204 → −.20 (the canonical code's own printout) | paper error |
+| 9 | l.350, CLAP cell-mean drift | ≤ 0.033 | measured 0.042 (Step 2) | paper claim contradicted; the README is already corrected |
+
+**Unverified (2):** PMEmo transfer ρ = 0.77 and the control-clip ranges 3.7–4.1 vs 6.0–6.5. Both are instrument and Tier-2 outputs that no Tier-1 code produces.
+
+**Reproduced after earlier "no source" entries (5):** pooled in-band +0.223 and out-of-band +0.033 (S6.5); rock-minus-others sa3s −.27 and sao −.20 (S4); DEAM R² 0.29 (the pinned-image refit gives 0.2894). README ρ = .70 reproduces when computed on verbal clips (0.7016); the definition isn't stated.
+
+The banked-cell condition passes. The overall verdict is FAIL only because of the paper's text: two rounding or transcription errors, six CLAP numbers awaiting the RESEARCH decision, and one drift claim. None of these is a problem in the code or the data, and **the paper wasn't touched**.
+
+---
+
 ## Current status (2026-11-08): **FAIL on the strict rule on the pinned image: 2,688/2,707** (19 cells at 1–225 ULP; 2,707/2,707 under attempt #1's rule)
 
 After you decided to revert the re-bank: `data/s6_raw_ridge_level_means.csv` is back to its original values, and `data/arousal_index_ridge.json` is refit on the pinned canonical image (CPU Kaggle run `energy-audit-ridge-refit`, numpy 2.0.2, pandas 2.3.3, scikit-learn 1.6.1). Step 1's strict comparison was then run on that image (attempt #3):
