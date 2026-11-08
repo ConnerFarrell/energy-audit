@@ -25,7 +25,7 @@ inferred.*
 | measured wall-clock | 1.42 h notebook (1.34 h generating; 73.1 s/clip mean over 66 clips) |
 | completeness | **66/300.** The harness stopped at clip 67 (`mrt2__edm_L1_verb__s0`) on its non-silence audit: RMS −67.8 dBFS, peak 0.031, below the −60 dBFS floor. Records: `generate_v1/` |
 | GPU quota used | about 1.4 h by wall-clock; the exact figure is [STATUS?] (Kaggle quota page) |
-| corpus bank | not banked: the corpus is incomplete (66/300). Pending Conner's decision on the silence gate (2026-11-08) |
+| corpus bank | version 1: not banked, the corpus was incomplete (66/300). *Superseded: the complete corpus is banked after version 2, see below.* |
 
 ## If the run stops at the 11 h mark
 
@@ -77,8 +77,18 @@ Resume is blocked on the gate decision. Not done: banking, scoring.
   input. It restores the 66 audited clips (tested locally against v1's real output: 66 restored, the
   `.tmp.wav` dropped, all 66 PCM hashes match) and generates the other 234. Clip 67 is regenerated from the
   same seed. Expected ~4.8 h of generation (234 × 73 s), not a measurement.
-* **Finished / wall-clock / completeness / quiet clips:** [STATUS?] (version 2 `run_manifest.json`)
-* **Corpus bank:** [STATUS?]. Banking needs the finished output, and this session doesn't watch the run. It is
-  the first step when Conner reports v2 done, before scoring.
+* **Finished:** 2026-11-08 11:36 UTC, status **COMPLETE**, harness exit code 0. Records: `generate_v2/`.
+* **Wall-clock:** 4.86 h notebook for version 2 (234 clips, 73.6 s/clip). Whole corpus: 6.12 h of generation
+  (73.5 s/clip mean over 300); 1.42 + 4.86 = 6.28 h of notebook time across both versions.
+* **Completeness:** 300/300 clips on disk, in the manifest and in the tar; all 48 kHz stereo, exactly 30 s; 300
+  distinct PCM hashes and 300 distinct seeds; `partial/` empty.
+* **Quiet clips:** 1, `mrt2__edm_L1_verb__s0` (−67.8 dBFS RMS), kept and flagged.
+* **Determinism, checked after download:** the regenerated clip 67 is bit-identical to the clip version 1
+  rejected, the 66 restored clips' hashes are unchanged, and all 300 clips in the tar match the manifest.
+* **Corpus bank:** private Kaggle dataset `energy-audit-mrt2-corpus`, version 1, created 2026-11-08 19:18 UTC
+  (status `ready`). Contents: `audio_mrt2.tar` (sha256 `4f9cd40b…51a84d63`, 1,728,624,640 bytes; Kaggle shows
+  it unpacked as `audio_mrt2/audio/*.wav`), `manifest_mrt2.csv` (sha256 `124d71cd…67f40f4`), `run_manifest.json`,
+  `prompts.csv`.
+* **GPU quota, both versions:** about 6.3 h by notebook wall-clock; the exact figure is [STATUS?] (Kaggle quota page).
 * **Scoring rule** (−inf loudness excluded from the normalized lens only; +40 dB gain flagged as a caveat) and
   the check of July's quiet-clip handling: `SCORING_PLAN.md`.
