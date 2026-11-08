@@ -1,0 +1,1158 @@
+file,key,field,stored,new,status,rule
+s6_bootstrap_cis.csv,droop_L9-L7_p0a|ace|verbal,point,-0.5533,-0.5533,MATCH,True
+s6_bootstrap_cis.csv,droop_L9-L7_p0a|ace|verbal,lo,-0.8233,-0.8233,MATCH,True
+s6_bootstrap_cis.csv,droop_L9-L7_p0a|ace|verbal,hi,-0.25,-0.25,MATCH,True
+s6_bootstrap_cis.csv,droop_L9-L7_clap|ace|verbal,point,-0.0806,-0.0706,CLAP (new baseline),False
+s6_bootstrap_cis.csv,droop_L9-L7_clap|ace|verbal,lo,-0.132,-0.1248,CLAP (new baseline),False
+s6_bootstrap_cis.csv,droop_L9-L7_clap|ace|verbal,hi,-0.0269,-0.0151,CLAP (new baseline),False
+s6_bootstrap_cis.csv,droop_L9-L7_p0a|mgm|verbal,point,0.4333,0.4333,MATCH,True
+s6_bootstrap_cis.csv,droop_L9-L7_p0a|mgm|verbal,lo,0.1499,0.1499,MATCH,True
+s6_bootstrap_cis.csv,droop_L9-L7_p0a|mgm|verbal,hi,0.7467,0.7467,MATCH,True
+s6_bootstrap_cis.csv,droop_L9-L7_clap|mgm|verbal,point,0.093,0.0958,CLAP (new baseline),False
+s6_bootstrap_cis.csv,droop_L9-L7_clap|mgm|verbal,lo,0.015,0.0231,CLAP (new baseline),False
+s6_bootstrap_cis.csv,droop_L9-L7_clap|mgm|verbal,hi,0.1627,0.1641,CLAP (new baseline),False
+s6_bootstrap_cis.csv,droop_L9-L7_p0a|mgs|verbal,point,-0.42,-0.42,MATCH,True
+s6_bootstrap_cis.csv,droop_L9-L7_p0a|mgs|verbal,lo,-0.8567,-0.8567,MATCH,True
+s6_bootstrap_cis.csv,droop_L9-L7_p0a|mgs|verbal,hi,0.0268,0.0268,MATCH,True
+s6_bootstrap_cis.csv,droop_L9-L7_clap|mgs|verbal,point,-0.0458,-0.0341,CLAP (new baseline),False
+s6_bootstrap_cis.csv,droop_L9-L7_clap|mgs|verbal,lo,-0.1202,-0.1071,CLAP (new baseline),False
+s6_bootstrap_cis.csv,droop_L9-L7_clap|mgs|verbal,hi,0.0302,0.0417,CLAP (new baseline),False
+s6_bootstrap_cis.csv,droop_L9-L7_p0a|sa3s|verbal,point,-0.3033,-0.3033,MATCH,True
+s6_bootstrap_cis.csv,droop_L9-L7_p0a|sa3s|verbal,lo,-0.6901,-0.6901,MATCH,True
+s6_bootstrap_cis.csv,droop_L9-L7_p0a|sa3s|verbal,hi,0.0567,0.0567,MATCH,True
+s6_bootstrap_cis.csv,droop_L9-L7_clap|sa3s|verbal,point,-0.0013,-0.0015,CLAP (new baseline),False
+s6_bootstrap_cis.csv,droop_L9-L7_clap|sa3s|verbal,lo,-0.0861,-0.0848,CLAP (new baseline),False
+s6_bootstrap_cis.csv,droop_L9-L7_clap|sa3s|verbal,hi,0.0852,0.0824,CLAP (new baseline),False
+s6_bootstrap_cis.csv,droop_L9-L7_p0a|sao|verbal,point,0.2333,0.2333,MATCH,True
+s6_bootstrap_cis.csv,droop_L9-L7_p0a|sao|verbal,lo,0.03,0.03,MATCH,True
+s6_bootstrap_cis.csv,droop_L9-L7_p0a|sao|verbal,hi,0.44,0.44,MATCH,True
+s6_bootstrap_cis.csv,droop_L9-L7_clap|sao|verbal,point,0.067,0.0662,CLAP (new baseline),False
+s6_bootstrap_cis.csv,droop_L9-L7_clap|sao|verbal,lo,-0.0004,-0.0007,CLAP (new baseline),False
+s6_bootstrap_cis.csv,droop_L9-L7_clap|sao|verbal,hi,0.1358,0.136,CLAP (new baseline),False
+s6_bootstrap_cis.csv,rho_level_p0a|ace|numeric,point,0.0705,0.0705,MATCH,True
+s6_bootstrap_cis.csv,rho_level_p0a|ace|numeric,lo,-0.089,-0.089,MATCH,True
+s6_bootstrap_cis.csv,rho_level_p0a|ace|numeric,hi,0.2283,0.2283,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_mean|ace|numeric,point,0.09,0.09,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_mean|ace|numeric,lo,-0.2133,-0.2133,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_mean|ace|numeric,hi,0.3834,0.3834,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_median|ace|numeric,point,0.1,0.1,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_median|ace|numeric,lo,-0.3,-0.3,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_median|ace|numeric,hi,0.4,0.4,MATCH,True
+s6_bootstrap_cis.csv,rho_level_p0a|ace|verbal,point,0.3281,0.3281,MATCH,True
+s6_bootstrap_cis.csv,rho_level_p0a|ace|verbal,lo,0.1672,0.1672,MATCH,True
+s6_bootstrap_cis.csv,rho_level_p0a|ace|verbal,hi,0.4758,0.4758,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_mean|ace|verbal,point,0.1833,0.1833,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_mean|ace|verbal,lo,-0.1201,-0.1201,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_mean|ace|verbal,hi,0.47,0.47,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_median|ace|verbal,point,0.1,0.1,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_median|ace|verbal,lo,-0.05,-0.05,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_median|ace|verbal,hi,0.7,0.7,MATCH,True
+s6_bootstrap_cis.csv,rho_level_p0a|mgm|numeric,point,0.0383,0.0383,MATCH,True
+s6_bootstrap_cis.csv,rho_level_p0a|mgm|numeric,lo,-0.134,-0.134,MATCH,True
+s6_bootstrap_cis.csv,rho_level_p0a|mgm|numeric,hi,0.2021,0.2021,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_mean|mgm|numeric,point,0.0033,0.0033,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_mean|mgm|numeric,lo,-0.4133,-0.4133,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_mean|mgm|numeric,hi,0.4367,0.4367,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_median|mgm|numeric,point,0.1,0.1,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_median|mgm|numeric,lo,-1.0,-1.0,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_median|mgm|numeric,hi,0.9,0.9,MATCH,True
+s6_bootstrap_cis.csv,rho_level_p0a|mgm|verbal,point,0.5383,0.5383,MATCH,True
+s6_bootstrap_cis.csv,rho_level_p0a|mgm|verbal,lo,0.4139,0.4139,MATCH,True
+s6_bootstrap_cis.csv,rho_level_p0a|mgm|verbal,hi,0.6438,0.6438,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_mean|mgm|verbal,point,1.2767,1.2767,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_mean|mgm|verbal,lo,0.91,0.91,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_mean|mgm|verbal,hi,1.6267,1.6267,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_median|mgm|verbal,point,1.3,1.3,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_median|mgm|verbal,lo,0.5,0.5,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_median|mgm|verbal,hi,2.1,2.1,MATCH,True
+s6_bootstrap_cis.csv,rho_level_p0a|mgs|numeric,point,0.0408,0.0408,MATCH,True
+s6_bootstrap_cis.csv,rho_level_p0a|mgs|numeric,lo,-0.1268,-0.1268,MATCH,True
+s6_bootstrap_cis.csv,rho_level_p0a|mgs|numeric,hi,0.1966,0.1966,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_mean|mgs|numeric,point,0.0767,0.0767,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_mean|mgs|numeric,lo,-0.3633,-0.3633,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_mean|mgs|numeric,hi,0.5167,0.5167,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_median|mgs|numeric,point,0.3,0.3,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_median|mgs|numeric,lo,-0.5,-0.5,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_median|mgs|numeric,hi,1.2,1.2,MATCH,True
+s6_bootstrap_cis.csv,rho_level_p0a|mgs|verbal,point,0.3876,0.3876,MATCH,True
+s6_bootstrap_cis.csv,rho_level_p0a|mgs|verbal,lo,0.2468,0.2468,MATCH,True
+s6_bootstrap_cis.csv,rho_level_p0a|mgs|verbal,hi,0.5123,0.5123,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_mean|mgs|verbal,point,0.9333,0.9333,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_mean|mgs|verbal,lo,0.3967,0.3967,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_mean|mgs|verbal,hi,1.45,1.45,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_median|mgs|verbal,point,2.05,2.05,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_median|mgs|verbal,lo,0.8,0.8,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_median|mgs|verbal,hi,2.4,2.4,MATCH,True
+s6_bootstrap_cis.csv,rho_level_p0a|sa3s|numeric,point,0.0347,0.0347,MATCH,True
+s6_bootstrap_cis.csv,rho_level_p0a|sa3s|numeric,lo,-0.1392,-0.1392,MATCH,True
+s6_bootstrap_cis.csv,rho_level_p0a|sa3s|numeric,hi,0.1981,0.1981,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_mean|sa3s|numeric,point,0.2367,0.2367,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_mean|sa3s|numeric,lo,-0.2435,-0.2435,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_mean|sa3s|numeric,hi,0.6834,0.6834,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_median|sa3s|numeric,point,0.3,0.3,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_median|sa3s|numeric,lo,-0.2,-0.2,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_median|sa3s|numeric,hi,0.9,0.9,MATCH,True
+s6_bootstrap_cis.csv,rho_level_p0a|sa3s|verbal,point,0.3844,0.3844,MATCH,True
+s6_bootstrap_cis.csv,rho_level_p0a|sa3s|verbal,lo,0.2226,0.2226,MATCH,True
+s6_bootstrap_cis.csv,rho_level_p0a|sa3s|verbal,hi,0.5253,0.5253,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_mean|sa3s|verbal,point,0.83,0.83,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_mean|sa3s|verbal,lo,0.3067,0.3067,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_mean|sa3s|verbal,hi,1.3267,1.3267,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_median|sa3s|verbal,point,1.6,1.6,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_median|sa3s|verbal,lo,0.55,0.55,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_median|sa3s|verbal,hi,2.2,2.2,MATCH,True
+s6_bootstrap_cis.csv,rho_level_p0a|sao|numeric,point,0.0071,0.0071,MATCH,True
+s6_bootstrap_cis.csv,rho_level_p0a|sao|numeric,lo,-0.1653,-0.1653,MATCH,True
+s6_bootstrap_cis.csv,rho_level_p0a|sao|numeric,hi,0.1641,0.1641,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_mean|sao|numeric,point,0.0,0.0,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_mean|sao|numeric,lo,-0.3567,-0.3567,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_mean|sao|numeric,hi,0.3533,0.3533,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_median|sao|numeric,point,0.1,0.1,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_median|sao|numeric,lo,-0.35,-0.35,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_median|sao|numeric,hi,0.3,0.3,MATCH,True
+s6_bootstrap_cis.csv,rho_level_p0a|sao|verbal,point,0.5042,0.5042,MATCH,True
+s6_bootstrap_cis.csv,rho_level_p0a|sao|verbal,lo,0.3672,0.3672,MATCH,True
+s6_bootstrap_cis.csv,rho_level_p0a|sao|verbal,hi,0.6186,0.6186,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_mean|sao|verbal,point,1.1333,1.1333,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_mean|sao|verbal,lo,0.78,0.78,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_mean|sao|verbal,hi,1.4967,1.4967,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_median|sao|verbal,point,1.3,1.3,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_median|sao|verbal,lo,0.55,0.55,MATCH,True
+s6_bootstrap_cis.csv,delta_L9-L1_median|sao|verbal,hi,2.0,2.0,MATCH,True
+s6_bootstrap_cis.csv,K4_content_share|ace|verbal,point,2.1636,2.1636,MATCH,True
+s6_bootstrap_cis.csv,K4_content_share|ace|verbal,lo,-8.075,-8.075,MATCH,True
+s6_bootstrap_cis.csv,K4_content_share|ace|verbal,hi,9.4673,9.4673,MATCH,True
+s6_bootstrap_cis.csv,K4_content_share|mgm|verbal,point,0.7624,0.7624,MATCH,True
+s6_bootstrap_cis.csv,K4_content_share|mgm|verbal,lo,0.627,0.627,MATCH,True
+s6_bootstrap_cis.csv,K4_content_share|mgm|verbal,hi,0.9124,0.9124,MATCH,True
+s6_bootstrap_cis.csv,K4_content_share|mgs|verbal,point,0.7571,0.7571,MATCH,True
+s6_bootstrap_cis.csv,K4_content_share|mgs|verbal,lo,0.4712,0.4712,MATCH,True
+s6_bootstrap_cis.csv,K4_content_share|mgs|verbal,hi,0.9878,0.9878,MATCH,True
+s6_bootstrap_cis.csv,K4_content_share|sa3s|verbal,point,0.8153,0.8153,MATCH,True
+s6_bootstrap_cis.csv,K4_content_share|sa3s|verbal,lo,0.6392,0.6392,MATCH,True
+s6_bootstrap_cis.csv,K4_content_share|sa3s|verbal,hi,1.1473,1.1473,MATCH,True
+s6_bootstrap_cis.csv,K4_content_share|sao|verbal,point,0.5912,0.5912,MATCH,True
+s6_bootstrap_cis.csv,K4_content_share|sao|verbal,lo,0.5028,0.5028,MATCH,True
+s6_bootstrap_cis.csv,K4_content_share|sao|verbal,hi,0.686,0.686,MATCH,True
+s6_bootstrap_cis.csv,phrasing_drho|ace|verbal-numeric,point,0.2577,0.2577,MATCH,True
+s6_bootstrap_cis.csv,phrasing_drho|ace|verbal-numeric,lo,0.0632,0.0632,MATCH,True
+s6_bootstrap_cis.csv,phrasing_drho|ace|verbal-numeric,hi,0.4508,0.4508,MATCH,True
+s6_bootstrap_cis.csv,phrasing_ddelta|ace|verbal-numeric,point,0.0933,0.0933,MATCH,True
+s6_bootstrap_cis.csv,phrasing_ddelta|ace|verbal-numeric,lo,-0.3067,-0.3067,MATCH,True
+s6_bootstrap_cis.csv,phrasing_ddelta|ace|verbal-numeric,hi,0.4967,0.4967,MATCH,True
+s6_bootstrap_cis.csv,phrasing_drho|mgm|verbal-numeric,point,0.5,0.5,MATCH,True
+s6_bootstrap_cis.csv,phrasing_drho|mgm|verbal-numeric,lo,0.333,0.333,MATCH,True
+s6_bootstrap_cis.csv,phrasing_drho|mgm|verbal-numeric,hi,0.6685,0.6685,MATCH,True
+s6_bootstrap_cis.csv,phrasing_ddelta|mgm|verbal-numeric,point,1.2733,1.2733,MATCH,True
+s6_bootstrap_cis.csv,phrasing_ddelta|mgm|verbal-numeric,lo,0.7166,0.7166,MATCH,True
+s6_bootstrap_cis.csv,phrasing_ddelta|mgm|verbal-numeric,hi,1.8235,1.8235,MATCH,True
+s6_bootstrap_cis.csv,phrasing_drho|mgs|verbal-numeric,point,0.3468,0.3468,MATCH,True
+s6_bootstrap_cis.csv,phrasing_drho|mgs|verbal-numeric,lo,0.1993,0.1993,MATCH,True
+s6_bootstrap_cis.csv,phrasing_drho|mgs|verbal-numeric,hi,0.4965,0.4965,MATCH,True
+s6_bootstrap_cis.csv,phrasing_ddelta|mgs|verbal-numeric,point,0.8567,0.8567,MATCH,True
+s6_bootstrap_cis.csv,phrasing_ddelta|mgs|verbal-numeric,lo,0.1865,0.1865,MATCH,True
+s6_bootstrap_cis.csv,phrasing_ddelta|mgs|verbal-numeric,hi,1.5267,1.5267,MATCH,True
+s6_bootstrap_cis.csv,phrasing_drho|sa3s|verbal-numeric,point,0.3496,0.3496,MATCH,True
+s6_bootstrap_cis.csv,phrasing_drho|sa3s|verbal-numeric,lo,0.2221,0.2221,MATCH,True
+s6_bootstrap_cis.csv,phrasing_drho|sa3s|verbal-numeric,hi,0.4822,0.4822,MATCH,True
+s6_bootstrap_cis.csv,phrasing_ddelta|sa3s|verbal-numeric,point,0.5933,0.5933,MATCH,True
+s6_bootstrap_cis.csv,phrasing_ddelta|sa3s|verbal-numeric,lo,-0.0768,-0.0768,MATCH,True
+s6_bootstrap_cis.csv,phrasing_ddelta|sa3s|verbal-numeric,hi,1.2567,1.2567,MATCH,True
+s6_bootstrap_cis.csv,phrasing_drho|sao|verbal-numeric,point,0.4972,0.4972,MATCH,True
+s6_bootstrap_cis.csv,phrasing_drho|sao|verbal-numeric,lo,0.3702,0.3702,MATCH,True
+s6_bootstrap_cis.csv,phrasing_drho|sao|verbal-numeric,hi,0.6268,0.6268,MATCH,True
+s6_bootstrap_cis.csv,phrasing_ddelta|sao|verbal-numeric,point,1.1333,1.1333,MATCH,True
+s6_bootstrap_cis.csv,phrasing_ddelta|sao|verbal-numeric,lo,0.6465,0.6465,MATCH,True
+s6_bootstrap_cis.csv,phrasing_ddelta|sao|verbal-numeric,hi,1.6233,1.6233,MATCH,True
+s6_bootstrap_cis.csv,droop_L9-L7_rawridge|ace|verbal,point,-0.3692,-0.3692,MATCH,True
+s6_bootstrap_cis.csv,droop_L9-L7_rawridge|ace|verbal,lo,-0.5586,-0.5586,MATCH,True
+s6_bootstrap_cis.csv,droop_L9-L7_rawridge|ace|verbal,hi,-0.1803,-0.1803,MATCH,True
+s6_bootstrap_cis.csv,droop_L9-L7_rawridge|mgm|verbal,point,0.967,0.967,MATCH,True
+s6_bootstrap_cis.csv,droop_L9-L7_rawridge|mgm|verbal,lo,0.5682,0.5682,MATCH,True
+s6_bootstrap_cis.csv,droop_L9-L7_rawridge|mgm|verbal,hi,1.382,1.382,MATCH,True
+s6_bootstrap_cis.csv,droop_L9-L7_rawridge|mgs|verbal,point,-0.7311,-0.7311,MATCH,True
+s6_bootstrap_cis.csv,droop_L9-L7_rawridge|mgs|verbal,lo,-1.3699,-1.3699,MATCH,True
+s6_bootstrap_cis.csv,droop_L9-L7_rawridge|mgs|verbal,hi,-0.1468,-0.1468,MATCH,True
+s6_bootstrap_cis.csv,droop_L9-L7_rawridge|sa3s|verbal,point,-0.1441,-0.1441,MATCH,True
+s6_bootstrap_cis.csv,droop_L9-L7_rawridge|sa3s|verbal,lo,-0.5267,-0.5267,MATCH,True
+s6_bootstrap_cis.csv,droop_L9-L7_rawridge|sa3s|verbal,hi,0.2355,0.2355,MATCH,True
+s6_bootstrap_cis.csv,droop_L9-L7_rawridge|sao|verbal,point,0.6682,0.6682,MATCH,True
+s6_bootstrap_cis.csv,droop_L9-L7_rawridge|sao|verbal,lo,0.318,0.318,MATCH,True
+s6_bootstrap_cis.csv,droop_L9-L7_rawridge|sao|verbal,hi,1.022,1.022,MATCH,True
+s6_bootstrap_cis.csv,edge_gain_in_minus_out|ace|verbal,point,0.2969,0.2969,MATCH,True
+s6_bootstrap_cis.csv,edge_gain_in_minus_out|ace|verbal,lo,0.1847,0.1847,MATCH,True
+s6_bootstrap_cis.csv,edge_gain_in_minus_out|ace|verbal,hi,0.4122,0.4122,MATCH,True
+s6_bootstrap_cis.csv,edge_gain_in_minus_out|mgm|verbal,point,0.2063,0.2063,MATCH,True
+s6_bootstrap_cis.csv,edge_gain_in_minus_out|mgm|verbal,lo,0.0517,0.0517,MATCH,True
+s6_bootstrap_cis.csv,edge_gain_in_minus_out|mgm|verbal,hi,0.3438,0.3438,MATCH,True
+s6_bootstrap_cis.csv,edge_gain_in_minus_out|mgs|verbal,point,0.1319,0.1319,MATCH,True
+s6_bootstrap_cis.csv,edge_gain_in_minus_out|mgs|verbal,lo,-0.0306,-0.0306,MATCH,True
+s6_bootstrap_cis.csv,edge_gain_in_minus_out|mgs|verbal,hi,0.3014,0.3014,MATCH,True
+s6_bootstrap_cis.csv,edge_gain_in_minus_out|sa3s|verbal,point,0.2906,0.2906,MATCH,True
+s6_bootstrap_cis.csv,edge_gain_in_minus_out|sa3s|verbal,lo,0.1788,0.1788,MATCH,True
+s6_bootstrap_cis.csv,edge_gain_in_minus_out|sa3s|verbal,hi,0.4004,0.4004,MATCH,True
+s6_bootstrap_cis.csv,edge_gain_in_minus_out|sao|verbal,point,0.026,0.026,MATCH,True
+s6_bootstrap_cis.csv,edge_gain_in_minus_out|sao|verbal,lo,-0.0743,-0.0743,MATCH,True
+s6_bootstrap_cis.csv,edge_gain_in_minus_out|sao|verbal,hi,0.1285,0.1285,MATCH,True
+s6_bootstrap_cis.csv,edge_gain_in_minus_out|ALL|verbal,point,0.1903,0.1903,MATCH,True
+s6_bootstrap_cis.csv,edge_gain_in_minus_out|ALL|verbal,lo,0.0956,0.0956,MATCH,True
+s6_bootstrap_cis.csv,edge_gain_in_minus_out|ALL|verbal,hi,0.2794,0.2794,MATCH,True
+s7_bootstrap_cis.csv,rho_level_raw|ace|verbal,point,0.3418,0.3418,MATCH,True
+s7_bootstrap_cis.csv,rho_level_raw|ace|verbal,lo,0.1765,0.1765,MATCH,True
+s7_bootstrap_cis.csv,rho_level_raw|ace|verbal,hi,0.494,0.494,MATCH,True
+s7_bootstrap_cis.csv,delta_raw_mean|ace|verbal,point,0.2078,0.2078,MATCH,True
+s7_bootstrap_cis.csv,delta_raw_mean|ace|verbal,lo,-0.0342,-0.0342,MATCH,True
+s7_bootstrap_cis.csv,delta_raw_mean|ace|verbal,hi,0.4331,0.4331,MATCH,True
+s7_bootstrap_cis.csv,delta_raw_median|ace|verbal,point,0.2253,0.2253,MATCH,True
+s7_bootstrap_cis.csv,delta_raw_median|ace|verbal,lo,-0.0268,-0.0268,MATCH,True
+s7_bootstrap_cis.csv,delta_raw_median|ace|verbal,hi,0.6175,0.6175,MATCH,True
+s7_bootstrap_cis.csv,rho_level_raw|mgm|verbal,point,0.5864,0.5864,MATCH,True
+s7_bootstrap_cis.csv,rho_level_raw|mgm|verbal,lo,0.4678,0.4678,MATCH,True
+s7_bootstrap_cis.csv,rho_level_raw|mgm|verbal,hi,0.6838,0.6838,MATCH,True
+s7_bootstrap_cis.csv,delta_raw_mean|mgm|verbal,point,1.8567,1.8567,MATCH,True
+s7_bootstrap_cis.csv,delta_raw_mean|mgm|verbal,lo,1.4651,1.4651,MATCH,True
+s7_bootstrap_cis.csv,delta_raw_mean|mgm|verbal,hi,2.2401,2.2401,MATCH,True
+s7_bootstrap_cis.csv,delta_raw_median|mgm|verbal,point,1.8564,1.8564,MATCH,True
+s7_bootstrap_cis.csv,delta_raw_median|mgm|verbal,lo,1.4146,1.4146,MATCH,True
+s7_bootstrap_cis.csv,delta_raw_median|mgm|verbal,hi,2.4045,2.4045,MATCH,True
+s7_bootstrap_cis.csv,rho_level_raw|mgs|verbal,point,0.4061,0.4061,MATCH,True
+s7_bootstrap_cis.csv,rho_level_raw|mgs|verbal,lo,0.2679,0.2679,MATCH,True
+s7_bootstrap_cis.csv,rho_level_raw|mgs|verbal,hi,0.525,0.525,MATCH,True
+s7_bootstrap_cis.csv,delta_raw_mean|mgs|verbal,point,0.9646,0.9646,MATCH,True
+s7_bootstrap_cis.csv,delta_raw_mean|mgs|verbal,lo,0.4869,0.4869,MATCH,True
+s7_bootstrap_cis.csv,delta_raw_mean|mgs|verbal,hi,1.4218,1.4218,MATCH,True
+s7_bootstrap_cis.csv,delta_raw_median|mgs|verbal,point,1.2022,1.2022,MATCH,True
+s7_bootstrap_cis.csv,delta_raw_median|mgs|verbal,lo,0.4717,0.4717,MATCH,True
+s7_bootstrap_cis.csv,delta_raw_median|mgs|verbal,hi,1.6614,1.6614,MATCH,True
+s7_bootstrap_cis.csv,rho_level_raw|sa3s|verbal,point,0.4058,0.4058,MATCH,True
+s7_bootstrap_cis.csv,rho_level_raw|sa3s|verbal,lo,0.2472,0.2472,MATCH,True
+s7_bootstrap_cis.csv,rho_level_raw|sa3s|verbal,hi,0.5426,0.5426,MATCH,True
+s7_bootstrap_cis.csv,delta_raw_mean|sa3s|verbal,point,0.7284,0.7284,MATCH,True
+s7_bootstrap_cis.csv,delta_raw_mean|sa3s|verbal,lo,0.3133,0.3133,MATCH,True
+s7_bootstrap_cis.csv,delta_raw_mean|sa3s|verbal,hi,1.1314,1.1314,MATCH,True
+s7_bootstrap_cis.csv,delta_raw_median|sa3s|verbal,point,0.8297,0.8297,MATCH,True
+s7_bootstrap_cis.csv,delta_raw_median|sa3s|verbal,lo,0.3177,0.3177,MATCH,True
+s7_bootstrap_cis.csv,delta_raw_median|sa3s|verbal,hi,1.3289,1.3289,MATCH,True
+s7_bootstrap_cis.csv,rho_level_raw|sao|verbal,point,0.537,0.537,MATCH,True
+s7_bootstrap_cis.csv,rho_level_raw|sao|verbal,lo,0.4033,0.4033,MATCH,True
+s7_bootstrap_cis.csv,rho_level_raw|sao|verbal,hi,0.648,0.648,MATCH,True
+s7_bootstrap_cis.csv,delta_raw_mean|sao|verbal,point,1.3888,1.3888,MATCH,True
+s7_bootstrap_cis.csv,delta_raw_mean|sao|verbal,lo,1.0284,1.0284,MATCH,True
+s7_bootstrap_cis.csv,delta_raw_mean|sao|verbal,hi,1.7475,1.7475,MATCH,True
+s7_bootstrap_cis.csv,delta_raw_median|sao|verbal,point,1.5037,1.5037,MATCH,True
+s7_bootstrap_cis.csv,delta_raw_median|sao|verbal,lo,0.9589,0.9589,MATCH,True
+s7_bootstrap_cis.csv,delta_raw_median|sao|verbal,hi,1.82,1.82,MATCH,True
+s7_bootstrap_cis.csv,edge_gain_norock|ALL|verbal,point,0.2166,0.2166,MATCH,True
+s7_bootstrap_cis.csv,edge_gain_norock|ALL|verbal,lo,0.1113,0.1113,MATCH,True
+s7_bootstrap_cis.csv,edge_gain_norock|ALL|verbal,hi,0.3211,0.3211,MATCH,True
+s7_bootstrap_cis.csv,edge_gain_norock|ace|verbal,point,0.3447,0.3447,MATCH,True
+s7_bootstrap_cis.csv,edge_gain_norock|ace|verbal,lo,0.2211,0.2211,MATCH,True
+s7_bootstrap_cis.csv,edge_gain_norock|ace|verbal,hi,0.481,0.481,MATCH,True
+s7_bootstrap_cis.csv,edge_gain_norock|mgm|verbal,point,0.2254,0.2254,MATCH,True
+s7_bootstrap_cis.csv,edge_gain_norock|mgm|verbal,lo,0.0364,0.0364,MATCH,True
+s7_bootstrap_cis.csv,edge_gain_norock|mgm|verbal,hi,0.3948,0.3948,MATCH,True
+s7_bootstrap_cis.csv,edge_gain_norock|mgs|verbal,point,0.1566,0.1566,MATCH,True
+s7_bootstrap_cis.csv,edge_gain_norock|mgs|verbal,lo,-0.0364,-0.0364,MATCH,True
+s7_bootstrap_cis.csv,edge_gain_norock|mgs|verbal,hi,0.3549,0.3549,MATCH,True
+s7_bootstrap_cis.csv,edge_gain_norock|sa3s|verbal,point,0.3291,0.3291,MATCH,True
+s7_bootstrap_cis.csv,edge_gain_norock|sa3s|verbal,lo,0.1905,0.1905,MATCH,True
+s7_bootstrap_cis.csv,edge_gain_norock|sa3s|verbal,hi,0.4648,0.4648,MATCH,True
+s7_bootstrap_cis.csv,edge_gain_norock|sao|verbal,point,0.027,0.027,MATCH,True
+s7_bootstrap_cis.csv,edge_gain_norock|sao|verbal,lo,-0.091,-0.091,MATCH,True
+s7_bootstrap_cis.csv,edge_gain_norock|sao|verbal,hi,0.1478,0.1478,MATCH,True
+s7_bootstrap_cis.csv,family_drho|scale_mgm-mgs|verbal,point,0.1508,0.1508,MATCH,True
+s7_bootstrap_cis.csv,family_drho|scale_mgm-mgs|verbal,lo,-0.0006,-0.0006,MATCH,True
+s7_bootstrap_cis.csv,family_drho|scale_mgm-mgs|verbal,hi,0.3151,0.3151,MATCH,True
+s7_bootstrap_cis.csv,family_drho|era_sa3s-sao|verbal,point,-0.1199,-0.1199,MATCH,True
+s7_bootstrap_cis.csv,family_drho|era_sa3s-sao|verbal,lo,-0.267,-0.267,MATCH,True
+s7_bootstrap_cis.csv,family_drho|era_sa3s-sao|verbal,hi,0.024,0.024,MATCH,True
+s7_bootstrap_cis.csv,rho_level_axis|ace|numeric,point,-0.0112,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,rho_level_axis|ace|numeric,lo,-0.1759,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,rho_level_axis|ace|numeric,hi,0.1573,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,rho_level_axis|ace|verbal,point,0.2743,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,rho_level_axis|ace|verbal,lo,0.1145,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,rho_level_axis|ace|verbal,hi,0.4263,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,rho_level_axis|mgm|numeric,point,-0.0507,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,rho_level_axis|mgm|numeric,lo,-0.2073,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,rho_level_axis|mgm|numeric,hi,0.1076,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,rho_level_axis|mgm|verbal,point,0.5961,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,rho_level_axis|mgm|verbal,lo,0.4768,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,rho_level_axis|mgm|verbal,hi,0.6902,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,rho_level_axis|mgs|numeric,point,-0.0797,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,rho_level_axis|mgs|numeric,lo,-0.2385,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,rho_level_axis|mgs|numeric,hi,0.0764,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,rho_level_axis|mgs|verbal,point,0.546,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,rho_level_axis|mgs|verbal,lo,0.4287,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,rho_level_axis|mgs|verbal,hi,0.6493,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,rho_level_axis|sa3s|numeric,point,0.0113,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,rho_level_axis|sa3s|numeric,lo,-0.1647,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,rho_level_axis|sa3s|numeric,hi,0.1809,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,rho_level_axis|sa3s|verbal,point,0.4502,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,rho_level_axis|sa3s|verbal,lo,0.2986,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,rho_level_axis|sa3s|verbal,hi,0.5903,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,rho_level_axis|sao|numeric,point,0.0208,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,rho_level_axis|sao|numeric,lo,-0.1544,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,rho_level_axis|sao|numeric,hi,0.1785,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,rho_level_axis|sao|verbal,point,0.4623,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,rho_level_axis|sao|verbal,lo,0.3288,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,rho_level_axis|sao|verbal,hi,0.5784,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,droop_L9-L7_axis|ace|verbal,point,-0.011,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,droop_L9-L7_axis|ace|verbal,lo,-0.0591,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,droop_L9-L7_axis|ace|verbal,hi,0.0366,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,droop_L9-L7_axis|mgm|verbal,point,0.0484,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,droop_L9-L7_axis|mgm|verbal,lo,0.0058,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,droop_L9-L7_axis|mgm|verbal,hi,0.0906,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,droop_L9-L7_axis|mgs|verbal,point,0.0101,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,droop_L9-L7_axis|mgs|verbal,lo,-0.0386,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,droop_L9-L7_axis|mgs|verbal,hi,0.061,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,droop_L9-L7_axis|sa3s|verbal,point,0.0065,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,droop_L9-L7_axis|sa3s|verbal,lo,-0.0461,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,droop_L9-L7_axis|sa3s|verbal,hi,0.0595,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,droop_L9-L7_axis|sao|verbal,point,0.0518,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,droop_L9-L7_axis|sao|verbal,lo,0.0094,MISSING,MISMATCH,False
+s7_bootstrap_cis.csv,droop_L9-L7_axis|sao|verbal,hi,0.0959,MISSING,MISMATCH,False
+s7_leaderboard.csv,ace,house_level,4.35,4.35,MATCH,True
+s7_leaderboard.csv,ace,rho_verbal,0.328,0.328,MATCH,True
+s7_leaderboard.csv,ace,rho_lo,0.167,0.167,MATCH,True
+s7_leaderboard.csv,ace,rho_hi,0.476,0.476,MATCH,True
+s7_leaderboard.csv,ace,med_delta,0.1,0.1,MATCH,True
+s7_leaderboard.csv,ace,md_lo,-0.05,-0.05,MATCH,True
+s7_leaderboard.csv,ace,md_hi,0.7,0.7,MATCH,True
+s7_leaderboard.csv,ace,content_share,undefined,undefined,MATCH,True
+s7_leaderboard.csv,ace,cs_lo,-8.07,-8.07,MATCH,True
+s7_leaderboard.csv,ace,cs_hi,9.47,9.47,MATCH,True
+s7_leaderboard.csv,mgm,house_level,5.83,5.83,MATCH,True
+s7_leaderboard.csv,mgm,rho_verbal,0.538,0.538,MATCH,True
+s7_leaderboard.csv,mgm,rho_lo,0.414,0.414,MATCH,True
+s7_leaderboard.csv,mgm,rho_hi,0.644,0.644,MATCH,True
+s7_leaderboard.csv,mgm,med_delta,1.3,1.3,MATCH,True
+s7_leaderboard.csv,mgm,md_lo,0.5,0.5,MATCH,True
+s7_leaderboard.csv,mgm,md_hi,2.1,2.1,MATCH,True
+s7_leaderboard.csv,mgm,content_share,0.76,0.76,MATCH,True
+s7_leaderboard.csv,mgm,cs_lo,0.63,0.63,MATCH,True
+s7_leaderboard.csv,mgm,cs_hi,0.91,0.91,MATCH,True
+s7_leaderboard.csv,mgs,house_level,5.81,5.81,MATCH,True
+s7_leaderboard.csv,mgs,rho_verbal,0.388,0.388,MATCH,True
+s7_leaderboard.csv,mgs,rho_lo,0.247,0.247,MATCH,True
+s7_leaderboard.csv,mgs,rho_hi,0.512,0.512,MATCH,True
+s7_leaderboard.csv,mgs,med_delta,2.05,2.05,MATCH,True
+s7_leaderboard.csv,mgs,md_lo,0.8,0.8,MATCH,True
+s7_leaderboard.csv,mgs,md_hi,2.4,2.4,MATCH,True
+s7_leaderboard.csv,mgs,content_share,0.76,0.76,MATCH,True
+s7_leaderboard.csv,mgs,cs_lo,0.47,0.47,MATCH,True
+s7_leaderboard.csv,mgs,cs_hi,0.99,0.99,MATCH,True
+s7_leaderboard.csv,sa3s,house_level,5.8,5.8,MATCH,True
+s7_leaderboard.csv,sa3s,rho_verbal,0.384,0.384,MATCH,True
+s7_leaderboard.csv,sa3s,rho_lo,0.223,0.223,MATCH,True
+s7_leaderboard.csv,sa3s,rho_hi,0.525,0.525,MATCH,True
+s7_leaderboard.csv,sa3s,med_delta,1.6,1.6,MATCH,True
+s7_leaderboard.csv,sa3s,md_lo,0.55,0.55,MATCH,True
+s7_leaderboard.csv,sa3s,md_hi,2.2,2.2,MATCH,True
+s7_leaderboard.csv,sa3s,content_share,0.82,0.82,MATCH,True
+s7_leaderboard.csv,sa3s,cs_lo,0.64,0.64,MATCH,True
+s7_leaderboard.csv,sa3s,cs_hi,1.15,1.15,MATCH,True
+s7_leaderboard.csv,sao,house_level,6.04,6.04,MATCH,True
+s7_leaderboard.csv,sao,rho_verbal,0.504,0.504,MATCH,True
+s7_leaderboard.csv,sao,rho_lo,0.367,0.367,MATCH,True
+s7_leaderboard.csv,sao,rho_hi,0.619,0.619,MATCH,True
+s7_leaderboard.csv,sao,med_delta,1.3,1.3,MATCH,True
+s7_leaderboard.csv,sao,md_lo,0.55,0.55,MATCH,True
+s7_leaderboard.csv,sao,md_hi,2.0,2.0,MATCH,True
+s7_leaderboard.csv,sao,content_share,0.59,0.59,MATCH,True
+s7_leaderboard.csv,sao,cs_lo,0.5,0.5,MATCH,True
+s7_leaderboard.csv,sao,cs_hi,0.69,0.69,MATCH,True
+s6_level_means.csv,ace|numeric|1,p0a,4.403,4.403,MATCH,True
+s6_level_means.csv,ace|numeric|1,clap,0.133,0.132,CLAP (new baseline),False
+s6_level_means.csv,ace|numeric|1,lufs,-18.844,-18.844,MATCH,True
+s6_level_means.csv,ace|numeric|1,p0a_n,4.85,4.85,MATCH,True
+s6_level_means.csv,ace|numeric|1,clap_n,0.171,0.185,CLAP (new baseline),False
+s6_level_means.csv,ace|numeric|3,p0a,4.25,4.25,MATCH,True
+s6_level_means.csv,ace|numeric|3,clap,0.113,0.126,CLAP (new baseline),False
+s6_level_means.csv,ace|numeric|3,lufs,-19.002,-19.002,MATCH,True
+s6_level_means.csv,ace|numeric|3,p0a_n,4.61,4.61,MATCH,True
+s6_level_means.csv,ace|numeric|3,clap_n,0.171,0.178,CLAP (new baseline),False
+s6_level_means.csv,ace|numeric|5,p0a,4.307,4.307,MATCH,True
+s6_level_means.csv,ace|numeric|5,clap,0.123,0.117,CLAP (new baseline),False
+s6_level_means.csv,ace|numeric|5,lufs,-18.762,-18.762,MATCH,True
+s6_level_means.csv,ace|numeric|5,p0a_n,4.78,4.78,MATCH,True
+s6_level_means.csv,ace|numeric|5,clap_n,0.149,0.171,CLAP (new baseline),False
+s6_level_means.csv,ace|numeric|7,p0a,4.297,4.297,MATCH,True
+s6_level_means.csv,ace|numeric|7,clap,0.115,0.125,CLAP (new baseline),False
+s6_level_means.csv,ace|numeric|7,lufs,-18.701,-18.701,MATCH,True
+s6_level_means.csv,ace|numeric|7,p0a_n,4.723,4.723,MATCH,True
+s6_level_means.csv,ace|numeric|7,clap_n,0.163,0.179,CLAP (new baseline),False
+s6_level_means.csv,ace|numeric|9,p0a,4.493,4.493,MATCH,True
+s6_level_means.csv,ace|numeric|9,clap,0.156,0.143,CLAP (new baseline),False
+s6_level_means.csv,ace|numeric|9,lufs,-18.996,-18.996,MATCH,True
+s6_level_means.csv,ace|numeric|9,p0a_n,5.077,5.077,MATCH,True
+s6_level_means.csv,ace|numeric|9,clap_n,0.195,0.195,CLAP (new baseline),True
+s6_level_means.csv,ace|verbal|1,p0a,4.163,4.163,MATCH,True
+s6_level_means.csv,ace|verbal|1,clap,0.064,0.061,CLAP (new baseline),False
+s6_level_means.csv,ace|verbal|1,lufs,-18.738,-18.738,MATCH,True
+s6_level_means.csv,ace|verbal|1,p0a_n,4.45,4.45,MATCH,True
+s6_level_means.csv,ace|verbal|1,clap_n,0.124,0.119,CLAP (new baseline),False
+s6_level_means.csv,ace|verbal|3,p0a,4.003,4.003,MATCH,True
+s6_level_means.csv,ace|verbal|3,clap,0.068,0.053,CLAP (new baseline),False
+s6_level_means.csv,ace|verbal|3,lufs,-19.257,-19.257,MATCH,True
+s6_level_means.csv,ace|verbal|3,p0a_n,4.363,4.363,MATCH,True
+s6_level_means.csv,ace|verbal|3,clap_n,0.124,0.115,CLAP (new baseline),False
+s6_level_means.csv,ace|verbal|5,p0a,4.327,4.327,MATCH,True
+s6_level_means.csv,ace|verbal|5,clap,0.115,0.114,CLAP (new baseline),False
+s6_level_means.csv,ace|verbal|5,lufs,-18.979,-18.979,MATCH,True
+s6_level_means.csv,ace|verbal|5,p0a_n,4.847,4.847,MATCH,True
+s6_level_means.csv,ace|verbal|5,clap_n,0.144,0.165,CLAP (new baseline),False
+s6_level_means.csv,ace|verbal|7,p0a,4.9,4.9,MATCH,True
+s6_level_means.csv,ace|verbal|7,clap,0.233,0.227,CLAP (new baseline),False
+s6_level_means.csv,ace|verbal|7,lufs,-18.606,-18.606,MATCH,True
+s6_level_means.csv,ace|verbal|7,p0a_n,5.443,5.443,MATCH,True
+s6_level_means.csv,ace|verbal|7,clap_n,0.269,0.268,CLAP (new baseline),False
+s6_level_means.csv,ace|verbal|9,p0a,4.347,4.347,MATCH,True
+s6_level_means.csv,ace|verbal|9,clap,0.152,0.156,CLAP (new baseline),False
+s6_level_means.csv,ace|verbal|9,lufs,-19.116,-19.116,MATCH,True
+s6_level_means.csv,ace|verbal|9,p0a_n,4.847,4.847,MATCH,True
+s6_level_means.csv,ace|verbal|9,clap_n,0.176,0.211,CLAP (new baseline),False
+s6_level_means.csv,mgm|numeric|1,p0a,5.713,5.713,MATCH,True
+s6_level_means.csv,mgm|numeric|1,clap,0.309,0.31,CLAP (new baseline),False
+s6_level_means.csv,mgm|numeric|1,lufs,-16.506,-16.506,MATCH,True
+s6_level_means.csv,mgm|numeric|1,p0a_n,6.027,6.027,MATCH,True
+s6_level_means.csv,mgm|numeric|1,clap_n,0.342,0.34,CLAP (new baseline),False
+s6_level_means.csv,mgm|numeric|3,p0a,5.91,5.91,MATCH,True
+s6_level_means.csv,mgm|numeric|3,clap,0.289,0.319,CLAP (new baseline),False
+s6_level_means.csv,mgm|numeric|3,lufs,-16.838,-16.838,MATCH,True
+s6_level_means.csv,mgm|numeric|3,p0a_n,6.1,6.1,MATCH,True
+s6_level_means.csv,mgm|numeric|3,clap_n,0.332,0.351,CLAP (new baseline),False
+s6_level_means.csv,mgm|numeric|5,p0a,5.883,5.883,MATCH,True
+s6_level_means.csv,mgm|numeric|5,clap,0.296,0.332,CLAP (new baseline),False
+s6_level_means.csv,mgm|numeric|5,lufs,-17.411,-17.411,MATCH,True
+s6_level_means.csv,mgm|numeric|5,p0a_n,6.19,6.19,MATCH,True
+s6_level_means.csv,mgm|numeric|5,clap_n,0.336,0.368,CLAP (new baseline),False
+s6_level_means.csv,mgm|numeric|7,p0a,5.947,5.947,MATCH,True
+s6_level_means.csv,mgm|numeric|7,clap,0.3,0.296,CLAP (new baseline),False
+s6_level_means.csv,mgm|numeric|7,lufs,-16.928,-16.928,MATCH,True
+s6_level_means.csv,mgm|numeric|7,p0a_n,6.087,6.087,MATCH,True
+s6_level_means.csv,mgm|numeric|7,clap_n,0.361,0.339,CLAP (new baseline),False
+s6_level_means.csv,mgm|numeric|9,p0a,5.717,5.717,MATCH,True
+s6_level_means.csv,mgm|numeric|9,clap,0.287,0.303,CLAP (new baseline),False
+s6_level_means.csv,mgm|numeric|9,lufs,-18.072,-18.072,MATCH,True
+s6_level_means.csv,mgm|numeric|9,p0a_n,6.033,6.033,MATCH,True
+s6_level_means.csv,mgm|numeric|9,clap_n,0.335,0.354,CLAP (new baseline),False
+s6_level_means.csv,mgm|verbal|1,p0a,5.163,5.163,MATCH,True
+s6_level_means.csv,mgm|verbal|1,clap,0.168,0.154,CLAP (new baseline),False
+s6_level_means.csv,mgm|verbal|1,lufs,-19.142,-19.142,MATCH,True
+s6_level_means.csv,mgm|verbal|1,p0a_n,5.497,5.497,MATCH,True
+s6_level_means.csv,mgm|verbal|1,clap_n,0.232,0.219,CLAP (new baseline),False
+s6_level_means.csv,mgm|verbal|3,p0a,5.223,5.223,MATCH,True
+s6_level_means.csv,mgm|verbal|3,clap,0.199,0.199,CLAP (new baseline),True
+s6_level_means.csv,mgm|verbal|3,lufs,-18.45,-18.45,MATCH,True
+s6_level_means.csv,mgm|verbal|3,p0a_n,5.523,5.523,MATCH,True
+s6_level_means.csv,mgm|verbal|3,clap_n,0.247,0.264,CLAP (new baseline),False
+s6_level_means.csv,mgm|verbal|5,p0a,5.953,5.953,MATCH,True
+s6_level_means.csv,mgm|verbal|5,clap,0.272,0.298,CLAP (new baseline),False
+s6_level_means.csv,mgm|verbal|5,lufs,-20.297,-20.297,MATCH,True
+s6_level_means.csv,mgm|verbal|5,p0a_n,6.287,6.287,MATCH,True
+s6_level_means.csv,mgm|verbal|5,clap_n,0.328,0.37,CLAP (new baseline),False
+s6_level_means.csv,mgm|verbal|7,p0a,6.007,6.007,MATCH,True
+s6_level_means.csv,mgm|verbal|7,clap,0.28,0.291,CLAP (new baseline),False
+s6_level_means.csv,mgm|verbal|7,lufs,-17.508,-17.508,MATCH,True
+s6_level_means.csv,mgm|verbal|7,p0a_n,6.17,6.17,MATCH,True
+s6_level_means.csv,mgm|verbal|7,clap_n,0.343,0.328,CLAP (new baseline),False
+s6_level_means.csv,mgm|verbal|9,p0a,6.44,6.44,MATCH,True
+s6_level_means.csv,mgm|verbal|9,clap,0.373,0.386,CLAP (new baseline),False
+s6_level_means.csv,mgm|verbal|9,lufs,-16.835,-16.835,MATCH,True
+s6_level_means.csv,mgm|verbal|9,p0a_n,6.47,6.47,MATCH,True
+s6_level_means.csv,mgm|verbal|9,clap_n,0.405,0.422,CLAP (new baseline),False
+s6_level_means.csv,mgs|numeric|1,p0a,5.747,5.747,MATCH,True
+s6_level_means.csv,mgs|numeric|1,clap,0.259,0.247,CLAP (new baseline),False
+s6_level_means.csv,mgs|numeric|1,lufs,-18.88,-18.88,MATCH,True
+s6_level_means.csv,mgs|numeric|1,p0a_n,6.123,6.123,MATCH,True
+s6_level_means.csv,mgs|numeric|1,clap_n,0.3,0.301,CLAP (new baseline),False
+s6_level_means.csv,mgs|numeric|3,p0a,5.717,5.717,MATCH,True
+s6_level_means.csv,mgs|numeric|3,clap,0.23,0.253,CLAP (new baseline),False
+s6_level_means.csv,mgs|numeric|3,lufs,-19.814,-19.814,MATCH,True
+s6_level_means.csv,mgs|numeric|3,p0a_n,6.107,6.107,MATCH,True
+s6_level_means.csv,mgs|numeric|3,clap_n,0.306,0.32,CLAP (new baseline),False
+s6_level_means.csv,mgs|numeric|5,p0a,5.953,5.953,MATCH,True
+s6_level_means.csv,mgs|numeric|5,clap,0.246,0.262,CLAP (new baseline),False
+s6_level_means.csv,mgs|numeric|5,lufs,-18.728,-18.728,MATCH,True
+s6_level_means.csv,mgs|numeric|5,p0a_n,6.177,6.177,MATCH,True
+s6_level_means.csv,mgs|numeric|5,clap_n,0.283,0.311,CLAP (new baseline),False
+s6_level_means.csv,mgs|numeric|7,p0a,5.797,5.797,MATCH,True
+s6_level_means.csv,mgs|numeric|7,clap,0.254,0.237,CLAP (new baseline),False
+s6_level_means.csv,mgs|numeric|7,lufs,-18.482,-18.482,MATCH,True
+s6_level_means.csv,mgs|numeric|7,p0a_n,6.05,6.05,MATCH,True
+s6_level_means.csv,mgs|numeric|7,clap_n,0.294,0.296,CLAP (new baseline),False
+s6_level_means.csv,mgs|numeric|9,p0a,5.823,5.823,MATCH,True
+s6_level_means.csv,mgs|numeric|9,clap,0.239,0.253,CLAP (new baseline),False
+s6_level_means.csv,mgs|numeric|9,lufs,-19.837,-19.837,MATCH,True
+s6_level_means.csv,mgs|numeric|9,p0a_n,6.137,6.137,MATCH,True
+s6_level_means.csv,mgs|numeric|9,clap_n,0.325,0.321,CLAP (new baseline),False
+s6_level_means.csv,mgs|verbal|1,p0a,4.76,4.76,MATCH,True
+s6_level_means.csv,mgs|verbal|1,clap,0.066,0.091,CLAP (new baseline),False
+s6_level_means.csv,mgs|verbal|1,lufs,-21.639,-21.639,MATCH,True
+s6_level_means.csv,mgs|verbal|1,p0a_n,5.22,5.22,MATCH,True
+s6_level_means.csv,mgs|verbal|1,clap_n,0.174,0.189,CLAP (new baseline),False
+s6_level_means.csv,mgs|verbal|3,p0a,5.097,5.097,MATCH,True
+s6_level_means.csv,mgs|verbal|3,clap,0.092,0.103,CLAP (new baseline),False
+s6_level_means.csv,mgs|verbal|3,lufs,-20.401,-20.401,MATCH,True
+s6_level_means.csv,mgs|verbal|3,p0a_n,5.517,5.517,MATCH,True
+s6_level_means.csv,mgs|verbal|3,clap_n,0.171,0.181,CLAP (new baseline),False
+s6_level_means.csv,mgs|verbal|5,p0a,5.547,5.547,MATCH,True
+s6_level_means.csv,mgs|verbal|5,clap,0.208,0.222,CLAP (new baseline),False
+s6_level_means.csv,mgs|verbal|5,lufs,-18.92,-18.92,MATCH,True
+s6_level_means.csv,mgs|verbal|5,p0a_n,5.703,5.703,MATCH,True
+s6_level_means.csv,mgs|verbal|5,clap_n,0.273,0.281,CLAP (new baseline),False
+s6_level_means.csv,mgs|verbal|7,p0a,6.113,6.113,MATCH,True
+s6_level_means.csv,mgs|verbal|7,clap,0.303,0.305,CLAP (new baseline),False
+s6_level_means.csv,mgs|verbal|7,lufs,-16.814,-16.814,MATCH,True
+s6_level_means.csv,mgs|verbal|7,p0a_n,6.203,6.203,MATCH,True
+s6_level_means.csv,mgs|verbal|7,clap_n,0.312,0.342,CLAP (new baseline),False
+s6_level_means.csv,mgs|verbal|9,p0a,5.693,5.693,MATCH,True
+s6_level_means.csv,mgs|verbal|9,clap,0.257,0.271,CLAP (new baseline),False
+s6_level_means.csv,mgs|verbal|9,lufs,-19.732,-19.732,MATCH,True
+s6_level_means.csv,mgs|verbal|9,p0a_n,5.927,5.927,MATCH,True
+s6_level_means.csv,mgs|verbal|9,clap_n,0.361,0.351,CLAP (new baseline),False
+s6_level_means.csv,sa3s|numeric|1,p0a,5.69,5.69,MATCH,True
+s6_level_means.csv,sa3s|numeric|1,clap,0.294,0.286,CLAP (new baseline),False
+s6_level_means.csv,sa3s|numeric|1,lufs,-16.487,-16.487,MATCH,True
+s6_level_means.csv,sa3s|numeric|1,p0a_n,5.887,5.887,MATCH,True
+s6_level_means.csv,sa3s|numeric|1,clap_n,0.314,0.313,CLAP (new baseline),False
+s6_level_means.csv,sa3s|numeric|3,p0a,5.927,5.927,MATCH,True
+s6_level_means.csv,sa3s|numeric|3,clap,0.31,0.312,CLAP (new baseline),False
+s6_level_means.csv,sa3s|numeric|3,lufs,-16.753,-16.753,MATCH,True
+s6_level_means.csv,sa3s|numeric|3,p0a_n,6.12,6.12,MATCH,True
+s6_level_means.csv,sa3s|numeric|3,clap_n,0.342,0.34,CLAP (new baseline),False
+s6_level_means.csv,sa3s|numeric|5,p0a,5.7,5.7,MATCH,True
+s6_level_means.csv,sa3s|numeric|5,clap,0.299,0.303,CLAP (new baseline),False
+s6_level_means.csv,sa3s|numeric|5,lufs,-17.058,-17.058,MATCH,True
+s6_level_means.csv,sa3s|numeric|5,p0a_n,5.93,5.93,MATCH,True
+s6_level_means.csv,sa3s|numeric|5,clap_n,0.333,0.336,CLAP (new baseline),False
+s6_level_means.csv,sa3s|numeric|7,p0a,5.773,5.773,MATCH,True
+s6_level_means.csv,sa3s|numeric|7,clap,0.297,0.3,CLAP (new baseline),False
+s6_level_means.csv,sa3s|numeric|7,lufs,-16.772,-16.772,MATCH,True
+s6_level_means.csv,sa3s|numeric|7,p0a_n,6.063,6.063,MATCH,True
+s6_level_means.csv,sa3s|numeric|7,clap_n,0.324,0.326,CLAP (new baseline),False
+s6_level_means.csv,sa3s|numeric|9,p0a,5.927,5.927,MATCH,True
+s6_level_means.csv,sa3s|numeric|9,clap,0.315,0.313,CLAP (new baseline),False
+s6_level_means.csv,sa3s|numeric|9,lufs,-16.62,-16.62,MATCH,True
+s6_level_means.csv,sa3s|numeric|9,p0a_n,6.077,6.077,MATCH,True
+s6_level_means.csv,sa3s|numeric|9,clap_n,0.331,0.34,CLAP (new baseline),False
+s6_level_means.csv,sa3s|verbal|1,p0a,4.95,4.95,MATCH,True
+s6_level_means.csv,sa3s|verbal|1,clap,0.136,0.146,CLAP (new baseline),False
+s6_level_means.csv,sa3s|verbal|1,lufs,-18.921,-18.921,MATCH,True
+s6_level_means.csv,sa3s|verbal|1,p0a_n,5.42,5.42,MATCH,True
+s6_level_means.csv,sa3s|verbal|1,clap_n,0.186,0.193,CLAP (new baseline),False
+s6_level_means.csv,sa3s|verbal|3,p0a,4.9,4.9,MATCH,True
+s6_level_means.csv,sa3s|verbal|3,clap,0.13,0.149,CLAP (new baseline),False
+s6_level_means.csv,sa3s|verbal|3,lufs,-18.72,-18.72,MATCH,True
+s6_level_means.csv,sa3s|verbal|3,p0a_n,5.25,5.25,MATCH,True
+s6_level_means.csv,sa3s|verbal|3,clap_n,0.198,0.196,CLAP (new baseline),False
+s6_level_means.csv,sa3s|verbal|5,p0a,5.92,5.92,MATCH,True
+s6_level_means.csv,sa3s|verbal|5,clap,0.314,0.305,CLAP (new baseline),False
+s6_level_means.csv,sa3s|verbal|5,lufs,-16.028,-16.028,MATCH,True
+s6_level_means.csv,sa3s|verbal|5,p0a_n,6.09,6.09,MATCH,True
+s6_level_means.csv,sa3s|verbal|5,clap_n,0.329,0.322,CLAP (new baseline),False
+s6_level_means.csv,sa3s|verbal|7,p0a,6.083,6.083,MATCH,True
+s6_level_means.csv,sa3s|verbal|7,clap,0.32,0.319,CLAP (new baseline),False
+s6_level_means.csv,sa3s|verbal|7,lufs,-16.684,-16.684,MATCH,True
+s6_level_means.csv,sa3s|verbal|7,p0a_n,6.27,6.27,MATCH,True
+s6_level_means.csv,sa3s|verbal|7,clap_n,0.338,0.342,CLAP (new baseline),False
+s6_level_means.csv,sa3s|verbal|9,p0a,5.78,5.78,MATCH,True
+s6_level_means.csv,sa3s|verbal|9,clap,0.318,0.318,CLAP (new baseline),True
+s6_level_means.csv,sa3s|verbal|9,lufs,-17.534,-17.534,MATCH,True
+s6_level_means.csv,sa3s|verbal|9,p0a_n,6.097,6.097,MATCH,True
+s6_level_means.csv,sa3s|verbal|9,clap_n,0.352,0.349,CLAP (new baseline),False
+s6_level_means.csv,sao|numeric|1,p0a,6.04,6.04,MATCH,True
+s6_level_means.csv,sao|numeric|1,clap,0.304,0.293,CLAP (new baseline),False
+s6_level_means.csv,sao|numeric|1,lufs,-17.057,-17.057,MATCH,True
+s6_level_means.csv,sao|numeric|1,p0a_n,6.29,6.29,MATCH,True
+s6_level_means.csv,sao|numeric|1,clap_n,0.324,0.319,CLAP (new baseline),False
+s6_level_means.csv,sao|numeric|3,p0a,6.077,6.077,MATCH,True
+s6_level_means.csv,sao|numeric|3,clap,0.317,0.311,CLAP (new baseline),False
+s6_level_means.csv,sao|numeric|3,lufs,-16.231,-16.231,MATCH,True
+s6_level_means.csv,sao|numeric|3,p0a_n,6.28,6.28,MATCH,True
+s6_level_means.csv,sao|numeric|3,clap_n,0.315,0.327,CLAP (new baseline),False
+s6_level_means.csv,sao|numeric|5,p0a,6.06,6.06,MATCH,True
+s6_level_means.csv,sao|numeric|5,clap,0.293,0.286,CLAP (new baseline),False
+s6_level_means.csv,sao|numeric|5,lufs,-16.034,-16.034,MATCH,True
+s6_level_means.csv,sao|numeric|5,p0a_n,6.267,6.267,MATCH,True
+s6_level_means.csv,sao|numeric|5,clap_n,0.31,0.303,CLAP (new baseline),False
+s6_level_means.csv,sao|numeric|7,p0a,6.007,6.007,MATCH,True
+s6_level_means.csv,sao|numeric|7,clap,0.311,0.306,CLAP (new baseline),False
+s6_level_means.csv,sao|numeric|7,lufs,-16.466,-16.466,MATCH,True
+s6_level_means.csv,sao|numeric|7,p0a_n,6.25,6.25,MATCH,True
+s6_level_means.csv,sao|numeric|7,clap_n,0.338,0.328,CLAP (new baseline),False
+s6_level_means.csv,sao|numeric|9,p0a,6.04,6.04,MATCH,True
+s6_level_means.csv,sao|numeric|9,clap,0.302,0.284,CLAP (new baseline),False
+s6_level_means.csv,sao|numeric|9,lufs,-16.334,-16.334,MATCH,True
+s6_level_means.csv,sao|numeric|9,p0a_n,6.29,6.29,MATCH,True
+s6_level_means.csv,sao|numeric|9,clap_n,0.311,0.305,CLAP (new baseline),False
+s6_level_means.csv,sao|verbal|1,p0a,5.19,5.19,MATCH,True
+s6_level_means.csv,sao|verbal|1,clap,0.158,0.151,CLAP (new baseline),False
+s6_level_means.csv,sao|verbal|1,lufs,-19.933,-19.933,MATCH,True
+s6_level_means.csv,sao|verbal|1,p0a_n,5.76,5.76,MATCH,True
+s6_level_means.csv,sao|verbal|1,clap_n,0.224,0.218,CLAP (new baseline),False
+s6_level_means.csv,sao|verbal|3,p0a,5.613,5.613,MATCH,True
+s6_level_means.csv,sao|verbal|3,clap,0.207,0.204,CLAP (new baseline),False
+s6_level_means.csv,sao|verbal|3,lufs,-18.312,-18.312,MATCH,True
+s6_level_means.csv,sao|verbal|3,p0a_n,6.11,6.11,MATCH,True
+s6_level_means.csv,sao|verbal|3,clap_n,0.241,0.246,CLAP (new baseline),False
+s6_level_means.csv,sao|verbal|5,p0a,5.763,5.763,MATCH,True
+s6_level_means.csv,sao|verbal|5,clap,0.246,0.225,CLAP (new baseline),False
+s6_level_means.csv,sao|verbal|5,lufs,-18.714,-18.714,MATCH,True
+s6_level_means.csv,sao|verbal|5,p0a_n,6.16,6.16,MATCH,True
+s6_level_means.csv,sao|verbal|5,clap_n,0.282,0.271,CLAP (new baseline),False
+s6_level_means.csv,sao|verbal|7,p0a,6.09,6.09,MATCH,True
+s6_level_means.csv,sao|verbal|7,clap,0.294,0.281,CLAP (new baseline),False
+s6_level_means.csv,sao|verbal|7,lufs,-17.02,-17.02,MATCH,True
+s6_level_means.csv,sao|verbal|7,p0a_n,6.323,6.323,MATCH,True
+s6_level_means.csv,sao|verbal|7,clap_n,0.303,0.306,CLAP (new baseline),False
+s6_level_means.csv,sao|verbal|9,p0a,6.323,6.323,MATCH,True
+s6_level_means.csv,sao|verbal|9,clap,0.361,0.347,CLAP (new baseline),False
+s6_level_means.csv,sao|verbal|9,lufs,-13.608,-13.608,MATCH,True
+s6_level_means.csv,sao|verbal|9,p0a_n,6.43,6.43,MATCH,True
+s6_level_means.csv,sao|verbal|9,clap_n,0.349,0.346,CLAP (new baseline),False
+s6_edge_cells.csv,ace|edm,1,4.65,4.65,MATCH,True
+s6_edge_cells.csv,ace|edm,3,4.28,4.28,MATCH,True
+s6_edge_cells.csv,ace|edm,5,4.48,4.48,MATCH,True
+s6_edge_cells.csv,ace|edm,7,5.2,5.2,MATCH,True
+s6_edge_cells.csv,ace|edm,9,4.38,4.38,MATCH,True
+s6_edge_cells.csv,ace|folk,1,3.77,3.77,MATCH,True
+s6_edge_cells.csv,ace|folk,3,3.77,3.77,MATCH,True
+s6_edge_cells.csv,ace|folk,5,4.02,4.02,MATCH,True
+s6_edge_cells.csv,ace|folk,7,4.62,4.62,MATCH,True
+s6_edge_cells.csv,ace|folk,9,3.87,3.87,MATCH,True
+s6_edge_cells.csv,ace|hiphop,1,4.57,4.57,MATCH,True
+s6_edge_cells.csv,ace|hiphop,3,3.87,3.87,MATCH,True
+s6_edge_cells.csv,ace|hiphop,5,4.37,4.37,MATCH,True
+s6_edge_cells.csv,ace|hiphop,7,5.1,5.1,MATCH,True
+s6_edge_cells.csv,ace|hiphop,9,4.35,4.35,MATCH,True
+s6_edge_cells.csv,ace|orchestral,1,3.7,3.7,MATCH,True
+s6_edge_cells.csv,ace|orchestral,3,3.9,3.9,MATCH,True
+s6_edge_cells.csv,ace|orchestral,5,4.1,4.1,MATCH,True
+s6_edge_cells.csv,ace|orchestral,7,4.4,4.4,MATCH,True
+s6_edge_cells.csv,ace|orchestral,9,4.05,4.05,MATCH,True
+s6_edge_cells.csv,ace|rock,1,4.13,4.13,MATCH,True
+s6_edge_cells.csv,ace|rock,3,4.2,4.2,MATCH,True
+s6_edge_cells.csv,ace|rock,5,4.67,4.67,MATCH,True
+s6_edge_cells.csv,ace|rock,7,5.18,5.18,MATCH,True
+s6_edge_cells.csv,ace|rock,9,5.08,5.08,MATCH,True
+s6_edge_cells.csv,mgm|edm,1,5.87,5.87,MATCH,True
+s6_edge_cells.csv,mgm|edm,3,6.38,6.38,MATCH,True
+s6_edge_cells.csv,mgm|edm,5,6.18,6.18,MATCH,True
+s6_edge_cells.csv,mgm|edm,7,6.32,6.32,MATCH,True
+s6_edge_cells.csv,mgm|edm,9,6.5,6.5,MATCH,True
+s6_edge_cells.csv,mgm|folk,1,4.43,4.43,MATCH,True
+s6_edge_cells.csv,mgm|folk,3,4.03,4.03,MATCH,True
+s6_edge_cells.csv,mgm|folk,5,5.82,5.82,MATCH,True
+s6_edge_cells.csv,mgm|folk,7,4.9,4.9,MATCH,True
+s6_edge_cells.csv,mgm|folk,9,6.25,6.25,MATCH,True
+s6_edge_cells.csv,mgm|hiphop,1,5.38,5.38,MATCH,True
+s6_edge_cells.csv,mgm|hiphop,3,4.65,4.65,MATCH,True
+s6_edge_cells.csv,mgm|hiphop,5,6.32,6.32,MATCH,True
+s6_edge_cells.csv,mgm|hiphop,7,6.33,6.33,MATCH,True
+s6_edge_cells.csv,mgm|hiphop,9,6.5,6.5,MATCH,True
+s6_edge_cells.csv,mgm|orchestral,1,3.77,3.77,MATCH,True
+s6_edge_cells.csv,mgm|orchestral,3,4.67,4.67,MATCH,True
+s6_edge_cells.csv,mgm|orchestral,5,4.97,4.97,MATCH,True
+s6_edge_cells.csv,mgm|orchestral,7,5.98,5.98,MATCH,True
+s6_edge_cells.csv,mgm|orchestral,9,6.47,6.47,MATCH,True
+s6_edge_cells.csv,mgm|rock,1,6.37,6.37,MATCH,True
+s6_edge_cells.csv,mgm|rock,3,6.38,6.38,MATCH,True
+s6_edge_cells.csv,mgm|rock,5,6.48,6.48,MATCH,True
+s6_edge_cells.csv,mgm|rock,7,6.5,6.5,MATCH,True
+s6_edge_cells.csv,mgm|rock,9,6.48,6.48,MATCH,True
+s6_edge_cells.csv,mgs|edm,1,5.4,5.4,MATCH,True
+s6_edge_cells.csv,mgs|edm,3,5.73,5.73,MATCH,True
+s6_edge_cells.csv,mgs|edm,5,6.47,6.47,MATCH,True
+s6_edge_cells.csv,mgs|edm,7,6.42,6.42,MATCH,True
+s6_edge_cells.csv,mgs|edm,9,6.38,6.38,MATCH,True
+s6_edge_cells.csv,mgs|folk,1,4.15,4.15,MATCH,True
+s6_edge_cells.csv,mgs|folk,3,4.08,4.08,MATCH,True
+s6_edge_cells.csv,mgs|folk,5,4.73,4.73,MATCH,True
+s6_edge_cells.csv,mgs|folk,7,5.72,5.72,MATCH,True
+s6_edge_cells.csv,mgs|folk,9,5.0,5.0,MATCH,True
+s6_edge_cells.csv,mgs|hiphop,1,4.98,4.98,MATCH,True
+s6_edge_cells.csv,mgs|hiphop,3,5.53,5.53,MATCH,True
+s6_edge_cells.csv,mgs|hiphop,5,6.18,6.18,MATCH,True
+s6_edge_cells.csv,mgs|hiphop,7,6.28,6.28,MATCH,True
+s6_edge_cells.csv,mgs|hiphop,9,6.33,6.33,MATCH,True
+s6_edge_cells.csv,mgs|orchestral,1,3.9,3.9,MATCH,True
+s6_edge_cells.csv,mgs|orchestral,3,3.97,3.97,MATCH,True
+s6_edge_cells.csv,mgs|orchestral,5,4.02,4.02,MATCH,True
+s6_edge_cells.csv,mgs|orchestral,7,5.67,5.67,MATCH,True
+s6_edge_cells.csv,mgs|orchestral,9,4.72,4.72,MATCH,True
+s6_edge_cells.csv,mgs|rock,1,5.37,5.37,MATCH,True
+s6_edge_cells.csv,mgs|rock,3,6.17,6.17,MATCH,True
+s6_edge_cells.csv,mgs|rock,5,6.33,6.33,MATCH,True
+s6_edge_cells.csv,mgs|rock,7,6.48,6.48,MATCH,True
+s6_edge_cells.csv,mgs|rock,9,6.03,6.03,MATCH,True
+s6_edge_cells.csv,sa3s|edm,1,4.87,4.87,MATCH,True
+s6_edge_cells.csv,sa3s|edm,3,5.8,5.8,MATCH,True
+s6_edge_cells.csv,sa3s|edm,5,6.47,6.47,MATCH,True
+s6_edge_cells.csv,sa3s|edm,7,6.45,6.45,MATCH,True
+s6_edge_cells.csv,sa3s|edm,9,6.42,6.42,MATCH,True
+s6_edge_cells.csv,sa3s|folk,1,3.95,3.95,MATCH,True
+s6_edge_cells.csv,sa3s|folk,3,4.03,4.03,MATCH,True
+s6_edge_cells.csv,sa3s|folk,5,4.97,4.97,MATCH,True
+s6_edge_cells.csv,sa3s|folk,7,5.47,5.47,MATCH,True
+s6_edge_cells.csv,sa3s|folk,9,4.23,4.23,MATCH,True
+s6_edge_cells.csv,sa3s|hiphop,1,5.4,5.4,MATCH,True
+s6_edge_cells.csv,sa3s|hiphop,3,4.43,4.43,MATCH,True
+s6_edge_cells.csv,sa3s|hiphop,5,6.15,6.15,MATCH,True
+s6_edge_cells.csv,sa3s|hiphop,7,5.97,5.97,MATCH,True
+s6_edge_cells.csv,sa3s|hiphop,9,6.05,6.05,MATCH,True
+s6_edge_cells.csv,sa3s|orchestral,1,4.05,4.05,MATCH,True
+s6_edge_cells.csv,sa3s|orchestral,3,4.17,4.17,MATCH,True
+s6_edge_cells.csv,sa3s|orchestral,5,5.57,5.57,MATCH,True
+s6_edge_cells.csv,sa3s|orchestral,7,6.03,6.03,MATCH,True
+s6_edge_cells.csv,sa3s|orchestral,9,5.7,5.7,MATCH,True
+s6_edge_cells.csv,sa3s|rock,1,6.48,6.48,MATCH,True
+s6_edge_cells.csv,sa3s|rock,3,6.07,6.07,MATCH,True
+s6_edge_cells.csv,sa3s|rock,5,6.45,6.45,MATCH,True
+s6_edge_cells.csv,sa3s|rock,7,6.5,6.5,MATCH,True
+s6_edge_cells.csv,sa3s|rock,9,6.5,6.5,MATCH,True
+s6_edge_cells.csv,sao|edm,1,5.92,5.92,MATCH,True
+s6_edge_cells.csv,sao|edm,3,6.42,6.42,MATCH,True
+s6_edge_cells.csv,sao|edm,5,6.28,6.28,MATCH,True
+s6_edge_cells.csv,sao|edm,7,6.5,6.5,MATCH,True
+s6_edge_cells.csv,sao|edm,9,6.5,6.5,MATCH,True
+s6_edge_cells.csv,sao|folk,1,3.87,3.87,MATCH,True
+s6_edge_cells.csv,sao|folk,3,4.5,4.5,MATCH,True
+s6_edge_cells.csv,sao|folk,5,4.7,4.7,MATCH,True
+s6_edge_cells.csv,sao|folk,7,5.33,5.33,MATCH,True
+s6_edge_cells.csv,sao|folk,9,5.78,5.78,MATCH,True
+s6_edge_cells.csv,sao|hiphop,1,5.57,5.57,MATCH,True
+s6_edge_cells.csv,sao|hiphop,3,5.75,5.75,MATCH,True
+s6_edge_cells.csv,sao|hiphop,5,6.37,6.37,MATCH,True
+s6_edge_cells.csv,sao|hiphop,7,6.4,6.4,MATCH,True
+s6_edge_cells.csv,sao|hiphop,9,6.5,6.5,MATCH,True
+s6_edge_cells.csv,sao|orchestral,1,4.77,4.77,MATCH,True
+s6_edge_cells.csv,sao|orchestral,3,5.18,5.18,MATCH,True
+s6_edge_cells.csv,sao|orchestral,5,5.25,5.25,MATCH,True
+s6_edge_cells.csv,sao|orchestral,7,5.88,5.88,MATCH,True
+s6_edge_cells.csv,sao|orchestral,9,6.33,6.33,MATCH,True
+s6_edge_cells.csv,sao|rock,1,5.83,5.83,MATCH,True
+s6_edge_cells.csv,sao|rock,3,6.22,6.22,MATCH,True
+s6_edge_cells.csv,sao|rock,5,6.22,6.22,MATCH,True
+s6_edge_cells.csv,sao|rock,7,6.33,6.33,MATCH,True
+s6_edge_cells.csv,sao|rock,9,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,ace|edm|1|0,p0a,4.1,4.1,MATCH,True
+s7_skew_L1L9.csv,ace|edm|1|1,p0a,5.2,5.2,MATCH,True
+s7_skew_L1L9.csv,ace|edm|1|2,p0a,3.7,3.7,MATCH,True
+s7_skew_L1L9.csv,ace|edm|1|3,p0a,5.2,5.2,MATCH,True
+s7_skew_L1L9.csv,ace|edm|1|4,p0a,4.5,4.5,MATCH,True
+s7_skew_L1L9.csv,ace|edm|1|5,p0a,5.2,5.2,MATCH,True
+s7_skew_L1L9.csv,ace|edm|9|0,p0a,3.7,3.7,MATCH,True
+s7_skew_L1L9.csv,ace|edm|9|1,p0a,4.5,4.5,MATCH,True
+s7_skew_L1L9.csv,ace|edm|9|2,p0a,4.5,4.5,MATCH,True
+s7_skew_L1L9.csv,ace|edm|9|3,p0a,4.0,4.0,MATCH,True
+s7_skew_L1L9.csv,ace|edm|9|4,p0a,5.2,5.2,MATCH,True
+s7_skew_L1L9.csv,ace|edm|9|5,p0a,4.4,4.4,MATCH,True
+s7_skew_L1L9.csv,ace|folk|1|0,p0a,3.7,3.7,MATCH,True
+s7_skew_L1L9.csv,ace|folk|1|1,p0a,3.7,3.7,MATCH,True
+s7_skew_L1L9.csv,ace|folk|1|2,p0a,3.7,3.7,MATCH,True
+s7_skew_L1L9.csv,ace|folk|1|3,p0a,3.7,3.7,MATCH,True
+s7_skew_L1L9.csv,ace|folk|1|4,p0a,3.7,3.7,MATCH,True
+s7_skew_L1L9.csv,ace|folk|1|5,p0a,4.1,4.1,MATCH,True
+s7_skew_L1L9.csv,ace|folk|9|0,p0a,3.7,3.7,MATCH,True
+s7_skew_L1L9.csv,ace|folk|9|1,p0a,4.1,4.1,MATCH,True
+s7_skew_L1L9.csv,ace|folk|9|2,p0a,3.8,3.8,MATCH,True
+s7_skew_L1L9.csv,ace|folk|9|3,p0a,3.8,3.8,MATCH,True
+s7_skew_L1L9.csv,ace|folk|9|4,p0a,3.7,3.7,MATCH,True
+s7_skew_L1L9.csv,ace|folk|9|5,p0a,4.1,4.1,MATCH,True
+s7_skew_L1L9.csv,ace|hiphop|1|0,p0a,5.2,5.2,MATCH,True
+s7_skew_L1L9.csv,ace|hiphop|1|1,p0a,4.1,4.1,MATCH,True
+s7_skew_L1L9.csv,ace|hiphop|1|2,p0a,4.1,4.1,MATCH,True
+s7_skew_L1L9.csv,ace|hiphop|1|3,p0a,4.0,4.0,MATCH,True
+s7_skew_L1L9.csv,ace|hiphop|1|4,p0a,5.9,5.9,MATCH,True
+s7_skew_L1L9.csv,ace|hiphop|1|5,p0a,4.1,4.1,MATCH,True
+s7_skew_L1L9.csv,ace|hiphop|9|0,p0a,3.8,3.8,MATCH,True
+s7_skew_L1L9.csv,ace|hiphop|9|1,p0a,4.1,4.1,MATCH,True
+s7_skew_L1L9.csv,ace|hiphop|9|2,p0a,4.4,4.4,MATCH,True
+s7_skew_L1L9.csv,ace|hiphop|9|3,p0a,5.9,5.9,MATCH,True
+s7_skew_L1L9.csv,ace|hiphop|9|4,p0a,4.2,4.2,MATCH,True
+s7_skew_L1L9.csv,ace|hiphop|9|5,p0a,3.7,3.7,MATCH,True
+s7_skew_L1L9.csv,ace|orchestral|1|0,p0a,3.7,3.7,MATCH,True
+s7_skew_L1L9.csv,ace|orchestral|1|1,p0a,3.7,3.7,MATCH,True
+s7_skew_L1L9.csv,ace|orchestral|1|2,p0a,3.7,3.7,MATCH,True
+s7_skew_L1L9.csv,ace|orchestral|1|3,p0a,3.7,3.7,MATCH,True
+s7_skew_L1L9.csv,ace|orchestral|1|4,p0a,3.7,3.7,MATCH,True
+s7_skew_L1L9.csv,ace|orchestral|1|5,p0a,3.7,3.7,MATCH,True
+s7_skew_L1L9.csv,ace|orchestral|9|0,p0a,4.1,4.1,MATCH,True
+s7_skew_L1L9.csv,ace|orchestral|9|1,p0a,3.8,3.8,MATCH,True
+s7_skew_L1L9.csv,ace|orchestral|9|2,p0a,3.7,3.7,MATCH,True
+s7_skew_L1L9.csv,ace|orchestral|9|3,p0a,4.1,4.1,MATCH,True
+s7_skew_L1L9.csv,ace|orchestral|9|4,p0a,4.5,4.5,MATCH,True
+s7_skew_L1L9.csv,ace|orchestral|9|5,p0a,4.1,4.1,MATCH,True
+s7_skew_L1L9.csv,ace|rock|1|0,p0a,4.4,4.4,MATCH,True
+s7_skew_L1L9.csv,ace|rock|1|1,p0a,4.5,4.5,MATCH,True
+s7_skew_L1L9.csv,ace|rock|1|2,p0a,4.0,4.0,MATCH,True
+s7_skew_L1L9.csv,ace|rock|1|3,p0a,3.7,3.7,MATCH,True
+s7_skew_L1L9.csv,ace|rock|1|4,p0a,4.5,4.5,MATCH,True
+s7_skew_L1L9.csv,ace|rock|1|5,p0a,3.7,3.7,MATCH,True
+s7_skew_L1L9.csv,ace|rock|9|0,p0a,5.2,5.2,MATCH,True
+s7_skew_L1L9.csv,ace|rock|9|1,p0a,5.2,5.2,MATCH,True
+s7_skew_L1L9.csv,ace|rock|9|2,p0a,5.2,5.2,MATCH,True
+s7_skew_L1L9.csv,ace|rock|9|3,p0a,5.2,5.2,MATCH,True
+s7_skew_L1L9.csv,ace|rock|9|4,p0a,4.5,4.5,MATCH,True
+s7_skew_L1L9.csv,ace|rock|9|5,p0a,5.2,5.2,MATCH,True
+s7_skew_L1L9.csv,mgm|edm|1|0,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,mgm|edm|1|1,p0a,6.4,6.4,MATCH,True
+s7_skew_L1L9.csv,mgm|edm|1|2,p0a,6.4,6.4,MATCH,True
+s7_skew_L1L9.csv,mgm|edm|1|3,p0a,5.5,5.5,MATCH,True
+s7_skew_L1L9.csv,mgm|edm|1|4,p0a,5.2,5.2,MATCH,True
+s7_skew_L1L9.csv,mgm|edm|1|5,p0a,5.2,5.2,MATCH,True
+s7_skew_L1L9.csv,mgm|edm|9|0,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,mgm|edm|9|1,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,mgm|edm|9|2,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,mgm|edm|9|3,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,mgm|edm|9|4,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,mgm|edm|9|5,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,mgm|folk|1|0,p0a,4.1,4.1,MATCH,True
+s7_skew_L1L9.csv,mgm|folk|1|1,p0a,4.4,4.4,MATCH,True
+s7_skew_L1L9.csv,mgm|folk|1|2,p0a,4.1,4.1,MATCH,True
+s7_skew_L1L9.csv,mgm|folk|1|3,p0a,5.2,5.2,MATCH,True
+s7_skew_L1L9.csv,mgm|folk|1|4,p0a,4.4,4.4,MATCH,True
+s7_skew_L1L9.csv,mgm|folk|1|5,p0a,4.4,4.4,MATCH,True
+s7_skew_L1L9.csv,mgm|folk|9|0,p0a,6.2,6.2,MATCH,True
+s7_skew_L1L9.csv,mgm|folk|9|1,p0a,5.9,5.9,MATCH,True
+s7_skew_L1L9.csv,mgm|folk|9|2,p0a,6.0,6.0,MATCH,True
+s7_skew_L1L9.csv,mgm|folk|9|3,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,mgm|folk|9|4,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,mgm|folk|9|5,p0a,6.4,6.4,MATCH,True
+s7_skew_L1L9.csv,mgm|hiphop|1|0,p0a,4.4,4.4,MATCH,True
+s7_skew_L1L9.csv,mgm|hiphop|1|1,p0a,5.2,5.2,MATCH,True
+s7_skew_L1L9.csv,mgm|hiphop|1|2,p0a,6.0,6.0,MATCH,True
+s7_skew_L1L9.csv,mgm|hiphop|1|3,p0a,6.0,6.0,MATCH,True
+s7_skew_L1L9.csv,mgm|hiphop|1|4,p0a,5.2,5.2,MATCH,True
+s7_skew_L1L9.csv,mgm|hiphop|1|5,p0a,5.5,5.5,MATCH,True
+s7_skew_L1L9.csv,mgm|hiphop|9|0,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,mgm|hiphop|9|1,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,mgm|hiphop|9|2,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,mgm|hiphop|9|3,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,mgm|hiphop|9|4,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,mgm|hiphop|9|5,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,mgm|orchestral|1|0,p0a,3.7,3.7,MATCH,True
+s7_skew_L1L9.csv,mgm|orchestral|1|1,p0a,3.7,3.7,MATCH,True
+s7_skew_L1L9.csv,mgm|orchestral|1|2,p0a,4.1,4.1,MATCH,True
+s7_skew_L1L9.csv,mgm|orchestral|1|3,p0a,3.7,3.7,MATCH,True
+s7_skew_L1L9.csv,mgm|orchestral|1|4,p0a,3.7,3.7,MATCH,True
+s7_skew_L1L9.csv,mgm|orchestral|1|5,p0a,3.7,3.7,MATCH,True
+s7_skew_L1L9.csv,mgm|orchestral|9|0,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,mgm|orchestral|9|1,p0a,6.4,6.4,MATCH,True
+s7_skew_L1L9.csv,mgm|orchestral|9|2,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,mgm|orchestral|9|3,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,mgm|orchestral|9|4,p0a,6.4,6.4,MATCH,True
+s7_skew_L1L9.csv,mgm|orchestral|9|5,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,mgm|rock|1|0,p0a,6.0,6.0,MATCH,True
+s7_skew_L1L9.csv,mgm|rock|1|1,p0a,6.4,6.4,MATCH,True
+s7_skew_L1L9.csv,mgm|rock|1|2,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,mgm|rock|1|3,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,mgm|rock|1|4,p0a,6.4,6.4,MATCH,True
+s7_skew_L1L9.csv,mgm|rock|1|5,p0a,6.4,6.4,MATCH,True
+s7_skew_L1L9.csv,mgm|rock|9|0,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,mgm|rock|9|1,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,mgm|rock|9|2,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,mgm|rock|9|3,p0a,6.4,6.4,MATCH,True
+s7_skew_L1L9.csv,mgm|rock|9|4,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,mgm|rock|9|5,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,mgs|edm|1|0,p0a,6.0,6.0,MATCH,True
+s7_skew_L1L9.csv,mgs|edm|1|1,p0a,3.7,3.7,MATCH,True
+s7_skew_L1L9.csv,mgs|edm|1|2,p0a,6.4,6.4,MATCH,True
+s7_skew_L1L9.csv,mgs|edm|1|3,p0a,3.7,3.7,MATCH,True
+s7_skew_L1L9.csv,mgs|edm|1|4,p0a,6.2,6.2,MATCH,True
+s7_skew_L1L9.csv,mgs|edm|1|5,p0a,6.4,6.4,MATCH,True
+s7_skew_L1L9.csv,mgs|edm|9|0,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,mgs|edm|9|1,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,mgs|edm|9|2,p0a,6.4,6.4,MATCH,True
+s7_skew_L1L9.csv,mgs|edm|9|3,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,mgs|edm|9|4,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,mgs|edm|9|5,p0a,5.9,5.9,MATCH,True
+s7_skew_L1L9.csv,mgs|folk|1|0,p0a,4.5,4.5,MATCH,True
+s7_skew_L1L9.csv,mgs|folk|1|1,p0a,4.4,4.4,MATCH,True
+s7_skew_L1L9.csv,mgs|folk|1|2,p0a,3.7,3.7,MATCH,True
+s7_skew_L1L9.csv,mgs|folk|1|3,p0a,4.1,4.1,MATCH,True
+s7_skew_L1L9.csv,mgs|folk|1|4,p0a,4.1,4.1,MATCH,True
+s7_skew_L1L9.csv,mgs|folk|1|5,p0a,4.1,4.1,MATCH,True
+s7_skew_L1L9.csv,mgs|folk|9|0,p0a,4.0,4.0,MATCH,True
+s7_skew_L1L9.csv,mgs|folk|9|1,p0a,6.0,6.0,MATCH,True
+s7_skew_L1L9.csv,mgs|folk|9|2,p0a,4.1,4.1,MATCH,True
+s7_skew_L1L9.csv,mgs|folk|9|3,p0a,5.2,5.2,MATCH,True
+s7_skew_L1L9.csv,mgs|folk|9|4,p0a,5.2,5.2,MATCH,True
+s7_skew_L1L9.csv,mgs|folk|9|5,p0a,5.5,5.5,MATCH,True
+s7_skew_L1L9.csv,mgs|hiphop|1|0,p0a,5.9,5.9,MATCH,True
+s7_skew_L1L9.csv,mgs|hiphop|1|1,p0a,4.5,4.5,MATCH,True
+s7_skew_L1L9.csv,mgs|hiphop|1|2,p0a,4.1,4.1,MATCH,True
+s7_skew_L1L9.csv,mgs|hiphop|1|3,p0a,3.7,3.7,MATCH,True
+s7_skew_L1L9.csv,mgs|hiphop|1|4,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,mgs|hiphop|1|5,p0a,5.2,5.2,MATCH,True
+s7_skew_L1L9.csv,mgs|hiphop|9|0,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,mgs|hiphop|9|1,p0a,6.2,6.2,MATCH,True
+s7_skew_L1L9.csv,mgs|hiphop|9|2,p0a,6.0,6.0,MATCH,True
+s7_skew_L1L9.csv,mgs|hiphop|9|3,p0a,6.4,6.4,MATCH,True
+s7_skew_L1L9.csv,mgs|hiphop|9|4,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,mgs|hiphop|9|5,p0a,6.4,6.4,MATCH,True
+s7_skew_L1L9.csv,mgs|orchestral|1|0,p0a,4.5,4.5,MATCH,True
+s7_skew_L1L9.csv,mgs|orchestral|1|1,p0a,3.7,3.7,MATCH,True
+s7_skew_L1L9.csv,mgs|orchestral|1|2,p0a,3.7,3.7,MATCH,True
+s7_skew_L1L9.csv,mgs|orchestral|1|3,p0a,3.8,3.8,MATCH,True
+s7_skew_L1L9.csv,mgs|orchestral|1|4,p0a,3.7,3.7,MATCH,True
+s7_skew_L1L9.csv,mgs|orchestral|1|5,p0a,4.0,4.0,MATCH,True
+s7_skew_L1L9.csv,mgs|orchestral|9|0,p0a,5.9,5.9,MATCH,True
+s7_skew_L1L9.csv,mgs|orchestral|9|1,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,mgs|orchestral|9|2,p0a,4.1,4.1,MATCH,True
+s7_skew_L1L9.csv,mgs|orchestral|9|3,p0a,3.8,3.8,MATCH,True
+s7_skew_L1L9.csv,mgs|orchestral|9|4,p0a,3.8,3.8,MATCH,True
+s7_skew_L1L9.csv,mgs|orchestral|9|5,p0a,4.2,4.2,MATCH,True
+s7_skew_L1L9.csv,mgs|rock|1|0,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,mgs|rock|1|1,p0a,6.0,6.0,MATCH,True
+s7_skew_L1L9.csv,mgs|rock|1|2,p0a,6.4,6.4,MATCH,True
+s7_skew_L1L9.csv,mgs|rock|1|3,p0a,4.1,4.1,MATCH,True
+s7_skew_L1L9.csv,mgs|rock|1|4,p0a,3.7,3.7,MATCH,True
+s7_skew_L1L9.csv,mgs|rock|1|5,p0a,5.5,5.5,MATCH,True
+s7_skew_L1L9.csv,mgs|rock|9|0,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,mgs|rock|9|1,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,mgs|rock|9|2,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,mgs|rock|9|3,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,mgs|rock|9|4,p0a,3.8,3.8,MATCH,True
+s7_skew_L1L9.csv,mgs|rock|9|5,p0a,6.4,6.4,MATCH,True
+s7_skew_L1L9.csv,sa3s|edm|1|0,p0a,5.2,5.2,MATCH,True
+s7_skew_L1L9.csv,sa3s|edm|1|1,p0a,4.1,4.1,MATCH,True
+s7_skew_L1L9.csv,sa3s|edm|1|2,p0a,6.0,6.0,MATCH,True
+s7_skew_L1L9.csv,sa3s|edm|1|3,p0a,5.2,5.2,MATCH,True
+s7_skew_L1L9.csv,sa3s|edm|1|4,p0a,4.5,4.5,MATCH,True
+s7_skew_L1L9.csv,sa3s|edm|1|5,p0a,4.2,4.2,MATCH,True
+s7_skew_L1L9.csv,sa3s|edm|9|0,p0a,6.4,6.4,MATCH,True
+s7_skew_L1L9.csv,sa3s|edm|9|1,p0a,6.2,6.2,MATCH,True
+s7_skew_L1L9.csv,sa3s|edm|9|2,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,sa3s|edm|9|3,p0a,6.4,6.4,MATCH,True
+s7_skew_L1L9.csv,sa3s|edm|9|4,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,sa3s|edm|9|5,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,sa3s|folk|1|0,p0a,3.7,3.7,MATCH,True
+s7_skew_L1L9.csv,sa3s|folk|1|1,p0a,3.7,3.7,MATCH,True
+s7_skew_L1L9.csv,sa3s|folk|1|2,p0a,4.1,4.1,MATCH,True
+s7_skew_L1L9.csv,sa3s|folk|1|3,p0a,3.7,3.7,MATCH,True
+s7_skew_L1L9.csv,sa3s|folk|1|4,p0a,4.1,4.1,MATCH,True
+s7_skew_L1L9.csv,sa3s|folk|1|5,p0a,4.4,4.4,MATCH,True
+s7_skew_L1L9.csv,sa3s|folk|9|0,p0a,4.2,4.2,MATCH,True
+s7_skew_L1L9.csv,sa3s|folk|9|1,p0a,4.1,4.1,MATCH,True
+s7_skew_L1L9.csv,sa3s|folk|9|2,p0a,4.5,4.5,MATCH,True
+s7_skew_L1L9.csv,sa3s|folk|9|3,p0a,3.7,3.7,MATCH,True
+s7_skew_L1L9.csv,sa3s|folk|9|4,p0a,4.5,4.5,MATCH,True
+s7_skew_L1L9.csv,sa3s|folk|9|5,p0a,4.4,4.4,MATCH,True
+s7_skew_L1L9.csv,sa3s|hiphop|1|0,p0a,6.4,6.4,MATCH,True
+s7_skew_L1L9.csv,sa3s|hiphop|1|1,p0a,5.2,5.2,MATCH,True
+s7_skew_L1L9.csv,sa3s|hiphop|1|2,p0a,5.5,5.5,MATCH,True
+s7_skew_L1L9.csv,sa3s|hiphop|1|3,p0a,4.1,4.1,MATCH,True
+s7_skew_L1L9.csv,sa3s|hiphop|1|4,p0a,6.0,6.0,MATCH,True
+s7_skew_L1L9.csv,sa3s|hiphop|1|5,p0a,5.2,5.2,MATCH,True
+s7_skew_L1L9.csv,sa3s|hiphop|9|0,p0a,6.0,6.0,MATCH,True
+s7_skew_L1L9.csv,sa3s|hiphop|9|1,p0a,6.4,6.4,MATCH,True
+s7_skew_L1L9.csv,sa3s|hiphop|9|2,p0a,5.5,5.5,MATCH,True
+s7_skew_L1L9.csv,sa3s|hiphop|9|3,p0a,6.4,6.4,MATCH,True
+s7_skew_L1L9.csv,sa3s|hiphop|9|4,p0a,6.0,6.0,MATCH,True
+s7_skew_L1L9.csv,sa3s|hiphop|9|5,p0a,6.0,6.0,MATCH,True
+s7_skew_L1L9.csv,sa3s|orchestral|1|0,p0a,3.8,3.8,MATCH,True
+s7_skew_L1L9.csv,sa3s|orchestral|1|1,p0a,4.4,4.4,MATCH,True
+s7_skew_L1L9.csv,sa3s|orchestral|1|2,p0a,4.5,4.5,MATCH,True
+s7_skew_L1L9.csv,sa3s|orchestral|1|3,p0a,3.8,3.8,MATCH,True
+s7_skew_L1L9.csv,sa3s|orchestral|1|4,p0a,4.1,4.1,MATCH,True
+s7_skew_L1L9.csv,sa3s|orchestral|1|5,p0a,3.7,3.7,MATCH,True
+s7_skew_L1L9.csv,sa3s|orchestral|9|0,p0a,5.2,5.2,MATCH,True
+s7_skew_L1L9.csv,sa3s|orchestral|9|1,p0a,4.5,4.5,MATCH,True
+s7_skew_L1L9.csv,sa3s|orchestral|9|2,p0a,6.0,6.0,MATCH,True
+s7_skew_L1L9.csv,sa3s|orchestral|9|3,p0a,6.0,6.0,MATCH,True
+s7_skew_L1L9.csv,sa3s|orchestral|9|4,p0a,6.0,6.0,MATCH,True
+s7_skew_L1L9.csv,sa3s|orchestral|9|5,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,sa3s|rock|1|0,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,sa3s|rock|1|1,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,sa3s|rock|1|2,p0a,6.4,6.4,MATCH,True
+s7_skew_L1L9.csv,sa3s|rock|1|3,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,sa3s|rock|1|4,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,sa3s|rock|1|5,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,sa3s|rock|9|0,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,sa3s|rock|9|1,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,sa3s|rock|9|2,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,sa3s|rock|9|3,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,sa3s|rock|9|4,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,sa3s|rock|9|5,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,sao|edm|1|0,p0a,5.2,5.2,MATCH,True
+s7_skew_L1L9.csv,sao|edm|1|1,p0a,5.2,5.2,MATCH,True
+s7_skew_L1L9.csv,sao|edm|1|2,p0a,6.4,6.4,MATCH,True
+s7_skew_L1L9.csv,sao|edm|1|3,p0a,6.0,6.0,MATCH,True
+s7_skew_L1L9.csv,sao|edm|1|4,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,sao|edm|1|5,p0a,6.2,6.2,MATCH,True
+s7_skew_L1L9.csv,sao|edm|9|0,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,sao|edm|9|1,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,sao|edm|9|2,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,sao|edm|9|3,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,sao|edm|9|4,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,sao|edm|9|5,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,sao|folk|1|0,p0a,3.8,3.8,MATCH,True
+s7_skew_L1L9.csv,sao|folk|1|1,p0a,4.0,4.0,MATCH,True
+s7_skew_L1L9.csv,sao|folk|1|2,p0a,4.1,4.1,MATCH,True
+s7_skew_L1L9.csv,sao|folk|1|3,p0a,3.7,3.7,MATCH,True
+s7_skew_L1L9.csv,sao|folk|1|4,p0a,3.8,3.8,MATCH,True
+s7_skew_L1L9.csv,sao|folk|1|5,p0a,3.8,3.8,MATCH,True
+s7_skew_L1L9.csv,sao|folk|9|0,p0a,5.9,5.9,MATCH,True
+s7_skew_L1L9.csv,sao|folk|9|1,p0a,6.2,6.2,MATCH,True
+s7_skew_L1L9.csv,sao|folk|9|2,p0a,6.0,6.0,MATCH,True
+s7_skew_L1L9.csv,sao|folk|9|3,p0a,5.2,5.2,MATCH,True
+s7_skew_L1L9.csv,sao|folk|9|4,p0a,5.2,5.2,MATCH,True
+s7_skew_L1L9.csv,sao|folk|9|5,p0a,6.2,6.2,MATCH,True
+s7_skew_L1L9.csv,sao|hiphop|1|0,p0a,5.5,5.5,MATCH,True
+s7_skew_L1L9.csv,sao|hiphop|1|1,p0a,6.0,6.0,MATCH,True
+s7_skew_L1L9.csv,sao|hiphop|1|2,p0a,6.2,6.2,MATCH,True
+s7_skew_L1L9.csv,sao|hiphop|1|3,p0a,6.0,6.0,MATCH,True
+s7_skew_L1L9.csv,sao|hiphop|1|4,p0a,5.2,5.2,MATCH,True
+s7_skew_L1L9.csv,sao|hiphop|1|5,p0a,4.5,4.5,MATCH,True
+s7_skew_L1L9.csv,sao|hiphop|9|0,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,sao|hiphop|9|1,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,sao|hiphop|9|2,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,sao|hiphop|9|3,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,sao|hiphop|9|4,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,sao|hiphop|9|5,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,sao|orchestral|1|0,p0a,4.1,4.1,MATCH,True
+s7_skew_L1L9.csv,sao|orchestral|1|1,p0a,5.2,5.2,MATCH,True
+s7_skew_L1L9.csv,sao|orchestral|1|2,p0a,5.2,5.2,MATCH,True
+s7_skew_L1L9.csv,sao|orchestral|1|3,p0a,3.7,3.7,MATCH,True
+s7_skew_L1L9.csv,sao|orchestral|1|4,p0a,5.9,5.9,MATCH,True
+s7_skew_L1L9.csv,sao|orchestral|1|5,p0a,4.5,4.5,MATCH,True
+s7_skew_L1L9.csv,sao|orchestral|9|0,p0a,6.4,6.4,MATCH,True
+s7_skew_L1L9.csv,sao|orchestral|9|1,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,sao|orchestral|9|2,p0a,6.2,6.2,MATCH,True
+s7_skew_L1L9.csv,sao|orchestral|9|3,p0a,6.4,6.4,MATCH,True
+s7_skew_L1L9.csv,sao|orchestral|9|4,p0a,6.0,6.0,MATCH,True
+s7_skew_L1L9.csv,sao|orchestral|9|5,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,sao|rock|1|0,p0a,6.2,6.2,MATCH,True
+s7_skew_L1L9.csv,sao|rock|1|1,p0a,4.5,4.5,MATCH,True
+s7_skew_L1L9.csv,sao|rock|1|2,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,sao|rock|1|3,p0a,5.9,5.9,MATCH,True
+s7_skew_L1L9.csv,sao|rock|1|4,p0a,6.4,6.4,MATCH,True
+s7_skew_L1L9.csv,sao|rock|1|5,p0a,5.5,5.5,MATCH,True
+s7_skew_L1L9.csv,sao|rock|9|0,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,sao|rock|9|1,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,sao|rock|9|2,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,sao|rock|9|3,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,sao|rock|9|4,p0a,6.5,6.5,MATCH,True
+s7_skew_L1L9.csv,sao|rock|9|5,p0a,6.5,6.5,MATCH,True
+s6_feature_decomp.csv,ace,d_raw_total,0.208,0.208,MATCH,True
+s6_feature_decomp.csv,ace,loudness_contrib,0.02,0.02,MATCH,True
+s6_feature_decomp.csv,ace,loudness_share,0.094,0.094,MATCH,True
+s6_feature_decomp.csv,ace,noisiness_contrib,0.054,0.054,MATCH,True
+s6_feature_decomp.csv,ace,noisiness_share,0.259,0.259,MATCH,True
+s6_feature_decomp.csv,ace,tonality_contrib,0.134,0.134,MATCH,True
+s6_feature_decomp.csv,ace,tonality_share,0.647,0.647,MATCH,True
+s6_feature_decomp.csv,ace,dfeat_loudness_mean,0.0022125319,0.0022125319,MATCH,True
+s6_feature_decomp.csv,ace,dfeat_loudness_std,-0.0046587065,-0.0046587065,MATCH,True
+s6_feature_decomp.csv,ace,dfeat_brightness_mean,104.3973778930665,104.3973778930665,MATCH,True
+s6_feature_decomp.csv,ace,dfeat_brightness_std,-97.0902763603799,-97.0902763603799,MATCH,True
+s6_feature_decomp.csv,ace,dfeat_flux_mean,-0.11370945,-0.11370945,MATCH,True
+s6_feature_decomp.csv,ace,dfeat_flux_std,-0.28634083,-0.28634083,MATCH,True
+s6_feature_decomp.csv,ace,dfeat_zcr_mean,0.0030172909007352977,0.0030172909007352977,MATCH,True
+s6_feature_decomp.csv,ace,dfeat_zcr_std,-0.003306958000494624,-0.003306958000494624,MATCH,True
+s6_feature_decomp.csv,ace,dfeat_sharpness_mean,0.00034377072,0.00034377072,MATCH,True
+s6_feature_decomp.csv,ace,dfeat_sharpness_std,-0.000115340576,-0.000115340576,MATCH,True
+s6_feature_decomp.csv,ace,dfeat_hnr_mean,-3.2407913,-3.2407913,MATCH,True
+s6_feature_decomp.csv,ace,dfeat_hnr_std,-0.80801487,-0.80801487,MATCH,True
+s6_feature_decomp.csv,mgm,d_raw_total,1.857,1.857,MATCH,True
+s6_feature_decomp.csv,mgm,loudness_contrib,-0.036,-0.036,MATCH,True
+s6_feature_decomp.csv,mgm,loudness_share,-0.019,-0.019,MATCH,True
+s6_feature_decomp.csv,mgm,noisiness_contrib,1.156,1.156,MATCH,True
+s6_feature_decomp.csv,mgm,noisiness_share,0.623,0.623,MATCH,True
+s6_feature_decomp.csv,mgm,tonality_contrib,0.736,0.736,MATCH,True
+s6_feature_decomp.csv,mgm,tonality_share,0.397,0.397,MATCH,True
+s6_feature_decomp.csv,mgm,dfeat_loudness_mean,-0.008744553,-0.008744553,MATCH,True
+s6_feature_decomp.csv,mgm,dfeat_loudness_std,-0.0062650517,-0.0062650517,MATCH,True
+s6_feature_decomp.csv,mgm,dfeat_brightness_mean,1909.2043349084458,1909.2043349084458,MATCH,True
+s6_feature_decomp.csv,mgm,dfeat_brightness_std,196.2396384382647,196.2396384382647,MATCH,True
+s6_feature_decomp.csv,mgm,dfeat_flux_mean,-0.11831713,-0.11831713,MATCH,True
+s6_feature_decomp.csv,mgm,dfeat_flux_std,-0.45040977,-0.45040977,MATCH,True
+s6_feature_decomp.csv,mgm,dfeat_zcr_mean,0.1259482371406654,0.1259482371406654,MATCH,True
+s6_feature_decomp.csv,mgm,dfeat_zcr_std,0.055214690541019976,0.055214690541019976,MATCH,True
+s6_feature_decomp.csv,mgm,dfeat_sharpness_mean,0.044494502,0.044494502,MATCH,True
+s6_feature_decomp.csv,mgm,dfeat_sharpness_std,0.036340423,0.036340423,MATCH,True
+s6_feature_decomp.csv,mgm,dfeat_hnr_mean,-14.83223,-14.83223,MATCH,True
+s6_feature_decomp.csv,mgm,dfeat_hnr_std,-2.215076,-2.215076,MATCH,True
+s6_feature_decomp.csv,mgs,d_raw_total,0.965,0.965,MATCH,True
+s6_feature_decomp.csv,mgs,loudness_contrib,0.199,0.199,MATCH,True
+s6_feature_decomp.csv,mgs,loudness_share,0.207,0.207,MATCH,True
+s6_feature_decomp.csv,mgs,noisiness_contrib,0.256,0.256,MATCH,True
+s6_feature_decomp.csv,mgs,noisiness_share,0.266,0.266,MATCH,True
+s6_feature_decomp.csv,mgs,tonality_contrib,0.509,0.509,MATCH,True
+s6_feature_decomp.csv,mgs,tonality_share,0.527,0.527,MATCH,True
+s6_feature_decomp.csv,mgs,dfeat_loudness_mean,0.040651023,0.040651023,MATCH,True
+s6_feature_decomp.csv,mgs,dfeat_loudness_std,0.008874301,0.008874301,MATCH,True
+s6_feature_decomp.csv,mgs,dfeat_brightness_mean,726.4873399846194,726.4873399846194,MATCH,True
+s6_feature_decomp.csv,mgs,dfeat_brightness_std,-23.349000659747617,-23.349000659747617,MATCH,True
+s6_feature_decomp.csv,mgs,dfeat_flux_mean,-0.06354213,-0.06354213,MATCH,True
+s6_feature_decomp.csv,mgs,dfeat_flux_std,-0.26157916,-0.26157916,MATCH,True
+s6_feature_decomp.csv,mgs,dfeat_zcr_mean,0.026802199410529706,0.026802199410529706,MATCH,True
+s6_feature_decomp.csv,mgs,dfeat_zcr_std,0.009890976948895326,0.009890976948895326,MATCH,True
+s6_feature_decomp.csv,mgs,dfeat_sharpness_mean,0.01943463,0.01943463,MATCH,True
+s6_feature_decomp.csv,mgs,dfeat_sharpness_std,0.014911783,0.014911783,MATCH,True
+s6_feature_decomp.csv,mgs,dfeat_hnr_mean,-9.726944,-9.726944,MATCH,True
+s6_feature_decomp.csv,mgs,dfeat_hnr_std,-1.137671,-1.137671,MATCH,True
+s6_feature_decomp.csv,sa3s,d_raw_total,0.728,0.728,MATCH,True
+s6_feature_decomp.csv,sa3s,loudness_contrib,0.133,0.133,MATCH,True
+s6_feature_decomp.csv,sa3s,loudness_share,0.183,0.183,MATCH,True
+s6_feature_decomp.csv,sa3s,noisiness_contrib,0.285,0.285,MATCH,True
+s6_feature_decomp.csv,sa3s,noisiness_share,0.391,0.391,MATCH,True
+s6_feature_decomp.csv,sa3s,tonality_contrib,0.31,0.31,MATCH,True
+s6_feature_decomp.csv,sa3s,tonality_share,0.426,0.426,MATCH,True
+s6_feature_decomp.csv,sa3s,dfeat_loudness_mean,0.025674663,0.025674663,MATCH,True
+s6_feature_decomp.csv,sa3s,dfeat_loudness_std,0.0012824908,0.0012824908,MATCH,True
+s6_feature_decomp.csv,sa3s,dfeat_brightness_mean,634.4552595437185,634.4552595437185,MATCH,True
+s6_feature_decomp.csv,sa3s,dfeat_brightness_std,-102.67804944958448,-102.67804944958448,MATCH,True
+s6_feature_decomp.csv,sa3s,dfeat_flux_mean,0.016460061,0.016460061,MATCH,True
+s6_feature_decomp.csv,sa3s,dfeat_flux_std,-0.13676345,-0.13676345,MATCH,True
+s6_feature_decomp.csv,sa3s,dfeat_zcr_mean,0.02962386974732327,0.02962386974732327,MATCH,True
+s6_feature_decomp.csv,sa3s,dfeat_zcr_std,0.01068274743054682,0.01068274743054682,MATCH,True
+s6_feature_decomp.csv,sa3s,dfeat_sharpness_mean,0.015216537,0.015216537,MATCH,True
+s6_feature_decomp.csv,sa3s,dfeat_sharpness_std,0.008633332,0.008633332,MATCH,True
+s6_feature_decomp.csv,sa3s,dfeat_hnr_mean,-7.946745,-7.946745,MATCH,True
+s6_feature_decomp.csv,sa3s,dfeat_hnr_std,-2.2171936,-2.2171936,MATCH,True
+s6_feature_decomp.csv,sao,d_raw_total,1.389,1.389,MATCH,True
+s6_feature_decomp.csv,sao,loudness_contrib,0.534,0.534,MATCH,True
+s6_feature_decomp.csv,sao,loudness_share,0.384,0.384,MATCH,True
+s6_feature_decomp.csv,sao,noisiness_contrib,0.528,0.528,MATCH,True
+s6_feature_decomp.csv,sao,noisiness_share,0.38,0.38,MATCH,True
+s6_feature_decomp.csv,sao,tonality_contrib,0.328,0.328,MATCH,True
+s6_feature_decomp.csv,sao,tonality_share,0.236,0.236,MATCH,True
+s6_feature_decomp.csv,sao,dfeat_loudness_mean,0.10591617,0.10591617,MATCH,True
+s6_feature_decomp.csv,sao,dfeat_loudness_std,0.014914446,0.014914446,MATCH,True
+s6_feature_decomp.csv,sao,dfeat_brightness_mean,814.445578955497,814.445578955497,MATCH,True
+s6_feature_decomp.csv,sao,dfeat_brightness_std,-83.85414473175956,-83.85414473175956,MATCH,True
+s6_feature_decomp.csv,sao,dfeat_flux_mean,-0.30460215,-0.30460215,MATCH,True
+s6_feature_decomp.csv,sao,dfeat_flux_std,-0.86282945,-0.86282945,MATCH,True
+s6_feature_decomp.csv,sao,dfeat_zcr_mean,0.04839187165408927,0.04839187165408927,MATCH,True
+s6_feature_decomp.csv,sao,dfeat_zcr_std,0.006432261282393124,0.006432261282393124,MATCH,True
+s6_feature_decomp.csv,sao,dfeat_sharpness_mean,0.0119186025,0.0119186025,MATCH,True
+s6_feature_decomp.csv,sao,dfeat_sharpness_std,-0.01032348,-0.01032348,MATCH,True
+s6_feature_decomp.csv,sao,dfeat_hnr_mean,-8.886057,-8.886057,MATCH,True
+s6_feature_decomp.csv,sao,dfeat_hnr_std,-2.7145247,-2.7145247,MATCH,True
+s6_raw_ridge_level_means.csv,ace,1,4.456702572064413,4.456702572064413,MATCH,True
+s6_raw_ridge_level_means.csv,ace,3,4.438118609743699,4.438118609743699,MATCH,True
+s6_raw_ridge_level_means.csv,ace,5,4.68587523578804,4.68587523578804,MATCH,True
+s6_raw_ridge_level_means.csv,ace,7,5.033708098664018,5.033708098664018,MATCH,True
+s6_raw_ridge_level_means.csv,ace,9,4.664474133397846,4.664474133397846,MATCH,True
+s6_raw_ridge_level_means.csv,mgm,1,5.185511805858677,5.185511805858677,MATCH,True
+s6_raw_ridge_level_means.csv,mgm,3,5.39518108005734,5.39518108005734,MATCH,True
+s6_raw_ridge_level_means.csv,mgm,5,5.989370400504882,5.989370400504882,MATCH,True
+s6_raw_ridge_level_means.csv,mgm,7,6.075210391481337,6.075210391481337,MATCH,True
+s6_raw_ridge_level_means.csv,mgm,9,7.042233685603586,7.042233685603586,MATCH,True
+s6_raw_ridge_level_means.csv,mgs,1,4.821387442489784,4.821387442489784,MATCH,True
+s6_raw_ridge_level_means.csv,mgs,3,5.15291893963215,5.15291893963215,MATCH,True
+s6_raw_ridge_level_means.csv,mgs,5,5.713571085544635,5.713571085544635,MATCH,True
+s6_raw_ridge_level_means.csv,mgs,7,6.517122044683502,6.517122044683502,MATCH,True
+s6_raw_ridge_level_means.csv,mgs,9,5.786024838707411,5.786024838707411,MATCH,True
+s6_raw_ridge_level_means.csv,sa3s,1,5.121271930278271,5.121271930278271,MATCH,True
+s6_raw_ridge_level_means.csv,sa3s,3,5.009484907979711,5.009484907979711,MATCH,True
+s6_raw_ridge_level_means.csv,sa3s,5,5.824698226735659,5.824698226735659,MATCH,True
+s6_raw_ridge_level_means.csv,sa3s,7,5.993764827444836,5.993764827444836,MATCH,True
+s6_raw_ridge_level_means.csv,sa3s,9,5.849650934757278,5.849650934757278,MATCH,True
+s6_raw_ridge_level_means.csv,sao,1,5.210845239345564,5.210845239345564,MATCH,True
+s6_raw_ridge_level_means.csv,sao,3,5.537177264167964,5.537177264167964,MATCH,True
+s6_raw_ridge_level_means.csv,sao,5,5.728631323370675,5.728631323370675,MATCH,True
+s6_raw_ridge_level_means.csv,sao,7,5.9314197961879715,5.9314197961879715,MATCH,True
+s6_raw_ridge_level_means.csv,sao,9,6.599636103744769,6.599636103744769,MATCH,True

@@ -76,12 +76,27 @@ overwritten by default. The pre-calibration ("raw ridge") statistics use the
 fitted Arousal Index ridge in `data/arousal_index_ridge.json`, re-fit from DEAM
 by `scripts/fit_arousal_ridge.py`.
 
-**Tier 2 — scoring (Kaggle, ~1 h GPU).** `notebooks/scoring.ipynb` re-runs
+**Tier 2 — scoring (Kaggle, ~30 min on a T4).** `notebooks/scoring.ipynb` re-runs
 the full three-instrument scoring stack over the generated corpus and
-re-banks all CSVs (corpus access and environment details: `docs/MODELS.md`).
-Arousal Index and LUFS reproduce bit-for-bit; CLAP shows documented
-run-to-run drift ≤ 0.033 at the cell-mean level (verdicts stable; the
-fixed-anchor CLAP axis in `data/s7_*.csv` is the deterministic replacement).
+re-banks all CSVs (corpus access and environment details: `docs/MODELS.md`;
+versions: `requirements-scoring.txt`).
+
+*Reproducibility guarantee.* A fresh run on the pinned Kaggle image
+(the canonical run's Docker image digest) must match the bank exactly. This
+was achieved on 2026-11-07: the Arousal Index, LUFS and every non-CLAP banked
+statistic were bit-identical to `data/`. Repeats *within one session* may
+differ by at most 1e-12 relative, from floating-point last-digit noise. The
+measured maximum was about 1e-15 for LUFS (1 ULP) and about 1e-16 absolute
+for CLAP. This is accepted, not a bug.
+
+*CLAP.* Scoring was unseeded until 2026-11-07. The CLAP feature extractor
+crops 30-second clips to 10 seconds at random, so CLAP (`clap`, `clap_n`) varied
+between runs, with measured cell-mean drift (model × phrasing × level) of up
+to **0.042** between the banked run and a re-run. Scoring is now seeded. The
+seeded values are in `data/clap_seeded_2026-11-07.csv`; the banked `clap` and
+`clap_n` columns are unchanged pending a decision on which run the paper
+cites. No CLAP verdict changed. The fixed-anchor CLAP axis in `data/s7_*.csv`
+was deterministic throughout.
 
 **Tier 3 — generation.** Prompt set (`data/prompts.csv`), model revisions,
 and generation harness notes in `docs/MODELS.md`.
@@ -98,6 +113,7 @@ and generation harness notes in `docs/MODELS.md`.
 │   ├── features_verbal.csv              # per-clip acoustic descriptors
 │   ├── s6_*.csv, s7_*.csv               # banked analyses (CIs, decompositions, axes)
 │   ├── arousal_index_ridge.json         # fitted Arousal Index ridge (Tier 1 needs no DEAM)
+│   ├── clap_seeded_2026-11-07.csv       # seeded CLAP (not yet the banked CLAP)
 │   └── prompts.csv                      # the frozen 50-prompt matrix
 ├── notebooks/
 │   ├── scoring.ipynb                    # three-instrument scoring stack (Kaggle)
@@ -157,4 +173,5 @@ instrument paper: Farrell, *The Arousal Index* (submitted to ICASSP 2027) —
 
 ## Changelog
 
+- **2026-11-08** — Added `data/clap_seeded_2026-11-07.csv` (CLAP `clap`/`clap_n` from the first seeded Tier-2 run, pinned image). The banked `clap`/`clap_n` columns are unchanged. Replaced the README's "CLAP drift ≤ 0.033" claim with the measured value (cell-mean drift up to 0.042, unseeded) and stated the Tier-2 reproducibility guarantee.
 - **2026-11-08** — `data/s6_raw_ridge_level_means.csv`: correction to the 2026-11-07 entry. The file was briefly re-banked from ridge coefficients fit outside the canonical environment (values changed at ~1e-15); that re-bank is reverted, and the file is back to its original values, which the pinned Kaggle image reproduces exactly (25/25). `data/arousal_index_ridge.json` is now fit on that pinned image (`scripts/fit_arousal_ridge.py`). No published number changed at any point.
