@@ -15,6 +15,13 @@ passes the same seed to the MusicCoCa text-to-style mapper noise
 (`embed_style(..., use_mapper=True, seed=seed)`). Per-clip seeds follow the
 July harness convention: 300000 + crc32(filename) mod 1e6.
 
+Audit (revised 2026-11-08, Conner's decision A). The run halts only on format errors (sample
+rate, channels, PCM_16, exact length), non-finite samples, or digital silence (every sample
+exactly zero). Quiet clips are model output: they are kept, and flagged in the manifest
+(`quiet_flag`: RMS below QUIET_RMS_DBFS). This matches the July harnesses, which had no
+loudness gate. A clip is written under <out>/partial/ and moved into <out>/audio/ only after
+it passes, so a rejected clip can never be mistaken for a finished one.
+
 Determinism. XLA_FLAGS gets --xla_gpu_deterministic_ops=true before jax is
 imported, so the same seed is expected to give bit-identical audio. The smoke
 test checks this.
@@ -67,9 +74,8 @@ TOP_K = 40
 CFG_SCALES = {"musiccoca": 3.0, "notes": 1.0, "drums": 1.0}
 USE_MAPPER = True  # as in the library's own `mrt jax generate`
 
-# Non-silence floor for the audit.
-MIN_PEAK = 1e-3
-MIN_RMS_DBFS = -60.0
+# Quiet-clip flag threshold (flag only, never a rejection).
+QUIET_RMS_DBFS = -60.0
 
 MUSICCOCA_FILES = [
     "resources/musiccoca/audio_preprocessor.tflite",
@@ -84,7 +90,7 @@ MANIFEST_FIELDS = [
     "clip", "model", "size", "hf_revision", "prompt_id", "prompt_text",
     "seed_index", "seed", "mapper_seed", "frames", "gen_s",
     "sample_rate", "channels", "n_samples", "duration_s", "peak", "rms_dbfs",
-    "pcm_sha256",
+    "quiet_flag", "pcm_sha256",
 ]
 
 
@@ -157,7 +163,7 @@ def generate_pcm(mrt, init, text: str, seed: int, frames: int) -> np.ndarray:
 
 
 def audit(path: pathlib.Path, duration_s: float) -> dict:
-    """Assert format, exact duration and non-silence. Returns the measured values."""
+    """Assert format, exact duration, finite samples, not digital silence. Flag quiet clips."""
     info = sf.info(str(path))
     assert info.samplerate == SAMPLE_RATE, (path.name, info.samplerate)
     assert info.channels == CHANNELS, (path.name, info.channels)
@@ -165,13 +171,37 @@ def audit(path: pathlib.Path, duration_s: float) -> dict:
     n_expect = int(round(duration_s * SAMPLE_RATE))
     assert info.frames == n_expect, (path.name, info.frames, n_expect)
     y, _ = sf.read(str(path), dtype="float64", always_2d=True)
-    assert np.isfinite(y).all(), path.name
+    assert np.isfinite(y).all(), (path.name, "non-finite samples")
     peak = float(np.abs(y).max())
+    assert peak > 0.0, (path.name, "digital silence")
     rms = float(np.sqrt(np.mean(y ** 2)))
-    rms_dbfs = 20 * np.log10(max(rms, 1e-12))
-    assert peak >= MIN_PEAK and rms_dbfs > MIN_RMS_DBFS, (path.name, peak, rms_dbfs)
+    rms_dbfs = 20 * np.log10(rms)
     return dict(sample_rate=info.samplerate, channels=info.channels, n_samples=info.frames,
-                duration_s=info.frames / info.samplerate, peak=peak, rms_dbfs=rms_dbfs)
+                duration_s=info.frames / info.samplerate, peak=peak, rms_dbfs=rms_dbfs,
+                quiet_flag=int(rms_dbfs < QUIET_RMS_DBFS))
+
+
+def migrate_manifest(manifest: pathlib.Path) -> None:
+    """Bring a manifest written by an earlier harness version up to MANIFEST_FIELDS.
+
+    The only added column is quiet_flag, recomputed from the stored rms_dbfs.
+    """
+    if not manifest.exists():
+        return
+    with open(manifest, newline="") as fh:
+        rd = csv.DictReader(fh)
+        if rd.fieldnames == MANIFEST_FIELDS:
+            return
+        rows = list(rd)
+    missing = set(MANIFEST_FIELDS) - set(rd.fieldnames or [])
+    assert missing <= {"quiet_flag"}, missing
+    for r in rows:
+        r["quiet_flag"] = int(float(r["rms_dbfs"]) < QUIET_RMS_DBFS)
+    with open(manifest, "w", newline="") as fh:
+        w = csv.DictWriter(fh, fieldnames=MANIFEST_FIELDS)
+        w.writeheader()
+        w.writerows({k: r[k] for k in MANIFEST_FIELDS} for r in rows)
+    print(f"[mrt2] manifest migrated: added quiet_flag to {len(rows)} rows", flush=True)
 
 
 def pcm_sha256(path: pathlib.Path) -> str:
@@ -198,7 +228,9 @@ def main(argv=None) -> int:
     t_start = time.time()
     out = pathlib.Path(args.out)
     (out / "audio").mkdir(parents=True, exist_ok=True)
+    (out / "partial").mkdir(parents=True, exist_ok=True)
     manifest = out / f"manifest_{TAG}.csv"
+    migrate_manifest(manifest)
     home = pathlib.Path(args.magenta_home)
 
     frames = int(round(args.duration * FRAME_RATE))
@@ -248,9 +280,9 @@ def main(argv=None) -> int:
             pcm = generate_pcm(mrt, init, text, seed, frames)
             gen_s = time.time() - tc
             path = out / "audio" / name
-            tmp = path.with_suffix(".tmp.wav")
+            tmp = out / "partial" / name
             sf.write(str(tmp), pcm, SAMPLE_RATE, subtype="PCM_16")
-            meas = audit(tmp, args.duration)
+            meas = audit(tmp, args.duration)  # raises on a hard failure; tmp stays in partial/
             tmp.rename(path)
             w.writerow(dict(clip=name, model=HF_REPO, size=args.size, hf_revision=args.revision,
                             prompt_id=pid, prompt_text=text, seed_index=k, seed=seed,
@@ -259,7 +291,8 @@ def main(argv=None) -> int:
             fh.flush()
             made += 1
             rate = (time.time() - t_loop) / made
-            print(f"[mrt2] {made}/{len(todo)} {name} {gen_s:.1f}s | mean {rate:.1f}s/clip | "
+            q = " QUIET" if meas["quiet_flag"] else ""
+            print(f"[mrt2] {made}/{len(todo)} {name} {gen_s:.1f}s{q} | mean {rate:.1f}s/clip | "
                   f"ETA {(len(todo) - made) * rate / 60:.0f} min", flush=True)
 
     if args.repeat_first:
