@@ -102,9 +102,80 @@ Arousal Index under the numeric phrasing.
    excluded went from +0.217 to +0.206. The two family contrasts (mgm−mgs, sa3s−sao) are unchanged. The
    paper's pooled numbers are the five-model values in `data/`.
 
+## 6. Conner's listening (human, 7 clips)
+
+*Conner's notes, in his words. 7 mrt2 clips: 3 random "very calm" (L1, verbal), 3 random "extremely intense"
+(L9, verbal), picked with `numpy.random.default_rng(202611087)` recorded before the pick, plus
+`edm_L1_verb__s0`. Private notebook `energy-audit-mrt2-listen7`.*
+
+- L9 clips are clearly more intense than L1, but the L9s are ~98% loud EDM and ~2% the requested genre
+  (orchestral, rock, etc.). Genre collapses toward EDM at high intensity.
+- edm_L1_verb__s0 is near-silent for ~10 s, then quiet spurts of noise. The instrument scores it 6.0, so it
+  looks like an Arousal Index failure mode at near-silence.
+
+## 7. Testing the first note with a metric: genre adherence, all six models
+
+**Question, fixed before looking** (`GENRE_PLAN.md`, commit `7b45f37`): does mrt2's genre adherence drop from
+L1 to L9 (verbal) more than the other five models'?
+
+**Method:**
+- All 1,800 already-scored clips; no new generation.
+- CLAP zero-shot classification against the five genre labels ("rock music", "electronic dance music",
+  "hip-hop music", "acoustic folk music", "orchestral music"). Same checkpoint (`laion/clap-htsat-unfused`)
+  and audio path as the scorer, seeded the same way.
+- Adherence = % of clips whose top genre is the prompted genre (primary), and the mean probability of the
+  prompted genre (secondary).
+- 2,000-resample clip-level bootstrap, 30 clips per cell.
+- Private notebook `energy-audit-genre-clap`; script `genre_analysis.py`; tables in `genre/`.
+
+**Answer: no.** By the committed rule, mrt2's drop is not larger than any of the five models' drops.
+
+| model | top-1 adherence L1 → L9 (verbal) | drop [95% CI] | mrt2 drop minus this model's drop [CI] |
+|---|---|---|---|
+| mrt2 | 63% → 53% | 0.10 [−0.13, 0.33] | — |
+| ace | 47% → 33% | 0.13 [−0.13, 0.37] | −0.03 [−0.37, 0.30] |
+| mgm | 63% → 50% | 0.13 [−0.13, 0.37] | −0.03 [−0.37, 0.33] |
+| mgs | 70% → 57% | 0.13 [−0.10, 0.37] | −0.03 [−0.37, 0.30] |
+| sa3s | 77% → 83% | −0.07 [−0.27, 0.13] | +0.17 [−0.13, 0.47] |
+| sao | 77% → 77% | 0.00 [−0.20, 0.20] | +0.10 [−0.23, 0.43] |
+
+- **Secondary metric agrees.** Prompted-genre probability: mrt2 drop 0.04 [−0.15, 0.22]; every difference
+  from the others has a CI that includes 0. Full tables: `genre/drop_L1_L9_verbal.csv`,
+  `genre/mrt2_vs_others.csv`, `genre/adherence_by_cell.csv`.
+- **The test is weak.** With 30 clips per cell, the difference CIs are about ±0.35 wide. A gap of
+  30 percentage points between models could not be ruled out. "No" means "not detected", not "shown equal".
+
+**Descriptive numbers, not pre-registered for any decision.** The share of clips CLAP classifies as "electronic
+dance music" does rise with intensity for mrt2:
+- **All verbal prompts:** 20% at L1, 50% at L9. This was pre-registered as descriptive.
+- **Non-EDM prompts only** (post hoc): 2/24 at L1, 9/24 at L9 (38%).
+- **mgs shows the same pattern**: 2/24 at L1, 9/24 (38%) at L9. mgm goes from 1 to 6 of 24, and the other three
+  models are at 0–2 of 24 at both L1 and L9.
+- **mrt2 by genre at L9** (post hoc): orchestral prompts 6/6 classified EDM, folk 1/6, hip-hop 2/6, rock 0/6.
+- **CLAP never chose "hip-hop music" for any mrt2 verbal clip at L1 or L9.** Hip-hop prompts went to rock
+  (5 of 6 at L1, 4 of 6 at L9) or EDM.
+
+**Where the measurement and the listening disagree:** the notes put the L9 clips at ~98% loud EDM. CLAP calls
+15 of mrt2's 30 L9 verbal clips EDM (50%), 9 of the 24 non-EDM ones. The listening covered 3 L9 clips:
+`edm_L9_verb__s2`, `orchestral_L9_verb__s3`, `rock_L9_verb__s1`. CLAP classifies all six orchestral L9 clips
+as EDM and all six rock L9 clips as rock. Both readings are recorded here; neither is adjusted to fit the
+other.
+
+### Clips below −50 dBFS RMS (all 1,800)
+
+| clip | RMS dBFS | LUFS | Arousal Index (raw / normalized) |
+|---|---|---|---|
+| `mrt2__edm_L1_verb__s0` | −67.8 | −62.4 | 6.0 / 6.0 |
+
+That's the only one. The quietest clip of each of the other five models is ace −22.9, sa3s −27.0, sao −26.7,
+mgs −33.5 and mgm −37.9 dBFS RMS. mrt2's next quietest is `edm_L1_verb__s1` at −45.4. So the instrument's behavior at
+near-silence (§5, item 1) rests on this single clip; the corpus has no second case to test it on. Table:
+`genre/quiet_clips.csv`.
+
 ## Files
 
-`score_out/` holds the run's tables: the main run at the top level, the 6-model re-execution in `six/`, and
+`GENRE_PLAN.md` (pre-registration), `genre_analysis.py` and `genre/` hold the genre-adherence check (§7);
+`kaggle_genre/` holds its notebook. `score_out/` holds the run's tables: the main run at the top level, the 6-model re-execution in `six/`, and
 the mrt2 scores and flags in `scores_mrt2.csv`, `scores_mrt2_raw.csv`, `mrt2_clip_flags.csv` and
 `mrt2_exclusions_by_*.csv`. The other files:
 

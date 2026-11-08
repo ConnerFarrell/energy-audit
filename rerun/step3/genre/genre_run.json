@@ -1,0 +1,13 @@
+{
+ "labels": [
+  "rock music",
+  "electronic dance music",
+  "hip-hop music",
+  "acoustic folk music",
+  "orchestral music"
+ ],
+ "checkpoint": "laion/clap-htsat-unfused",
+ "n": 1800,
+ "torch": "2.10.0+cu128",
+ "gpu": "Tesla T4"
+}

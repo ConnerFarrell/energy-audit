@@ -1,0 +1,2 @@
+file,model,prompt_id,seed,rms_dbfs,p0a,p0a_n,lufs
+corpus/mrt2__edm_L1_verb__s0.wav,mrt2,edm_L1_verb,0,-67.77389052475856,6.0,6.0,-62.37443219644268
