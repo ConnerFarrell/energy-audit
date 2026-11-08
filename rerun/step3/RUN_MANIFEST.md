@@ -65,3 +65,20 @@ Harness defect, separate from the gate: the rejected clip was still on disk as `
 corpus; the `.tmp.wav` is the rejected clip.
 
 Resume is blocked on the gate decision. Not done: banking, scoring.
+
+## Version 2: resume (2026-11-08)
+
+* **Decision (Conner, 2026-11-08):** A. Quiet clips are model output. The harness halts only on format errors,
+  non-finite samples or digital silence, and flags quiet clips (`quiet_flag`, RMS < −60 dBFS). The `.tmp.wav`
+  bug is fixed: clips are written to `partial/` and moved into `audio/` only after the audit passes.
+* **Harness:** `gen/mrt2.py` @ `91d5677` (sha256 `3bfaec69…cc0755df`). Only the audit, the manifest and the
+  temp path changed; the generation path (sampling, seeding, conditioning) is identical to `34f50fc`.
+* **Resume:** version 2 pushed 2026-11-08 06:44 UTC (RUNNING at 06:45), with version 1's output attached as
+  input. It restores the 66 audited clips (tested locally against v1's real output: 66 restored, the
+  `.tmp.wav` dropped, all 66 PCM hashes match) and generates the other 234. Clip 67 is regenerated from the
+  same seed. Expected ~4.8 h of generation (234 × 73 s), not a measurement.
+* **Finished / wall-clock / completeness / quiet clips:** [STATUS?] (version 2 `run_manifest.json`)
+* **Corpus bank:** [STATUS?]. Banking needs the finished output, and this session doesn't watch the run. It is
+  the first step when Conner reports v2 done, before scoring.
+* **Scoring rule** (−inf loudness excluded from the normalized lens only; +40 dB gain flagged as a caveat) and
+  the check of July's quiet-clip handling: `SCORING_PLAN.md`.
