@@ -1,0 +1,12 @@
+[mrt2] 6 clips to make (mrt2_base, rev 010aa0dcb0, 30 s = 750 frames)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[mrt2] devices=[CudaDevice(id=0), CudaDevice(id=1)] jax=0.11.0 download 77s, load+compile 91s
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+[mrt2] 1/6 mrt2__rock_L1_verb__s0.wav 77.7s | mean 77.8s/clip | ETA 6 min
+[mrt2] 2/6 mrt2__rock_L1_verb__s1.wav 73.9s | mean 75.9s/clip | ETA 5 min
+[mrt2] 3/6 mrt2__rock_L1_verb__s2.wav 73.7s | mean 75.2s/clip | ETA 4 min
+[mrt2] 4/6 mrt2__rock_L1_verb__s3.wav 73.6s | mean 74.8s/clip | ETA 2 min
+[mrt2] 5/6 mrt2__rock_L1_verb__s4.wav 73.8s | mean 74.6s/clip | ETA 1 min
+[mrt2] 6/6 mrt2__rock_L1_verb__s5.wav 73.8s | mean 74.5s/clip | ETA 0 min
+[mrt2] REPEAT mrt2__rock_L1_verb__s0.wav: IDENTICAL (max |diff| 0)
+[mrt2] done in 11.5 min
