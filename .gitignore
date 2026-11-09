@@ -1,1 +1,8 @@
 repro_out/
+
+# Step 3: never commit generated audio or Kaggle metadata (contains the account name)
+*.wav
+*.flac
+*.mp3
+*.tar
+kernel-metadata.json

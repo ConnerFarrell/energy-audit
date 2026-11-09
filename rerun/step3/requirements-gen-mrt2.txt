@@ -1,0 +1,35 @@
+# Generation environment for gen/mrt2.py (Magenta RT 2), on top of the pinned Kaggle image.
+# Exact versions resolved in smoke run v1 (2026-11-08) from magenta-rt==2.0.3, jax[cuda12]==0.11.0, flax==0.12.8.
+absl-py==1.4.0
+ai-edge-litert==2.3.0
+chex==0.1.90
+click==8.3.3
+einops==0.8.2
+flax==0.12.8
+google-cloud-storage==3.10.1
+huggingface_hub==1.11.0
+jax==0.11.0
+jax-cuda12-pjrt==0.11.0
+jax-cuda12-plugin==0.11.0
+jaxlib==0.11.0
+jaxtyping==0.3.11
+librosa==0.11.0
+magenta-rt==2.0.3
+ml_dtypes==0.5.4
+msgpack==1.1.2
+numpy==2.3.5
+opt_einsum==3.4.0
+optax==0.2.8
+orbax-checkpoint==0.11.36
+pyloudnorm==0.2.0
+recurrentgemma==1.0.1
+resampy==0.4.3
+safetensors==0.7.0
+scipy==1.16.3
+sentencepiece==0.2.1
+simple-term-menu==1.6.6
+soundfile==0.13.1
+tensorstore==0.1.82
+treescope==0.1.10
+typeguard==2.13.3
+wadler_lindig==0.1.8
